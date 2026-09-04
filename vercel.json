@@ -1,19 +1,11 @@
 {
-  "version": 2,
-  "public": true,
-  "builds": [
+  "buildCommand": "npm run build-storybook",
+  "outputDirectory": "storybook-static",
+  "framework": null,
+  "rewrites": [
     {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "storybook-static"
-      }
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
+      "source": "/(.*)",
+      "destination": "/$1"
     }
   ]
 }
