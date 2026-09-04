@@ -4,41 +4,45 @@
   gap: 6px;
   max-width: 340px;
   width: 100%;
-  font-family: inherit;
+  font-family: 'Lufga', 'Inter', sans-serif;
 }
 
 .uedp-input-field__label {
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--uedp-slate-700, #334155);
+  font-size: 12px;
+  font-weight: 500;
+  color: #334155;
 }
 
 .uedp-input-field__container {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 10px 14px;
-  background-color: var(--uedp-base-white, #ffffff);
-  border: 1px solid var(--uedp-slate-300, #cbd5e1);
-  border-radius: var(--uedp-rounded-xl, 12px);
+  padding: 9px 10px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 5px;
   transition: all 0.2s ease;
 }
 
 .uedp-input-field__container:focus-within {
-  border-color: var(--uedp-teal-500, #14b8a6);
-  box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.15);
+  border-color: #18181b;
+  box-shadow: 0 0 0 2px rgba(24, 24, 27, 0.1);
 }
 
 .uedp-input-field--error .uedp-input-field__container {
-  border-color: var(--uedp-red-500, #ef4444);
+  border-color: #b91c1c;
+}
+
+.uedp-input-field--error .uedp-input-field__input {
+  color: #b91c1c;
 }
 
 .uedp-input-field--entered .uedp-input-field__container {
-  border-color: var(--uedp-teal-500, #14b8a6);
+  border-color: #18181b;
 }
 
 .uedp-input-field__icon-left {
-  color: var(--uedp-slate-400, #94a3b8);
+  color: #71717a;
   flex-shrink: 0;
 }
 
@@ -46,24 +50,25 @@
   flex: 1;
   border: none;
   background: transparent;
-  font-family: inherit;
-  font-size: 14px;
-  color: var(--uedp-slate-900, #0f172a);
+  font-family: 'Lufga', 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #18181b;
   outline: none;
 }
 
 .uedp-input-field__icon-status--success {
-  color: var(--uedp-teal-500, #14b8a6);
+  color: #18181b;
 }
 
 .uedp-input-field__icon-status--error {
-  color: var(--uedp-red-500, #ef4444);
+  color: #b91c1c;
 }
 
 .uedp-input-field__error-msg {
   display: flex;
   align-items: center;
   gap: 4px;
-  font-size: 12px;
-  color: var(--uedp-red-500, #ef4444);
+  font-size: 11px;
+  color: #b91c1c;
 }

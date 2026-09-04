@@ -2,38 +2,37 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: var(--uedp-gap-2, 8px);
-  padding: 10px 20px;
-  border-radius: var(--uedp-rounded-2xl, 16px);
-  font-family: inherit;
+  gap: 12px;
+  padding: 12px 20px;
+  border-radius: 9999px;
+  font-family: 'Lufga', 'Inter', -apple-system, sans-serif;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 500;
   border: none;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   outline: none;
 }
 
-/* As is / Default state */
-.uedp-nav-home-btn--as-is {
-  background-color: transparent;
-  color: var(--uedp-slate-500, #64748b);
-}
-
-.uedp-nav-home-btn--as-is:hover {
-  background-color: var(--uedp-slate-100, #f1f5f9);
-  color: var(--uedp-slate-800, #1e293b);
-}
-
-/* Selected state - Bound to Teal/Emerald token */
+/* Selected state - Dark background (#18181b), Cream text (#FFEDD5) */
 .uedp-nav-home-btn--selected {
-  background-color: var(--uedp-teal-500, #14b8a6);
-  color: var(--uedp-base-white, #ffffff);
-  box-shadow: 0 4px 12px rgba(20, 184, 166, 0.3);
+  background-color: var(--uedp-zinc-900, #18181b);
+  color: var(--uedp-amber-100, #ffedd5);
+  box-shadow: 0 4px 14px rgba(24, 24, 27, 0.25);
 }
 
 .uedp-nav-home-btn--selected:hover {
-  background-color: var(--uedp-teal-600, #0d9488);
+  background-color: #000000;
+}
+
+/* As is state - Cream background (#FFEDD5), Dark text (#18181b) */
+.uedp-nav-home-btn--as-is {
+  background-color: var(--uedp-amber-100, #ffedd5);
+  color: var(--uedp-zinc-900, #18181b);
+}
+
+.uedp-nav-home-btn--as-is:hover {
+  background-color: #fde68a;
 }
 
 .uedp-nav-home-btn__icon {

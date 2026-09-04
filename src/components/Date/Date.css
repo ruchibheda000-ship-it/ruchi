@@ -4,44 +4,46 @@
   align-items: center;
   justify-content: center;
   gap: 4px;
-  width: 52px;
+  width: 54px;
   height: 68px;
-  border-radius: var(--uedp-rounded-2xl, 16px);
-  border: 1px solid var(--uedp-slate-200, #e2e8f0);
-  background-color: var(--uedp-base-white, #ffffff);
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  background-color: var(--uedp-slate-50, #f8fafc);
   cursor: pointer;
   transition: all 0.2s ease;
   outline: none;
+  font-family: 'Lufga', 'Inter', sans-serif;
 }
 
 .uedp-date-pill--as-is:hover {
-  border-color: var(--uedp-teal-500, #14b8a6);
-  background-color: var(--uedp-slate-50, #f8fafc);
+  border-color: #18181b;
+  background-color: #f1f5f9;
 }
 
+/* Selected state: Dark #18181b background, Cream #FFEDD5 text */
 .uedp-date-pill--selected {
-  background-color: var(--uedp-teal-500, #14b8a6);
-  border-color: var(--uedp-teal-500, #14b8a6);
-  box-shadow: 0 4px 14px rgba(20, 184, 166, 0.3);
+  background-color: var(--uedp-zinc-900, #18181b);
+  border-color: #18181b;
+  box-shadow: 0 4px 14px rgba(24, 24, 27, 0.25);
 }
 
 .uedp-date-pill__day {
   font-size: 11px;
   font-weight: 500;
-  color: var(--uedp-slate-500, #64748b);
+  color: #64748b;
   text-transform: uppercase;
 }
 
 .uedp-date-pill--selected .uedp-date-pill__day {
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 237, 213, 0.85);
 }
 
 .uedp-date-pill__number {
   font-size: 16px;
   font-weight: 700;
-  color: var(--uedp-slate-900, #0f172a);
+  color: #0f172a;
 }
 
 .uedp-date-pill--selected .uedp-date-pill__number {
-  color: var(--uedp-base-white, #ffffff);
+  color: var(--uedp-amber-100, #ffedd5);
 }
