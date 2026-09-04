@@ -1,0 +1,34 @@
+.uedp-all-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 18px;
+  border-radius: var(--uedp-rounded-full, 9999px);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.uedp-all-pill--selected {
+  background-color: var(--uedp-teal-500, #14b8a6);
+  color: var(--uedp-base-white, #ffffff);
+  box-shadow: 0 4px 12px rgba(20, 184, 166, 0.25);
+}
+
+.uedp-all-pill--selected:hover {
+  background-color: var(--uedp-teal-600, #0d9488);
+}
+
+.uedp-all-pill--not-selected {
+  background-color: var(--uedp-slate-100, #f1f5f9);
+  color: var(--uedp-slate-700, #334155);
+  border-color: var(--uedp-slate-200, #e2e8f0);
+}
+
+.uedp-all-pill--not-selected:hover {
+  background-color: var(--uedp-slate-200, #e2e8f0);
+}

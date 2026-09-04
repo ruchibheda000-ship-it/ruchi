@@ -1,0 +1,1622 @@
+﻿{
+    "VariableID:137:1441":  {
+                                "val":  "#2DD4BF",
+                                "css":  "var(--uedp-teal-400)",
+                                "varName":  "--uedp-teal-400"
+                            },
+    "VariableID:137:1568":  {
+                                "val":  "36px",
+                                "css":  "var(--uedp-gap-gap-9)",
+                                "varName":  "--uedp-gap-gap-9"
+                            },
+    "VariableID:137:1413":  {
+                                "val":  "#365314",
+                                "css":  "var(--uedp-lime-900)",
+                                "varName":  "--uedp-lime-900"
+                            },
+    "VariableID:137:1505":  {
+                                "val":  "#E9D5FF",
+                                "css":  "var(--uedp-purple-200)",
+                                "varName":  "--uedp-purple-200"
+                            },
+    "VariableID:137:1338":  {
+                                "val":  "#FAFAFA",
+                                "css":  "var(--uedp-neutral-50)",
+                                "varName":  "--uedp-neutral-50"
+                            },
+    "VariableID:137:1329":  {
+                                "val":  "#E4E4E7",
+                                "css":  "var(--uedp-zinc-200)",
+                                "varName":  "--uedp-zinc-200"
+                            },
+    "VariableID:137:1533":  {
+                                "val":  "#9D174D",
+                                "css":  "var(--uedp-pink-800)",
+                                "varName":  "--uedp-pink-800"
+                            },
+    "VariableID:137:1401":  {
+                                "val":  "#854D0E",
+                                "css":  "var(--uedp-yellow-800)",
+                                "varName":  "--uedp-yellow-800"
+                            },
+    "VariableID:137:1522":  {
+                                "val":  "#86198F",
+                                "css":  "var(--uedp-fuchsia-800)",
+                                "varName":  "--uedp-fuchsia-800"
+                            },
+    "VariableID:137:1552":  {
+                                "val":  "8px",
+                                "css":  "var(--uedp-border-radius-rounded-lg)",
+                                "varName":  "--uedp-border-radius-rounded-lg"
+                            },
+    "VariableID:137:1340":  {
+                                "val":  "#E5E5E5",
+                                "css":  "var(--uedp-neutral-200)",
+                                "varName":  "--uedp-neutral-200"
+                            },
+    "VariableID:137:1534":  {
+                                "val":  "#831843",
+                                "css":  "var(--uedp-pink-900)",
+                                "varName":  "--uedp-pink-900"
+                            },
+    "VariableID:459:1258":  {
+                                "val":  "28px",
+                                "css":  "var(--uedp-padding-p-7)",
+                                "varName":  "--uedp-padding-p-7"
+                            },
+    "VariableID:459:1249":  {
+                                "val":  "4px",
+                                "css":  "var(--uedp-padding-p-1)",
+                                "varName":  "--uedp-padding-p-1"
+                            },
+    "VariableID:137:1351":  {
+                                "val":  "#E7E5E4",
+                                "css":  "var(--uedp-stone-200)",
+                                "varName":  "--uedp-stone-200"
+                            },
+    "VariableID:137:1555":  {
+                                "val":  "24px",
+                                "css":  "var(--uedp-border-radius-rounded-3xl)",
+                                "varName":  "--uedp-border-radius-rounded-3xl"
+                            },
+    "VariableID:137:1544":  {
+                                "val":  "#9F1239",
+                                "css":  "var(--uedp-rose-800)",
+                                "varName":  "--uedp-rose-800"
+                            },
+    "VariableID:137:1514":  {
+                                "val":  "#FDF4FF",
+                                "css":  "var(--uedp-fuchsia-50)",
+                                "varName":  "--uedp-fuchsia-50"
+                            },
+    "VariableID:137:1566":  {
+                                "val":  "28px",
+                                "css":  "var(--uedp-gap-gap-7)",
+                                "varName":  "--uedp-gap-gap-7"
+                            },
+    "VariableID:137:1451":  {
+                                "val":  "#67E8F9",
+                                "css":  "var(--uedp-cyan-300)",
+                                "varName":  "--uedp-cyan-300"
+                            },
+    "VariableID:137:1462":  {
+                                "val":  "#7DD3FC",
+                                "css":  "var(--uedp-sky-300)",
+                                "varName":  "--uedp-sky-300"
+                            },
+    "VariableID:137:1473":  {
+                                "val":  "#93C5FD",
+                                "css":  "var(--uedp-blue-300)",
+                                "varName":  "--uedp-blue-300"
+                            },
+    "VariableID:137:1569":  {
+                                "val":  "40px",
+                                "css":  "var(--uedp-gap-gap-10)",
+                                "varName":  "--uedp-gap-gap-10"
+                            },
+    "VariableID:137:1489":  {
+                                "val":  "#3730A3",
+                                "css":  "var(--uedp-indigo-800)",
+                                "varName":  "--uedp-indigo-800"
+                            },
+    "VariableID:137:1423":  {
+                                "val":  "#166534",
+                                "css":  "var(--uedp-green-800)",
+                                "varName":  "--uedp-green-800"
+                            },
+    "VariableID:137:1504":  {
+                                "val":  "#F3E8FF",
+                                "css":  "var(--uedp-purple-100)",
+                                "varName":  "--uedp-purple-100"
+                            },
+    "VariableID:137:1432":  {
+                                "val":  "#059669",
+                                "css":  "var(--uedp-emerald-600)",
+                                "varName":  "--uedp-emerald-600"
+                            },
+    "VariableID:137:1474":  {
+                                "val":  "#60A5FA",
+                                "css":  "var(--uedp-blue-400)",
+                                "varName":  "--uedp-blue-400"
+                            },
+    "VariableID:137:1326":  {
+                                "val":  "#030712",
+                                "css":  "var(--uedp-gray-950)",
+                                "varName":  "--uedp-gray-950"
+                            },
+    "VariableID:137:1315":  {
+                                "val":  "#020617",
+                                "css":  "var(--uedp-slate-950)",
+                                "varName":  "--uedp-slate-950"
+                            },
+    "VariableID:459:1256":  {
+                                "val":  "20px",
+                                "css":  "var(--uedp-padding-p-5)",
+                                "varName":  "--uedp-padding-p-5"
+                            },
+    "VariableID:459:1247":  {
+                                "val":  "0px",
+                                "css":  "var(--uedp-padding-p-0)",
+                                "varName":  "--uedp-padding-p-0"
+                            },
+    "VariableID:137:1445":  {
+                                "val":  "#115E59",
+                                "css":  "var(--uedp-teal-800)",
+                                "varName":  "--uedp-teal-800"
+                            },
+    "VariableID:137:1468":  {
+                                "val":  "#0C4A6E",
+                                "css":  "var(--uedp-sky-900)",
+                                "varName":  "--uedp-sky-900"
+                            },
+    "VariableID:137:1479":  {
+                                "val":  "#1E3A8A",
+                                "css":  "var(--uedp-blue-900)",
+                                "varName":  "--uedp-blue-900"
+                            },
+    "VariableID:137:1567":  {
+                                "val":  "32px",
+                                "css":  "var(--uedp-gap-gap-8)",
+                                "varName":  "--uedp-gap-gap-8"
+                            },
+    "VariableID:137:1486":  {
+                                "val":  "#6366F1",
+                                "css":  "var(--uedp-indigo-500)",
+                                "varName":  "--uedp-indigo-500"
+                            },
+    "VariableID:137:1405":  {
+                                "val":  "#ECFCCB",
+                                "css":  "var(--uedp-lime-100)",
+                                "varName":  "--uedp-lime-100"
+                            },
+    "VariableID:137:1469":  {
+                                "val":  "#082F49",
+                                "css":  "var(--uedp-sky-950)",
+                                "varName":  "--uedp-sky-950"
+                            },
+    "VariableID:137:1483":  {
+                                "val":  "#C7D2FE",
+                                "css":  "var(--uedp-indigo-200)",
+                                "varName":  "--uedp-indigo-200"
+                            },
+    "VariableID:137:1364":  {
+                                "val":  "#F87171",
+                                "css":  "var(--uedp-red-400)",
+                                "varName":  "--uedp-red-400"
+                            },
+    "VariableID:137:1408":  {
+                                "val":  "#A3E635",
+                                "css":  "var(--uedp-lime-400)",
+                                "varName":  "--uedp-lime-400"
+                            },
+    "VariableID:137:1538":  {
+                                "val":  "#FECDD3",
+                                "css":  "var(--uedp-rose-200)",
+                                "varName":  "--uedp-rose-200"
+                            },
+    "VariableID:137:1492":  {
+                                "val":  "#F5F3FF",
+                                "css":  "var(--uedp-violet-50)",
+                                "varName":  "--uedp-violet-50"
+                            },
+    "VariableID:137:1310":  {
+                                "val":  "#64748B",
+                                "css":  "var(--uedp-slate-500)",
+                                "varName":  "--uedp-slate-500"
+                            },
+    "VariableID:535:5211":  {
+                                "val":  "672px",
+                                "css":  "var(--uedp-max-w-max-w-2xl)",
+                                "varName":  "--uedp-max-w-max-w-2xl"
+                            },
+    "VariableID:394:5329":  {
+                                "val":  "256px",
+                                "css":  "var(--uedp-gap-gap-64)",
+                                "varName":  "--uedp-gap-gap-64"
+                            },
+    "VariableID:137:1455":  {
+                                "val":  "#0E7490",
+                                "css":  "var(--uedp-cyan-700)",
+                                "varName":  "--uedp-cyan-700"
+                            },
+    "VariableID:137:1463":  {
+                                "val":  "#38BDF8",
+                                "css":  "var(--uedp-sky-400)",
+                                "varName":  "--uedp-sky-400"
+                            },
+    "VariableID:137:1466":  {
+                                "val":  "#0369A1",
+                                "css":  "var(--uedp-sky-700)",
+                                "varName":  "--uedp-sky-700"
+                            },
+    "VariableID:528:3952":  {
+                                "val":  "512px",
+                                "css":  "var(--uedp-max-w-max-w-lg)",
+                                "varName":  "--uedp-max-w-max-w-lg"
+                            },
+    "VariableID:137:1477":  {
+                                "val":  "#1D4ED8",
+                                "css":  "var(--uedp-blue-700)",
+                                "varName":  "--uedp-blue-700"
+                            },
+    "VariableID:137:1525":  {
+                                "val":  "#FDF2F8",
+                                "css":  "var(--uedp-pink-50)",
+                                "varName":  "--uedp-pink-50"
+                            },
+    "VariableID:137:1488":  {
+                                "val":  "#4338CA",
+                                "css":  "var(--uedp-indigo-700)",
+                                "varName":  "--uedp-indigo-700"
+                            },
+    "VariableID:394:5324":  {
+                                "val":  "80px",
+                                "css":  "var(--uedp-gap-gap-20)",
+                                "varName":  "--uedp-gap-gap-20"
+                            },
+    "VariableID:394:5335":  {
+                                "val":  "30px",
+                                "css":  "var(--uedp-opacity-opacity-30)",
+                                "varName":  "--uedp-opacity-opacity-30"
+                            },
+    "VariableID:137:1535":  {
+                                "val":  "#500724",
+                                "css":  "var(--uedp-pink-950)",
+                                "varName":  "--uedp-pink-950"
+                            },
+    "VariableID:394:5342":  {
+                                "val":  "95px",
+                                "css":  "var(--uedp-opacity-opacity-95)",
+                                "varName":  "--uedp-opacity-opacity-95"
+                            },
+    "VariableID:137:1494":  {
+                                "val":  "#DDD6FE",
+                                "css":  "var(--uedp-violet-200)",
+                                "varName":  "--uedp-violet-200"
+                            },
+    "VariableID:137:1374":  {
+                                "val":  "#FDBA74",
+                                "css":  "var(--uedp-orange-300)",
+                                "varName":  "--uedp-orange-300"
+                            },
+    "VariableID:137:1392":  {
+                                "val":  "#451A03",
+                                "css":  "var(--uedp-amber-950)",
+                                "varName":  "--uedp-amber-950"
+                            },
+    "VariableID:137:1356":  {
+                                "val":  "#44403C",
+                                "css":  "var(--uedp-stone-700)",
+                                "varName":  "--uedp-stone-700"
+                            },
+    "VariableID:137:1347":  {
+                                "val":  "#171717",
+                                "css":  "var(--uedp-neutral-900)",
+                                "varName":  "--uedp-neutral-900"
+                            },
+    "VariableID:137:1317":  {
+                                "val":  "#F3F4F6",
+                                "css":  "var(--uedp-gray-100)",
+                                "varName":  "--uedp-gray-100"
+                            },
+    "VariableID:137:1369":  {
+                                "val":  "#7F1D1D",
+                                "css":  "var(--uedp-red-900)",
+                                "varName":  "--uedp-red-900"
+                            },
+    "VariableID:137:1553":  {
+                                "val":  "12px",
+                                "css":  "var(--uedp-border-radius-rounded-xl)",
+                                "varName":  "--uedp-border-radius-rounded-xl"
+                            },
+    "VariableID:137:1308":  {
+                                "val":  "#CBD5E1",
+                                "css":  "var(--uedp-slate-300)",
+                                "varName":  "--uedp-slate-300"
+                            },
+    "VariableID:137:1542":  {
+                                "val":  "#E11D48",
+                                "css":  "var(--uedp-rose-600)",
+                                "varName":  "--uedp-rose-600"
+                            },
+    "VariableID:137:1330":  {
+                                "val":  "#D4D4D8",
+                                "css":  "var(--uedp-zinc-300)",
+                                "varName":  "--uedp-zinc-300"
+                            },
+    "VariableID:137:1416":  {
+                                "val":  "#DCFCE7",
+                                "css":  "var(--uedp-green-100)",
+                                "varName":  "--uedp-green-100"
+                            },
+    "VariableID:137:1425":  {
+                                "val":  "#052E16",
+                                "css":  "var(--uedp-green-950)",
+                                "varName":  "--uedp-green-950"
+                            },
+    "VariableID:137:1502":  {
+                                "val":  "#2E1065",
+                                "css":  "var(--uedp-violet-950)",
+                                "varName":  "--uedp-violet-950"
+                            },
+    "VariableID:137:1434":  {
+                                "val":  "#065F46",
+                                "css":  "var(--uedp-emerald-800)",
+                                "varName":  "--uedp-emerald-800"
+                            },
+    "VariableID:137:1371":  {
+                                "val":  "#FFF7ED",
+                                "css":  "var(--uedp-orange-50)",
+                                "varName":  "--uedp-orange-50"
+                            },
+    "VariableID:459:1250":  {
+                                "val":  "6px",
+                                "css":  "var(--uedp-padding-p-15)",
+                                "varName":  "--uedp-padding-p-15"
+                            },
+    "VariableID:394:5341":  {
+                                "val":  "90px",
+                                "css":  "var(--uedp-opacity-opacity-90)",
+                                "varName":  "--uedp-opacity-opacity-90"
+                            },
+    "VariableID:535:5215":  {
+                                "val":  "1152px",
+                                "css":  "var(--uedp-max-w-max-w-6xl)",
+                                "varName":  "--uedp-max-w-max-w-6xl"
+                            },
+    "VariableID:137:1309":  {
+                                "val":  "#94A3B8",
+                                "css":  "var(--uedp-slate-400)",
+                                "varName":  "--uedp-slate-400"
+                            },
+    "VariableID:137:1520":  {
+                                "val":  "#C026D3",
+                                "css":  "var(--uedp-fuchsia-600)",
+                                "varName":  "--uedp-fuchsia-600"
+                            },
+    "VariableID:137:1543":  {
+                                "val":  "#BE123C",
+                                "css":  "var(--uedp-rose-700)",
+                                "varName":  "--uedp-rose-700"
+                            },
+    "VariableID:137:1313":  {
+                                "val":  "#1E293B",
+                                "css":  "var(--uedp-slate-800)",
+                                "varName":  "--uedp-slate-800"
+                            },
+    "VariableID:137:1561":  {
+                                "val":  "8px",
+                                "css":  "var(--uedp-gap-gap-2)",
+                                "varName":  "--uedp-gap-gap-2"
+                            },
+    "VariableID:137:1418":  {
+                                "val":  "#86EFAC",
+                                "css":  "var(--uedp-green-300)",
+                                "varName":  "--uedp-green-300"
+                            },
+    "VariableID:137:1531":  {
+                                "val":  "#DB2777",
+                                "css":  "var(--uedp-pink-600)",
+                                "varName":  "--uedp-pink-600"
+                            },
+    "VariableID:137:1320":  {
+                                "val":  "#9CA3AF",
+                                "css":  "var(--uedp-gray-400)",
+                                "varName":  "--uedp-gray-400"
+                            },
+    "VariableID:137:1424":  {
+                                "val":  "#14532D",
+                                "css":  "var(--uedp-green-900)",
+                                "varName":  "--uedp-green-900"
+                            },
+    "VariableID:137:1435":  {
+                                "val":  "#064E3B",
+                                "css":  "var(--uedp-emerald-900)",
+                                "varName":  "--uedp-emerald-900"
+                            },
+    "VariableID:137:1361":  {
+                                "val":  "#FEE2E2",
+                                "css":  "var(--uedp-red-100)",
+                                "varName":  "--uedp-red-100"
+                            },
+    "VariableID:137:1352":  {
+                                "val":  "#D6D3D1",
+                                "css":  "var(--uedp-stone-300)",
+                                "varName":  "--uedp-stone-300"
+                            },
+    "VariableID:137:1539":  {
+                                "val":  "#FDA4AF",
+                                "css":  "var(--uedp-rose-300)",
+                                "varName":  "--uedp-rose-300"
+                            },
+    "VariableID:137:1343":  {
+                                "val":  "#737373",
+                                "css":  "var(--uedp-neutral-500)",
+                                "varName":  "--uedp-neutral-500"
+                            },
+    "VariableID:394:5333":  {
+                                "val":  "20px",
+                                "css":  "var(--uedp-opacity-opacity-20)",
+                                "varName":  "--uedp-opacity-opacity-20"
+                            },
+    "VariableID:137:1557":  {
+                                "val":  "0px",
+                                "css":  "var(--uedp-gap-gap-0)",
+                                "varName":  "--uedp-gap-gap-0"
+                            },
+    "VariableID:137:1515":  {
+                                "val":  "#FAE8FF",
+                                "css":  "var(--uedp-fuchsia-100)",
+                                "varName":  "--uedp-fuchsia-100"
+                            },
+    "VariableID:137:1546":  {
+                                "val":  "#4C0519",
+                                "css":  "var(--uedp-rose-950)",
+                                "varName":  "--uedp-rose-950"
+                            },
+    "VariableID:137:1495":  {
+                                "val":  "#C4B5FD",
+                                "css":  "var(--uedp-violet-300)",
+                                "varName":  "--uedp-violet-300"
+                            },
+    "VariableID:137:1331":  {
+                                "val":  "#A1A1AA",
+                                "css":  "var(--uedp-zinc-400)",
+                                "varName":  "--uedp-zinc-400"
+                            },
+    "VariableID:137:1442":  {
+                                "val":  "#14B8A6",
+                                "css":  "var(--uedp-teal-500)",
+                                "varName":  "--uedp-teal-500"
+                            },
+    "VariableID:137:1453":  {
+                                "val":  "#06B6D4",
+                                "css":  "var(--uedp-cyan-500)",
+                                "varName":  "--uedp-cyan-500"
+                            },
+    "VariableID:137:1471":  {
+                                "val":  "#DBEAFE",
+                                "css":  "var(--uedp-blue-100)",
+                                "varName":  "--uedp-blue-100"
+                            },
+    "VariableID:137:1334":  {
+                                "val":  "#3F3F46",
+                                "css":  "var(--uedp-zinc-700)",
+                                "varName":  "--uedp-zinc-700"
+                            },
+    "VariableID:137:1412":  {
+                                "val":  "#3F6212",
+                                "css":  "var(--uedp-lime-800)",
+                                "varName":  "--uedp-lime-800"
+                            },
+    "VariableID:394:5340":  {
+                                "val":  "80px",
+                                "css":  "var(--uedp-opacity-opacity-80)",
+                                "varName":  "--uedp-opacity-opacity-80"
+                            },
+    "VariableID:137:1421":  {
+                                "val":  "#16A34A",
+                                "css":  "var(--uedp-green-600)",
+                                "varName":  "--uedp-green-600"
+                            },
+    "VariableID:137:1506":  {
+                                "val":  "#D8B4FE",
+                                "css":  "var(--uedp-purple-300)",
+                                "varName":  "--uedp-purple-300"
+                            },
+    "VariableID:137:1386":  {
+                                "val":  "#FBBF24",
+                                "css":  "var(--uedp-amber-400)",
+                                "varName":  "--uedp-amber-400"
+                            },
+    "VariableID:137:1339":  {
+                                "val":  "#F5F5F5",
+                                "css":  "var(--uedp-neutral-100)",
+                                "varName":  "--uedp-neutral-100"
+                            },
+    "VariableID:137:1328":  {
+                                "val":  "#F4F4F5",
+                                "css":  "var(--uedp-zinc-100)",
+                                "varName":  "--uedp-zinc-100"
+                            },
+    "VariableID:137:1350":  {
+                                "val":  "#F5F5F4",
+                                "css":  "var(--uedp-stone-100)",
+                                "varName":  "--uedp-stone-100"
+                            },
+    "VariableID:137:1414":  {
+                                "val":  "#111111",
+                                "css":  "var(--uedp-lime-950)",
+                                "varName":  "--uedp-lime-950"
+                            },
+    "VariableID:459:1259":  {
+                                "val":  "32px",
+                                "css":  "var(--uedp-padding-p-8)",
+                                "varName":  "--uedp-padding-p-8"
+                            },
+    "VariableID:459:1248":  {
+                                "val":  "2px",
+                                "css":  "var(--uedp-padding-p-05)",
+                                "varName":  "--uedp-padding-p-05"
+                            },
+    "VariableID:137:1460":  {
+                                "val":  "#E0F2FE",
+                                "css":  "var(--uedp-sky-100)",
+                                "varName":  "--uedp-sky-100"
+                            },
+    "VariableID:394:5332":  {
+                                "val":  "10px",
+                                "css":  "var(--uedp-opacity-opacity-10)",
+                                "varName":  "--uedp-opacity-opacity-10"
+                            },
+    "VariableID:137:1375":  {
+                                "val":  "#FB923C",
+                                "css":  "var(--uedp-orange-400)",
+                                "varName":  "--uedp-orange-400"
+                            },
+    "VariableID:137:1556":  {
+                                "val":  "9999px",
+                                "css":  "var(--uedp-border-radius-rounded-full)",
+                                "varName":  "--uedp-border-radius-rounded-full"
+                            },
+    "VariableID:137:1565":  {
+                                "val":  "24px",
+                                "css":  "var(--uedp-gap-gap-6)",
+                                "varName":  "--uedp-gap-gap-6"
+                            },
+    "VariableID:137:1470":  {
+                                "val":  "#EFF6FF",
+                                "css":  "var(--uedp-blue-50)",
+                                "varName":  "--uedp-blue-50"
+                            },
+    "VariableID:137:1399":  {
+                                "val":  "#CA8A04",
+                                "css":  "var(--uedp-yellow-600)",
+                                "varName":  "--uedp-yellow-600"
+                            },
+    "VariableID:137:1388":  {
+                                "val":  "#D97706",
+                                "css":  "var(--uedp-amber-600)",
+                                "varName":  "--uedp-amber-600"
+                            },
+    "VariableID:137:1431":  {
+                                "val":  "#10B981",
+                                "css":  "var(--uedp-emerald-500)",
+                                "varName":  "--uedp-emerald-500"
+                            },
+    "VariableID:459:1261":  {
+                                "val":  "40px",
+                                "css":  "var(--uedp-padding-p-10)",
+                                "varName":  "--uedp-padding-p-10"
+                            },
+    "VariableID:459:1252":  {
+                                "val":  "10px",
+                                "css":  "var(--uedp-padding-p-25)",
+                                "varName":  "--uedp-padding-p-25"
+                            },
+    "VariableID:459:1257":  {
+                                "val":  "24px",
+                                "css":  "var(--uedp-padding-p-6)",
+                                "varName":  "--uedp-padding-p-6"
+                            },
+    "VariableID:535:5220":  {
+                                "val":  "1280px",
+                                "css":  "var(--uedp-max-w-max-w-screen-xl)",
+                                "varName":  "--uedp-max-w-max-w-screen-xl"
+                            },
+    "VariableID:535:5213":  {
+                                "val":  "896px",
+                                "css":  "var(--uedp-max-w-max-w-4xl)",
+                                "varName":  "--uedp-max-w-max-w-4xl"
+                            },
+    "VariableID:137:1419":  {
+                                "val":  "#4ADE80",
+                                "css":  "var(--uedp-green-400)",
+                                "varName":  "--uedp-green-400"
+                            },
+    "VariableID:137:1446":  {
+                                "val":  "#134E4A",
+                                "css":  "var(--uedp-teal-900)",
+                                "varName":  "--uedp-teal-900"
+                            },
+    "VariableID:137:1457":  {
+                                "val":  "#164E63",
+                                "css":  "var(--uedp-cyan-900)",
+                                "varName":  "--uedp-cyan-900"
+                            },
+    "VariableID:137:1410":  {
+                                "val":  "#65A30D",
+                                "css":  "var(--uedp-lime-600)",
+                                "varName":  "--uedp-lime-600"
+                            },
+    "VariableID:137:1524":  {
+                                "val":  "#4A044E",
+                                "css":  "var(--uedp-fuchsia-950)",
+                                "varName":  "--uedp-fuchsia-950"
+                            },
+    "VariableID:137:1397":  {
+                                "val":  "#FACC15",
+                                "css":  "var(--uedp-yellow-400)",
+                                "varName":  "--uedp-yellow-400"
+                            },
+    "VariableID:137:1478":  {
+                                "val":  "#1E40AF",
+                                "css":  "var(--uedp-blue-800)",
+                                "varName":  "--uedp-blue-800"
+                            },
+    "VariableID:137:1487":  {
+                                "val":  "#4F46E5",
+                                "css":  "var(--uedp-indigo-600)",
+                                "varName":  "--uedp-indigo-600"
+                            },
+    "VariableID:137:1496":  {
+                                "val":  "#A78BFA",
+                                "css":  "var(--uedp-violet-400)",
+                                "varName":  "--uedp-violet-400"
+                            },
+    "VariableID:137:1398":  {
+                                "val":  "#EAB308",
+                                "css":  "var(--uedp-yellow-500)",
+                                "varName":  "--uedp-yellow-500"
+                            },
+    "VariableID:137:1404":  {
+                                "val":  "#F7FEE7",
+                                "css":  "var(--uedp-lime-50)",
+                                "varName":  "--uedp-lime-50"
+                            },
+    "VariableID:137:1389":  {
+                                "val":  "#B45309",
+                                "css":  "var(--uedp-amber-700)",
+                                "varName":  "--uedp-amber-700"
+                            },
+    "VariableID:137:1393":  {
+                                "val":  "#FEFCE8",
+                                "css":  "var(--uedp-yellow-50)",
+                                "varName":  "--uedp-yellow-50"
+                            },
+    "VariableID:137:1367":  {
+                                "val":  "#B91C1C",
+                                "css":  "var(--uedp-red-700)",
+                                "varName":  "--uedp-red-700"
+                            },
+    "VariableID:137:1354":  {
+                                "val":  "#78716C",
+                                "css":  "var(--uedp-stone-500)",
+                                "varName":  "--uedp-stone-500"
+                            },
+    "VariableID:137:1314":  {
+                                "val":  "#0F172A",
+                                "css":  "var(--uedp-slate-900)",
+                                "varName":  "--uedp-slate-900"
+                            },
+    "VariableID:137:1345":  {
+                                "val":  "#404040",
+                                "css":  "var(--uedp-neutral-700)",
+                                "varName":  "--uedp-neutral-700"
+                            },
+    "VariableID:137:1458":  {
+                                "val":  "#083344",
+                                "css":  "var(--uedp-cyan-950)",
+                                "varName":  "--uedp-cyan-950"
+                            },
+    "VariableID:137:1563":  {
+                                "val":  "16px",
+                                "css":  "var(--uedp-gap-gap-4)",
+                                "varName":  "--uedp-gap-gap-4"
+                            },
+    "VariableID:137:1444":  {
+                                "val":  "#0F766E",
+                                "css":  "var(--uedp-teal-700)",
+                                "varName":  "--uedp-teal-700"
+                            },
+    "VariableID:137:1454":  {
+                                "val":  "#0891B2",
+                                "css":  "var(--uedp-cyan-600)",
+                                "varName":  "--uedp-cyan-600"
+                            },
+    "VariableID:394:5339":  {
+                                "val":  "70px",
+                                "css":  "var(--uedp-opacity-opacity-70)",
+                                "varName":  "--uedp-opacity-opacity-70"
+                            },
+    "VariableID:137:1395":  {
+                                "val":  "#FEF08A",
+                                "css":  "var(--uedp-yellow-200)",
+                                "varName":  "--uedp-yellow-200"
+                            },
+    "VariableID:137:1476":  {
+                                "val":  "#2563EB",
+                                "css":  "var(--uedp-blue-600)",
+                                "varName":  "--uedp-blue-600"
+                            },
+    "VariableID:137:1528":  {
+                                "val":  "#F9A8D4",
+                                "css":  "var(--uedp-pink-300)",
+                                "varName":  "--uedp-pink-300"
+                            },
+    "VariableID:394:5325":  {
+                                "val":  "72px",
+                                "css":  "var(--uedp-gap-gap-18)",
+                                "varName":  "--uedp-gap-gap-18"
+                            },
+    "VariableID:137:1498":  {
+                                "val":  "#7C3AED",
+                                "css":  "var(--uedp-violet-600)",
+                                "varName":  "--uedp-violet-600"
+                            },
+    "VariableID:394:5334":  {
+                                "val":  "25px",
+                                "css":  "var(--uedp-opacity-opacity-25)",
+                                "varName":  "--uedp-opacity-opacity-25"
+                            },
+    "VariableID:137:1387":  {
+                                "val":  "#F59E0B",
+                                "css":  "var(--uedp-amber-500)",
+                                "varName":  "--uedp-amber-500"
+                            },
+    "VariableID:394:5343":  {
+                                "val":  "100px",
+                                "css":  "var(--uedp-opacity-opacity-100)",
+                                "varName":  "--uedp-opacity-opacity-100"
+                            },
+    "VariableID:137:1497":  {
+                                "val":  "#8B5CF6",
+                                "css":  "var(--uedp-violet-500)",
+                                "varName":  "--uedp-violet-500"
+                            },
+    "VariableID:137:1332":  {
+                                "val":  "#71717A",
+                                "css":  "var(--uedp-zinc-500)",
+                                "varName":  "--uedp-zinc-500"
+                            },
+    "VariableID:137:1357":  {
+                                "val":  "#292524",
+                                "css":  "var(--uedp-stone-800)",
+                                "varName":  "--uedp-stone-800"
+                            },
+    "VariableID:137:1346":  {
+                                "val":  "#262626",
+                                "css":  "var(--uedp-neutral-800)",
+                                "varName":  "--uedp-neutral-800"
+                            },
+    "VariableID:535:5217":  {
+                                "val":  "640px",
+                                "css":  "var(--uedp-max-w-max-w-screen-sm)",
+                                "varName":  "--uedp-max-w-max-w-screen-sm"
+                            },
+    "VariableID:137:1307":  {
+                                "val":  "#E2E8F0",
+                                "css":  "var(--uedp-slate-200)",
+                                "varName":  "--uedp-slate-200"
+                            },
+    "VariableID:394:5327":  {
+                                "val":  "112px",
+                                "css":  "var(--uedp-gap-gap-28)",
+                                "varName":  "--uedp-gap-gap-28"
+                            },
+    "VariableID:314:35":  {
+                              "val":  "64px",
+                              "css":  "var(--uedp-gap-gap-16)",
+                              "varName":  "--uedp-gap-gap-16"
+                          },
+    "VariableID:137:1503":  {
+                                "val":  "#FAF5FF",
+                                "css":  "var(--uedp-purple-50)",
+                                "varName":  "--uedp-purple-50"
+                            },
+    "VariableID:137:1443":  {
+                                "val":  "#0D9488",
+                                "css":  "var(--uedp-teal-600)",
+                                "varName":  "--uedp-teal-600"
+                            },
+    "VariableID:137:1529":  {
+                                "val":  "#F472B6",
+                                "css":  "var(--uedp-pink-400)",
+                                "varName":  "--uedp-pink-400"
+                            },
+    "VariableID:137:1499":  {
+                                "val":  "#6D28D9",
+                                "css":  "var(--uedp-violet-700)",
+                                "varName":  "--uedp-violet-700"
+                            },
+    "VariableID:137:1400":  {
+                                "val":  "#A16207",
+                                "css":  "var(--uedp-yellow-700)",
+                                "varName":  "--uedp-yellow-700"
+                            },
+    "VariableID:137:1467":  {
+                                "val":  "#075985",
+                                "css":  "var(--uedp-sky-800)",
+                                "varName":  "--uedp-sky-800"
+                            },
+    "VariableID:137:1341":  {
+                                "val":  "#D4D4D4",
+                                "css":  "var(--uedp-neutral-300)",
+                                "varName":  "--uedp-neutral-300"
+                            },
+    "VariableID:137:1570":  {
+                                "val":  "44px",
+                                "css":  "var(--uedp-gap-gap-11)",
+                                "varName":  "--uedp-gap-gap-11"
+                            },
+    "VariableID:528:3949":  {
+                                "val":  "384px",
+                                "css":  "var(--uedp-max-w-max-w-sm)",
+                                "varName":  "--uedp-max-w-max-w-sm"
+                            },
+    "VariableID:314:34":  {
+                              "val":  "56px",
+                              "css":  "var(--uedp-gap-gap-14)",
+                              "varName":  "--uedp-gap-gap-14"
+                          },
+    "VariableID:137:1306":  {
+                                "val":  "#F1F5F9",
+                                "css":  "var(--uedp-slate-100)",
+                                "varName":  "--uedp-slate-100"
+                            },
+    "VariableID:137:1508":  {
+                                "val":  "#A855F7",
+                                "css":  "var(--uedp-purple-500)",
+                                "varName":  "--uedp-purple-500"
+                            },
+    "VariableID:137:1571":  {
+                                "val":  "48px",
+                                "css":  "var(--uedp-gap-gap-12)",
+                                "varName":  "--uedp-gap-gap-12"
+                            },
+    "VariableID:137:1428":  {
+                                "val":  "#A7F3D0",
+                                "css":  "var(--uedp-emerald-200)",
+                                "varName":  "--uedp-emerald-200"
+                            },
+    "VariableID:137:1319":  {
+                                "val":  "#D1D5DB",
+                                "css":  "var(--uedp-gray-300)",
+                                "varName":  "--uedp-gray-300"
+                            },
+    "VariableID:137:1402":  {
+                                "val":  "#713F12",
+                                "css":  "var(--uedp-yellow-900)",
+                                "varName":  "--uedp-yellow-900"
+                            },
+    "VariableID:137:1321":  {
+                                "val":  "#6B7280",
+                                "css":  "var(--uedp-gray-500)",
+                                "varName":  "--uedp-gray-500"
+                            },
+    "VariableID:137:1510":  {
+                                "val":  "#7E22CE",
+                                "css":  "var(--uedp-purple-700)",
+                                "varName":  "--uedp-purple-700"
+                            },
+    "VariableID:137:1312":  {
+                                "val":  "#334155",
+                                "css":  "var(--uedp-slate-700)",
+                                "varName":  "--uedp-slate-700"
+                            },
+    "VariableID:137:1353":  {
+                                "val":  "#A8A29E",
+                                "css":  "var(--uedp-stone-400)",
+                                "varName":  "--uedp-stone-400"
+                            },
+    "VariableID:459:1254":  {
+                                "val":  "14px",
+                                "css":  "var(--uedp-padding-p-35)",
+                                "varName":  "--uedp-padding-p-35"
+                            },
+    "VariableID:137:1342":  {
+                                "val":  "#A3A3A3",
+                                "css":  "var(--uedp-neutral-400)",
+                                "varName":  "--uedp-neutral-400"
+                            },
+    "VariableID:137:1303":  {
+                                "val":  "#000000",
+                                "css":  "var(--uedp-base-black)",
+                                "varName":  "--uedp-base-black"
+                            },
+    "VariableID:137:1549":  {
+                                "val":  "2px",
+                                "css":  "var(--uedp-border-radius-rounded-sm)",
+                                "varName":  "--uedp-border-radius-rounded-sm"
+                            },
+    "VariableID:137:1363":  {
+                                "val":  "#FCA5A5",
+                                "css":  "var(--uedp-red-300)",
+                                "varName":  "--uedp-red-300"
+                            },
+    "VariableID:137:1452":  {
+                                "val":  "#22D3EE",
+                                "css":  "var(--uedp-cyan-400)",
+                                "varName":  "--uedp-cyan-400"
+                            },
+    "VariableID:137:1461":  {
+                                "val":  "#BAE6FD",
+                                "css":  "var(--uedp-sky-200)",
+                                "varName":  "--uedp-sky-200"
+                            },
+    "VariableID:137:1390":  {
+                                "val":  "#92400E",
+                                "css":  "var(--uedp-amber-800)",
+                                "varName":  "--uedp-amber-800"
+                            },
+    "VariableID:137:1490":  {
+                                "val":  "#312E81",
+                                "css":  "var(--uedp-indigo-900)",
+                                "varName":  "--uedp-indigo-900"
+                            },
+    "VariableID:137:1335":  {
+                                "val":  "#27272A",
+                                "css":  "var(--uedp-zinc-800)",
+                                "varName":  "--uedp-zinc-800"
+                            },
+    "VariableID:137:1324":  {
+                                "val":  "#1F2937",
+                                "css":  "var(--uedp-gray-800)",
+                                "varName":  "--uedp-gray-800"
+                            },
+    "VariableID:137:1507":  {
+                                "val":  "#C084FC",
+                                "css":  "var(--uedp-purple-400)",
+                                "varName":  "--uedp-purple-400"
+                            },
+    "VariableID:137:1318":  {
+                                "val":  "#E5E7EB",
+                                "css":  "var(--uedp-gray-200)",
+                                "varName":  "--uedp-gray-200"
+                            },
+    "VariableID:137:1403":  {
+                                "val":  "#422006",
+                                "css":  "var(--uedp-yellow-950)",
+                                "varName":  "--uedp-yellow-950"
+                            },
+    "VariableID:459:1255":  {
+                                "val":  "16px",
+                                "css":  "var(--uedp-padding-p-4)",
+                                "varName":  "--uedp-padding-p-4"
+                            },
+    "VariableID:137:1472":  {
+                                "val":  "#BFDBFE",
+                                "css":  "var(--uedp-blue-200)",
+                                "varName":  "--uedp-blue-200"
+                            },
+    "VariableID:137:1448":  {
+                                "val":  "#ECFEFF",
+                                "css":  "var(--uedp-cyan-50)",
+                                "varName":  "--uedp-cyan-50"
+                            },
+    "VariableID:137:1523":  {
+                                "val":  "#701A75",
+                                "css":  "var(--uedp-fuchsia-900)",
+                                "varName":  "--uedp-fuchsia-900"
+                            },
+    "VariableID:137:1564":  {
+                                "val":  "20px",
+                                "css":  "var(--uedp-gap-gap-5)",
+                                "varName":  "--uedp-gap-gap-5"
+                            },
+    "VariableID:137:1481":  {
+                                "val":  "#EEF2FF",
+                                "css":  "var(--uedp-indigo-50)",
+                                "varName":  "--uedp-indigo-50"
+                            },
+    "VariableID:137:1406":  {
+                                "val":  "#D9F99D",
+                                "css":  "var(--uedp-lime-200)",
+                                "varName":  "--uedp-lime-200"
+                            },
+    "VariableID:137:1325":  {
+                                "val":  "#111827",
+                                "css":  "var(--uedp-gray-900)",
+                                "varName":  "--uedp-gray-900"
+                            },
+    "VariableID:137:1316":  {
+                                "val":  "#F9FAFB",
+                                "css":  "var(--uedp-gray-50)",
+                                "varName":  "--uedp-gray-50"
+                            },
+    "VariableID:459:1253":  {
+                                "val":  "12px",
+                                "css":  "var(--uedp-padding-p-3)",
+                                "varName":  "--uedp-padding-p-3"
+                            },
+    "VariableID:535:5212":  {
+                                "val":  "768px",
+                                "css":  "var(--uedp-max-w-max-w-3xl)",
+                                "varName":  "--uedp-max-w-max-w-3xl"
+                            },
+    "VariableID:528:3950":  {
+                                "val":  "320px",
+                                "css":  "var(--uedp-max-w-max-w-xs)",
+                                "varName":  "--uedp-max-w-max-w-xs"
+                            },
+    "VariableID:535:5221":  {
+                                "val":  "1536px",
+                                "css":  "var(--uedp-max-w-max-w-screen-2xl)",
+                                "varName":  "--uedp-max-w-max-w-screen-2xl"
+                            },
+    "VariableID:137:1447":  {
+                                "val":  "#042F2E",
+                                "css":  "var(--uedp-teal-950)",
+                                "varName":  "--uedp-teal-950"
+                            },
+    "VariableID:137:1456":  {
+                                "val":  "#155E75",
+                                "css":  "var(--uedp-cyan-800)",
+                                "varName":  "--uedp-cyan-800"
+                            },
+    "VariableID:137:1465":  {
+                                "val":  "#0284C7",
+                                "css":  "var(--uedp-sky-600)",
+                                "varName":  "--uedp-sky-600"
+                            },
+    "VariableID:137:1537":  {
+                                "val":  "#FFE4E6",
+                                "css":  "var(--uedp-rose-100)",
+                                "varName":  "--uedp-rose-100"
+                            },
+    "VariableID:137:1394":  {
+                                "val":  "#FEF9C3",
+                                "css":  "var(--uedp-yellow-100)",
+                                "varName":  "--uedp-yellow-100"
+                            },
+    "VariableID:137:1385":  {
+                                "val":  "#FCD34D",
+                                "css":  "var(--uedp-amber-300)",
+                                "varName":  "--uedp-amber-300"
+                            },
+    "VariableID:137:1491":  {
+                                "val":  "#1E1B4B",
+                                "css":  "var(--uedp-indigo-950)",
+                                "varName":  "--uedp-indigo-950"
+                            },
+    "VariableID:137:1407":  {
+                                "val":  "#BEF264",
+                                "css":  "var(--uedp-lime-300)",
+                                "varName":  "--uedp-lime-300"
+                            },
+    "VariableID:137:1377":  {
+                                "val":  "#EA580C",
+                                "css":  "var(--uedp-orange-600)",
+                                "varName":  "--uedp-orange-600"
+                            },
+    "VariableID:137:1366":  {
+                                "val":  "#DC2626",
+                                "css":  "var(--uedp-red-600)",
+                                "varName":  "--uedp-red-600"
+                            },
+    "VariableID:137:1355":  {
+                                "val":  "#57534E",
+                                "css":  "var(--uedp-stone-600)",
+                                "varName":  "--uedp-stone-600"
+                            },
+    "VariableID:137:1344":  {
+                                "val":  "#525252",
+                                "css":  "var(--uedp-neutral-600)",
+                                "varName":  "--uedp-neutral-600"
+                            },
+    "VariableID:535:5219":  {
+                                "val":  "1024px",
+                                "css":  "var(--uedp-max-w-max-w-screen-lg)",
+                                "varName":  "--uedp-max-w-max-w-screen-lg"
+                            },
+    "VariableID:137:1558":  {
+                                "val":  "1px",
+                                "css":  "var(--uedp-gap-gap-px)",
+                                "varName":  "--uedp-gap-gap-px"
+                            },
+    "VariableID:137:1333":  {
+                                "val":  "#52525B",
+                                "css":  "var(--uedp-zinc-600)",
+                                "varName":  "--uedp-zinc-600"
+                            },
+    "VariableID:394:5338":  {
+                                "val":  "60px",
+                                "css":  "var(--uedp-opacity-opacity-60)",
+                                "varName":  "--uedp-opacity-opacity-60"
+                            },
+    "VariableID:137:1536":  {
+                                "val":  "#FFF1F2",
+                                "css":  "var(--uedp-rose-50)",
+                                "varName":  "--uedp-rose-50"
+                            },
+    "VariableID:137:1527":  {
+                                "val":  "#FBCFE8",
+                                "css":  "var(--uedp-pink-200)",
+                                "varName":  "--uedp-pink-200"
+                            },
+    "VariableID:137:1391":  {
+                                "val":  "#78350F",
+                                "css":  "var(--uedp-amber-900)",
+                                "varName":  "--uedp-amber-900"
+                            },
+    "VariableID:137:1379":  {
+                                "val":  "#9A3412",
+                                "css":  "var(--uedp-orange-800)",
+                                "varName":  "--uedp-orange-800"
+                            },
+    "VariableID:137:1368":  {
+                                "val":  "#991B1B",
+                                "css":  "var(--uedp-red-800)",
+                                "varName":  "--uedp-red-800"
+                            },
+    "VariableID:137:1550":  {
+                                "val":  "4px",
+                                "css":  "var(--uedp-border-radius-rounded)",
+                                "varName":  "--uedp-border-radius-rounded"
+                            },
+    "VariableID:535:5216":  {
+                                "val":  "1280px",
+                                "css":  "var(--uedp-max-w-max-w-7xl)",
+                                "varName":  "--uedp-max-w-max-w-7xl"
+                            },
+    "VariableID:137:1541":  {
+                                "val":  "#F43F5E",
+                                "css":  "var(--uedp-rose-500)",
+                                "varName":  "--uedp-rose-500"
+                            },
+    "VariableID:137:1511":  {
+                                "val":  "#6B21A8",
+                                "css":  "var(--uedp-purple-800)",
+                                "varName":  "--uedp-purple-800"
+                            },
+    "VariableID:137:1304":  {
+                                "val":  "#FFFFFF",
+                                "css":  "var(--uedp-base-white)",
+                                "varName":  "--uedp-base-white"
+                            },
+    "VariableID:137:1415":  {
+                                "val":  "#F0FDF4",
+                                "css":  "var(--uedp-green-50)",
+                                "varName":  "--uedp-green-50"
+                            },
+    "VariableID:137:1426":  {
+                                "val":  "#ECFDF5",
+                                "css":  "var(--uedp-emerald-50)",
+                                "varName":  "--uedp-emerald-50"
+                            },
+    "VariableID:137:1437":  {
+                                "val":  "#F0FDFA",
+                                "css":  "var(--uedp-teal-50)",
+                                "varName":  "--uedp-teal-50"
+                            },
+    "VariableID:459:1260":  {
+                                "val":  "36px",
+                                "css":  "var(--uedp-padding-p-9)",
+                                "varName":  "--uedp-padding-p-9"
+                            },
+    "VariableID:137:1323":  {
+                                "val":  "#374151",
+                                "css":  "var(--uedp-gray-700)",
+                                "varName":  "--uedp-gray-700"
+                            },
+    "VariableID:137:1430":  {
+                                "val":  "#34D399",
+                                "css":  "var(--uedp-emerald-400)",
+                                "varName":  "--uedp-emerald-400"
+                            },
+    "VariableID:137:1373":  {
+                                "val":  "#FED7AA",
+                                "css":  "var(--uedp-orange-200)",
+                                "varName":  "--uedp-orange-200"
+                            },
+    "VariableID:137:1362":  {
+                                "val":  "#FECACA",
+                                "css":  "var(--uedp-red-200)",
+                                "varName":  "--uedp-red-200"
+                            },
+    "VariableID:137:1380":  {
+                                "val":  "#7C2D12",
+                                "css":  "var(--uedp-orange-900)",
+                                "varName":  "--uedp-orange-900"
+                            },
+    "VariableID:137:1440":  {
+                                "val":  "#5EEAD4",
+                                "css":  "var(--uedp-teal-300)",
+                                "varName":  "--uedp-teal-300"
+                            },
+    "VariableID:137:1540":  {
+                                "val":  "#FB7185",
+                                "css":  "var(--uedp-rose-400)",
+                                "varName":  "--uedp-rose-400"
+                            },
+    "VariableID:137:1337":  {
+                                "val":  "#09090B",
+                                "css":  "var(--uedp-zinc-950)",
+                                "varName":  "--uedp-zinc-950"
+                            },
+    "VariableID:137:1370":  {
+                                "val":  "#450A0A",
+                                "css":  "var(--uedp-red-950)",
+                                "varName":  "--uedp-red-950"
+                            },
+    "VariableID:137:1509":  {
+                                "val":  "#9333EA",
+                                "css":  "var(--uedp-purple-600)",
+                                "varName":  "--uedp-purple-600"
+                            },
+    "VariableID:137:1439":  {
+                                "val":  "#99F6E4",
+                                "css":  "var(--uedp-teal-200)",
+                                "varName":  "--uedp-teal-200"
+                            },
+    "VariableID:137:1429":  {
+                                "val":  "#6EE7B7",
+                                "css":  "var(--uedp-emerald-300)",
+                                "varName":  "--uedp-emerald-300"
+                            },
+    "VariableID:137:1438":  {
+                                "val":  "#CCFBF1",
+                                "css":  "var(--uedp-teal-100)",
+                                "varName":  "--uedp-teal-100"
+                            },
+    "VariableID:137:1554":  {
+                                "val":  "16px",
+                                "css":  "var(--uedp-border-radius-rounded-2xl)",
+                                "varName":  "--uedp-border-radius-rounded-2xl"
+                            },
+    "VariableID:137:1545":  {
+                                "val":  "#881337",
+                                "css":  "var(--uedp-rose-900)",
+                                "varName":  "--uedp-rose-900"
+                            },
+    "VariableID:137:1450":  {
+                                "val":  "#A5F3FC",
+                                "css":  "var(--uedp-cyan-200)",
+                                "varName":  "--uedp-cyan-200"
+                            },
+    "VariableID:137:1559":  {
+                                "val":  "2px",
+                                "css":  "var(--uedp-gap-gap-05)",
+                                "varName":  "--uedp-gap-gap-05"
+                            },
+    "VariableID:137:1485":  {
+                                "val":  "#818CF8",
+                                "css":  "var(--uedp-indigo-400)",
+                                "varName":  "--uedp-indigo-400"
+                            },
+    "VariableID:137:1548":  {
+                                "val":  "0px",
+                                "css":  "var(--uedp-border-radius-rounded-none)",
+                                "varName":  "--uedp-border-radius-rounded-none"
+                            },
+    "VariableID:535:5214":  {
+                                "val":  "1024px",
+                                "css":  "var(--uedp-max-w-max-w-5xl)",
+                                "varName":  "--uedp-max-w-max-w-5xl"
+                            },
+    "VariableID:137:1530":  {
+                                "val":  "#EC4899",
+                                "css":  "var(--uedp-pink-500)",
+                                "varName":  "--uedp-pink-500"
+                            },
+    "VariableID:137:1411":  {
+                                "val":  "#4D7C0F",
+                                "css":  "var(--uedp-lime-700)",
+                                "varName":  "--uedp-lime-700"
+                            },
+    "VariableID:137:1512":  {
+                                "val":  "#581C87",
+                                "css":  "var(--uedp-purple-900)",
+                                "varName":  "--uedp-purple-900"
+                            },
+    "VariableID:137:1422":  {
+                                "val":  "#15803D",
+                                "css":  "var(--uedp-green-700)",
+                                "varName":  "--uedp-green-700"
+                            },
+    "VariableID:137:1480":  {
+                                "val":  "#172554",
+                                "css":  "var(--uedp-blue-950)",
+                                "varName":  "--uedp-blue-950"
+                            },
+    "VariableID:137:1433":  {
+                                "val":  "#047857",
+                                "css":  "var(--uedp-emerald-700)",
+                                "varName":  "--uedp-emerald-700"
+                            },
+    "VariableID:137:1336":  {
+                                "val":  "#18181B",
+                                "css":  "var(--uedp-zinc-900)",
+                                "varName":  "--uedp-zinc-900"
+                            },
+    "VariableID:137:1327":  {
+                                "val":  "#FAFAFA",
+                                "css":  "var(--uedp-zinc-50)",
+                                "varName":  "--uedp-zinc-50"
+                            },
+    "VariableID:137:1360":  {
+                                "val":  "#FEF2F2",
+                                "css":  "var(--uedp-red-50)",
+                                "varName":  "--uedp-red-50"
+                            },
+    "VariableID:459:1262":  {
+                                "val":  "44px",
+                                "css":  "var(--uedp-padding-p-11)",
+                                "varName":  "--uedp-padding-p-11"
+                            },
+    "VariableID:459:1251":  {
+                                "val":  "8px",
+                                "css":  "var(--uedp-padding-p-2)",
+                                "varName":  "--uedp-padding-p-2"
+                            },
+    "VariableID:137:1518":  {
+                                "val":  "#E879F9",
+                                "css":  "var(--uedp-fuchsia-400)",
+                                "varName":  "--uedp-fuchsia-400"
+                            },
+    "VariableID:137:1449":  {
+                                "val":  "#CFFAFE",
+                                "css":  "var(--uedp-cyan-100)",
+                                "varName":  "--uedp-cyan-100"
+                            },
+    "VariableID:137:1517":  {
+                                "val":  "#F0ABFC",
+                                "css":  "var(--uedp-fuchsia-300)",
+                                "varName":  "--uedp-fuchsia-300"
+                            },
+    "VariableID:137:1420":  {
+                                "val":  "#22C55E",
+                                "css":  "var(--uedp-green-500)",
+                                "varName":  "--uedp-green-500"
+                            },
+    "VariableID:137:1372":  {
+                                "val":  "#FFEDD5",
+                                "css":  "var(--uedp-orange-100)",
+                                "varName":  "--uedp-orange-100"
+                            },
+    "VariableID:137:1482":  {
+                                "val":  "#E0E7FF",
+                                "css":  "var(--uedp-indigo-100)",
+                                "varName":  "--uedp-indigo-100"
+                            },
+    "VariableID:137:1493":  {
+                                "val":  "#EDE9FE",
+                                "css":  "var(--uedp-violet-100)",
+                                "varName":  "--uedp-violet-100"
+                            },
+    "VariableID:137:1383":  {
+                                "val":  "#FEF3C7",
+                                "css":  "var(--uedp-amber-100)",
+                                "varName":  "--uedp-amber-100"
+                            },
+    "VariableID:137:1409":  {
+                                "val":  "#84CC16",
+                                "css":  "var(--uedp-lime-500)",
+                                "varName":  "--uedp-lime-500"
+                            },
+    "VariableID:459:1263":  {
+                                "val":  "48px",
+                                "css":  "var(--uedp-padding-p-12)",
+                                "varName":  "--uedp-padding-p-12"
+                            },
+    "VariableID:137:1516":  {
+                                "val":  "#F5D0FE",
+                                "css":  "var(--uedp-fuchsia-200)",
+                                "varName":  "--uedp-fuchsia-200"
+                            },
+    "VariableID:535:5210":  {
+                                "val":  "576px",
+                                "css":  "var(--uedp-max-w-max-w-xl)",
+                                "varName":  "--uedp-max-w-max-w-xl"
+                            },
+    "VariableID:137:1532":  {
+                                "val":  "#BE185D",
+                                "css":  "var(--uedp-pink-700)",
+                                "varName":  "--uedp-pink-700"
+                            },
+    "VariableID:394:5330":  {
+                                "val":  "0px",
+                                "css":  "var(--uedp-opacity-opacity-0)",
+                                "varName":  "--uedp-opacity-opacity-0"
+                            },
+    "VariableID:137:1519":  {
+                                "val":  "#D946EF",
+                                "css":  "var(--uedp-fuchsia-500)",
+                                "varName":  "--uedp-fuchsia-500"
+                            },
+    "VariableID:137:1378":  {
+                                "val":  "#C2410C",
+                                "css":  "var(--uedp-orange-700)",
+                                "varName":  "--uedp-orange-700"
+                            },
+    "VariableID:137:1459":  {
+                                "val":  "#F0F9FF",
+                                "css":  "var(--uedp-sky-50)",
+                                "varName":  "--uedp-sky-50"
+                            },
+    "VariableID:394:5336":  {
+                                "val":  "40px",
+                                "css":  "var(--uedp-opacity-opacity-40)",
+                                "varName":  "--uedp-opacity-opacity-40"
+                            },
+    "VariableID:158:1789":  {
+                                "val":  "6px",
+                                "css":  "var(--uedp-gap-gap-15)",
+                                "varName":  "--uedp-gap-gap-15"
+                            },
+    "VariableID:137:1381":  {
+                                "val":  "#431407",
+                                "css":  "var(--uedp-orange-950)",
+                                "varName":  "--uedp-orange-950"
+                            },
+    "VariableID:137:1484":  {
+                                "val":  "#A5B4FC",
+                                "css":  "var(--uedp-indigo-300)",
+                                "varName":  "--uedp-indigo-300"
+                            },
+    "VariableID:137:1396":  {
+                                "val":  "#FDE047",
+                                "css":  "var(--uedp-yellow-300)",
+                                "varName":  "--uedp-yellow-300"
+                            },
+    "VariableID:394:5331":  {
+                                "val":  "5px",
+                                "css":  "var(--uedp-opacity-opacity-5)",
+                                "varName":  "--uedp-opacity-opacity-5"
+                            },
+    "VariableID:137:1384":  {
+                                "val":  "#FDE68A",
+                                "css":  "var(--uedp-amber-200)",
+                                "varName":  "--uedp-amber-200"
+                            },
+    "VariableID:137:1359":  {
+                                "val":  "#0C0A09",
+                                "css":  "var(--uedp-stone-950)",
+                                "varName":  "--uedp-stone-950"
+                            },
+    "VariableID:137:1365":  {
+                                "val":  "#EF4444",
+                                "css":  "var(--uedp-red-500)",
+                                "varName":  "--uedp-red-500"
+                            },
+    "VariableID:137:1348":  {
+                                "val":  "#0A0A0A",
+                                "css":  "var(--uedp-neutral-950)",
+                                "varName":  "--uedp-neutral-950"
+                            },
+    "VariableID:137:1376":  {
+                                "val":  "#F97316",
+                                "css":  "var(--uedp-orange-500)",
+                                "varName":  "--uedp-orange-500"
+                            },
+    "VariableID:535:5218":  {
+                                "val":  "768px",
+                                "css":  "var(--uedp-max-w-max-w-screen-md)",
+                                "varName":  "--uedp-max-w-max-w-screen-md"
+                            },
+    "VariableID:137:1513":  {
+                                "val":  "#3B0764",
+                                "css":  "var(--uedp-purple-950)",
+                                "varName":  "--uedp-purple-950"
+                            },
+    "VariableID:394:5328":  {
+                                "val":  "128px",
+                                "css":  "var(--uedp-gap-gap-32)",
+                                "varName":  "--uedp-gap-gap-32"
+                            },
+    "VariableID:137:1417":  {
+                                "val":  "#BBF7D0",
+                                "css":  "var(--uedp-green-200)",
+                                "varName":  "--uedp-green-200"
+                            },
+    "VariableID:137:1501":  {
+                                "val":  "#4C1D95",
+                                "css":  "var(--uedp-violet-900)",
+                                "varName":  "--uedp-violet-900"
+                            },
+    "VariableID:528:3951":  {
+                                "val":  "448px",
+                                "css":  "var(--uedp-max-w-max-w-md)",
+                                "varName":  "--uedp-max-w-max-w-md"
+                            },
+    "VariableID:394:5326":  {
+                                "val":  "96px",
+                                "css":  "var(--uedp-gap-gap-24)",
+                                "varName":  "--uedp-gap-gap-24"
+                            },
+    "VariableID:394:5337":  {
+                                "val":  "50px",
+                                "css":  "var(--uedp-opacity-opacity-50)",
+                                "varName":  "--uedp-opacity-opacity-50"
+                            },
+    "VariableID:137:1382":  {
+                                "val":  "#FFFBEB",
+                                "css":  "var(--uedp-amber-50)",
+                                "varName":  "--uedp-amber-50"
+                            },
+    "VariableID:137:1526":  {
+                                "val":  "#FCE7F3",
+                                "css":  "var(--uedp-pink-100)",
+                                "varName":  "--uedp-pink-100"
+                            },
+    "VariableID:137:1358":  {
+                                "val":  "#1C1917",
+                                "css":  "var(--uedp-stone-900)",
+                                "varName":  "--uedp-stone-900"
+                            },
+    "VariableID:137:1349":  {
+                                "val":  "#FAFAF9",
+                                "css":  "var(--uedp-stone-50)",
+                                "varName":  "--uedp-stone-50"
+                            },
+    "VariableID:137:1500":  {
+                                "val":  "#5B21B6",
+                                "css":  "var(--uedp-violet-800)",
+                                "varName":  "--uedp-violet-800"
+                            },
+    "VariableID:137:1551":  {
+                                "val":  "6px",
+                                "css":  "var(--uedp-border-radius-rounded-md)",
+                                "varName":  "--uedp-border-radius-rounded-md"
+                            },
+    "VariableID:137:1560":  {
+                                "val":  "4px",
+                                "css":  "var(--uedp-gap-gap-1)",
+                                "varName":  "--uedp-gap-gap-1"
+                            },
+    "VariableID:137:1562":  {
+                                "val":  "12px",
+                                "css":  "var(--uedp-gap-gap-3)",
+                                "varName":  "--uedp-gap-gap-3"
+                            },
+    "VariableID:137:1305":  {
+                                "val":  "#F8FAFC",
+                                "css":  "var(--uedp-slate-50)",
+                                "varName":  "--uedp-slate-50"
+                            },
+    "VariableID:137:1521":  {
+                                "val":  "#A21CAF",
+                                "css":  "var(--uedp-fuchsia-700)",
+                                "varName":  "--uedp-fuchsia-700"
+                            },
+    "VariableID:137:1475":  {
+                                "val":  "#3B82F6",
+                                "css":  "var(--uedp-blue-500)",
+                                "varName":  "--uedp-blue-500"
+                            },
+    "VariableID:137:1427":  {
+                                "val":  "#D1FAE5",
+                                "css":  "var(--uedp-emerald-100)",
+                                "varName":  "--uedp-emerald-100"
+                            },
+    "VariableID:137:1436":  {
+                                "val":  "#022C22",
+                                "css":  "var(--uedp-emerald-950)",
+                                "varName":  "--uedp-emerald-950"
+                            },
+    "VariableID:137:1464":  {
+                                "val":  "#0EA5E9",
+                                "css":  "var(--uedp-sky-500)",
+                                "varName":  "--uedp-sky-500"
+                            },
+    "VariableID:137:1322":  {
+                                "val":  "#4B5563",
+                                "css":  "var(--uedp-gray-600)",
+                                "varName":  "--uedp-gray-600"
+                            },
+    "VariableID:137:1311":  {
+                                "val":  "#475569",
+                                "css":  "var(--uedp-slate-600)",
+                                "varName":  "--uedp-slate-600"
+                            }
+}

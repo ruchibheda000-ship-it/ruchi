@@ -1,0 +1,92 @@
+.uedp-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--uedp-gap-3, 12px);
+  background: var(--uedp-base-white, #ffffff);
+  border-radius: var(--uedp-rounded-3xl, 24px);
+  padding: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+  border: 1px solid var(--uedp-slate-100, #f1f5f9);
+  max-width: 380px;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.uedp-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+.uedp-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.uedp-card__title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--uedp-slate-900, #0f172a);
+}
+
+.uedp-card__subtitle {
+  margin: 4px 0 0 0;
+  font-size: 13px;
+  color: var(--uedp-slate-500, #64748b);
+}
+
+.uedp-card__status {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: var(--uedp-rounded-full, 9999px);
+  white-space: nowrap;
+}
+
+.uedp-card__status--confirmed {
+  background-color: #dcfce7;
+  color: #15803d;
+}
+
+.uedp-card__status--pending {
+  background-color: #fef9c3;
+  color: #a16207;
+}
+
+.uedp-card__status--completed {
+  background-color: var(--uedp-slate-100, #f1f5f9);
+  color: var(--uedp-slate-600, #475569);
+}
+
+.uedp-card__details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 12px 0;
+  border-top: 1px dashed var(--uedp-slate-200, #e2e8f0);
+  border-bottom: 1px dashed var(--uedp-slate-200, #e2e8f0);
+}
+
+.uedp-card__detail-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--uedp-slate-600, #475569);
+}
+
+.uedp-card__icon {
+  color: var(--uedp-teal-500, #14b8a6);
+}
+
+.uedp-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--uedp-teal-600, #0d9488);
+  font-size: 13px;
+  font-weight: 600;
+}

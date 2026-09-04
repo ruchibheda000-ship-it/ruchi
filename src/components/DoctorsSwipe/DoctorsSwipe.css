@@ -1,0 +1,117 @@
+.uedp-doctors-swipe {
+  display: flex;
+  flex-direction: column;
+  gap: var(--uedp-gap-3, 12px);
+  background: var(--uedp-base-white, #ffffff);
+  border-radius: var(--uedp-rounded-3xl, 24px);
+  padding: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  max-width: 360px;
+  width: 100%;
+  border: 1px solid var(--uedp-slate-100, #f1f5f9);
+  transition: all 0.25s ease;
+}
+
+.uedp-doctors-swipe:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+}
+
+.uedp-doctors-swipe__card {
+  display: flex;
+  align-items: center;
+  gap: var(--uedp-gap-4, 16px);
+  cursor: pointer;
+}
+
+.uedp-doctors-swipe__avatar-wrapper {
+  position: relative;
+}
+
+.uedp-doctors-swipe__avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--uedp-rounded-full, 9999px);
+  background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--uedp-teal-600, #0d9488);
+}
+
+.uedp-doctors-swipe__badge {
+  position: absolute;
+  bottom: -4px;
+  right: -4px;
+  background: #fef08a;
+  color: #713f12;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: var(--uedp-rounded-full, 9999px);
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.uedp-doctors-swipe__info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.uedp-doctors-swipe__name {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--uedp-slate-900, #0f172a);
+}
+
+.uedp-doctors-swipe__specialty {
+  margin: 0;
+  font-size: 12px;
+  color: var(--uedp-slate-500, #64748b);
+}
+
+.uedp-doctors-swipe__ai-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--uedp-slate-50, #f8fafc);
+  border: 1px solid var(--uedp-slate-200, #e2e8f0);
+  border-radius: var(--uedp-rounded-2xl, 16px);
+  padding: 8px 12px;
+}
+
+.uedp-doctors-swipe__ai-icon {
+  color: var(--uedp-teal-500, #14b8a6);
+}
+
+.uedp-doctors-swipe__input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: 13px;
+  color: var(--uedp-slate-800, #1e293b);
+  outline: none;
+}
+
+.uedp-doctors-swipe__voice-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--uedp-rounded-full, 9999px);
+  background: var(--uedp-teal-500, #14b8a6);
+  color: var(--uedp-base-white, #ffffff);
+  cursor: pointer;
+}
+
+/* Selected state styling */
+.uedp-doctors-swipe--selected {
+  border-color: var(--uedp-teal-500, #14b8a6);
+  box-shadow: 0 0 0 2px rgba(20, 184, 166, 0.2);
+}

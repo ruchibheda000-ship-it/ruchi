@@ -1,0 +1,17 @@
+.uedp-dates-strip {
+  display: flex;
+  align-items: center;
+  gap: var(--uedp-gap-2, 8px);
+  overflow-x: auto;
+  padding: 8px 12px;
+  background-color: var(--uedp-slate-50, #f8fafc);
+  border-radius: var(--uedp-rounded-3xl, 24px);
+  border: 1px solid var(--uedp-slate-200, #e2e8f0);
+  scrollbar-width: none;
+  max-width: 440px;
+  width: 100%;
+}
+
+.uedp-dates-strip::-webkit-scrollbar {
+  display: none;
+}
