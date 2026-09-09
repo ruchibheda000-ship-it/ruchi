@@ -3,90 +3,101 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 export const FoundationalTokensGallery: React.FC = () => {
   const radii = [
-    { label: 'rounded-none', val: '0px' },
-    { label: 'rounded-sm', val: '2px' },
-    { label: 'rounded', val: '4px' },
-    { label: 'rounded-md', val: '6px' },
-    { label: 'rounded-lg', val: '8px' },
-    { label: 'rounded-xl', val: '12px' },
-    { label: 'rounded-2xl', val: '16px' },
-    { label: 'rounded-3xl', val: '24px' },
-    { label: 'rounded-full', val: '9999px' },
+    { label: 'rounded-none', val: '0px', varName: '--uedp-rounded-none' },
+    { label: 'rounded-sm', val: '2px', varName: '--uedp-rounded-sm' },
+    { label: 'rounded', val: '4px', varName: '--uedp-rounded' },
+    { label: 'rounded-md', val: '6px', varName: '--uedp-rounded-md' },
+    { label: 'rounded-lg', val: '8px', varName: '--uedp-rounded-lg' },
+    { label: 'rounded-xl', val: '12px', varName: '--uedp-rounded-xl' },
+    { label: 'rounded-2xl', val: '16px', varName: '--uedp-rounded-2xl' },
+    { label: 'rounded-3xl', val: '24px', varName: '--uedp-rounded-3xl' },
+    { label: 'rounded-full', val: '9999px', varName: '--uedp-rounded-full' },
   ];
 
   const spacing = [
-    { label: 'gap-1 / padding-1', val: '4px' },
-    { label: 'gap-2 / padding-2', val: '8px' },
-    { label: 'gap-3 / padding-3', val: '12px' },
-    { label: 'gap-4 / padding-4', val: '16px' },
-    { label: 'gap-6 / padding-6', val: '24px' },
-    { label: 'gap-8 / padding-8', val: '32px' },
+    { label: 'gap-1 / padding-1', val: '4px', varName: '--uedp-gap-1' },
+    { label: 'gap-2 / padding-2', val: '8px', varName: '--uedp-gap-2' },
+    { label: 'gap-3 / padding-3', val: '12px', varName: '--uedp-gap-3' },
+    { label: 'gap-4 / padding-4', val: '16px', varName: '--uedp-gap-4' },
+    { label: 'gap-6 / padding-6', val: '24px', varName: '--uedp-gap-6' },
+    { label: 'gap-8 / padding-8', val: '32px', varName: '--uedp-gap-8' },
   ];
 
   return (
-    <div style={{ fontFamily: 'sans-serif', padding: '24px', maxWidth: '900px' }}>
-      <h2 style={{ color: '#0f172a', marginBottom: '8px' }}>Foundational Design Tokens</h2>
-      <p style={{ color: '#64748b', marginBottom: '32px' }}>
-        Extracted directly from foundational-tokens.json mapped to Figma variable IDs.
-      </p>
-
-      <div style={{ marginBottom: '40px' }}>
-        <h3 style={{ fontSize: '18px', color: '#1e293b', marginBottom: '16px' }}>Border Radii</h3>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: '16px' }}>
-          {radii.map((item) => (
-            <div
-              key={item.label}
-              style={{
-                border: '1px solid #cbd5e1',
-                padding: '16px',
-                borderRadius: item.val,
-                backgroundColor: '#f8fafc',
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                justifyContent: 'center',
-                textAlign: 'center',
-              }}
-            >
-              <span style={{ fontWeight: 'bold', fontSize: '14px', color: '#0f172a' }}>{item.label}</span>
-              <span style={{ fontSize: '12px', color: '#14b8a6', fontWeight: 'bold', marginTop: '4px' }}>
-                {item.val}
-              </span>
-            </div>
-          ))}
+    <div className="doc-page-container" style={{ padding: '8px 0' }}>
+      <div className="doc-page-header">
+        <h1 className="doc-page-title">Foundational Tokens</h1>
+        <p className="doc-page-description">
+          System-wide geometric primitives, border radii, and spacing scales extracted from foundational Figma design tokens. These tokens define spatial rhythm, boundary curvatures, and component density.
+        </p>
+        <div className="doc-meta-row">
+          <span className="doc-meta-item">
+            <span className="doc-meta-label">Category:</span>
+            <span className="doc-meta-badge">Foundations & Tokens</span>
+          </span>
+          <span className="doc-meta-item">
+            <span className="doc-meta-label">Source:</span>
+            <code className="doc-meta-code">foundational-tokens.json</code>
+          </span>
+          <span className="doc-meta-item">
+            <span className="doc-meta-label">Status:</span>
+            <span className="doc-meta-badge status-stable">Active Foundation</span>
+          </span>
         </div>
       </div>
 
-      <div style={{ marginBottom: '40px' }}>
-        <h3 style={{ fontSize: '18px', color: '#1e293b', marginBottom: '16px' }}>Spacing & Geometry Scales</h3>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-          {spacing.map((item) => (
-            <div
-              key={item.label}
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: '16px',
-                padding: '12px 16px',
-                border: '1px solid #e2e8f0',
-                borderRadius: '12px',
-                backgroundColor: '#ffffff',
-              }}
-            >
+      <div className="token-arch-grid">
+        <div className="token-arch-card">
+          <div className="token-arch-title">Curvature Scale (Radii)</div>
+          <p className="token-arch-desc">Progressive rounding hierarchy promoting an approachable clinical feel, from 12px input controls to 24px healthcare consultation cards and 9999px pill capsules.</p>
+        </div>
+        <div className="token-arch-card">
+          <div className="token-arch-title">Layout & Spacing Grid</div>
+          <p className="token-arch-desc">4px baseline incremental scale establishing harmonic vertical rhythm, internal button padding, and multi-component grid gaps.</p>
+        </div>
+      </div>
+
+      <div className="token-gallery-wrapper">
+        <div className="token-family-section">
+          <h3 className="token-family-title">
+            Border Radii
+            <span className="token-family-count">{radii.length} scales</span>
+          </h3>
+          <div className="token-specimen-grid">
+            {radii.map((item) => (
               <div
-                style={{
-                  width: item.val,
-                  height: '24px',
-                  backgroundColor: '#14b8a6',
-                  borderRadius: '4px',
-                }}
-              />
-              <div>
-                <span style={{ fontWeight: 'bold', fontSize: '14px', color: '#0f172a' }}>{item.label}</span>
-                <span style={{ fontSize: '12px', color: '#64748b', marginLeft: '12px' }}>{item.val}</span>
+                key={item.label}
+                className="token-specimen-card"
+                style={{ borderRadius: item.val }}
+              >
+                <span className="token-specimen-label">{item.label}</span>
+                <span className="token-specimen-val">{item.val}</span>
+                <code style={{ fontSize: '10px', color: 'var(--theme-text-muted)', fontFamily: "'JetBrains Mono', monospace" }}>{item.varName}</code>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+        </div>
+
+        <div className="token-family-section">
+          <h3 className="token-family-title">
+            Spacing & Geometry Scales
+            <span className="token-family-count">{spacing.length} scales</span>
+          </h3>
+          <div className="token-spacing-list">
+            {spacing.map((item) => (
+              <div key={item.label} className="token-spacing-row">
+                <div
+                  className="token-spacing-bar"
+                  style={{ width: item.val }}
+                />
+                <div className="token-spacing-meta">
+                  <span className="token-spacing-label">{item.label}</span>
+                  <span className="token-spacing-val">{item.val}</span>
+                  <code style={{ fontSize: '11px', color: 'var(--theme-text-muted)', fontFamily: "'JetBrains Mono', monospace" }}>{item.varName}</code>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

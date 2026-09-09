@@ -49,45 +49,74 @@ const ColorSwatchGallery: React.FC = () => {
   ];
 
   return (
-    <div style={{ fontFamily: 'sans-serif', padding: '24px', maxWidth: '900px' }}>
-      <h2 style={{ color: '#0f172a', marginBottom: '8px' }}>Base Color Palette Design Tokens</h2>
-      <p style={{ color: '#64748b', marginBottom: '32px' }}>
-        Extracted directly from <code>base-palette-tokens.json</code> mapped to Figma <code>com.figma.variableId</code>.
-      </p>
-
-      {families.map((family) => (
-        <div key={family.name} style={{ marginBottom: '32px' }}>
-          <h3 style={{ fontSize: '18px', color: '#1e293b', marginBottom: '16px' }}>{family.name}</h3>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(140px, 1fr))', gap: '16px' }}>
-            {family.shades.map((shade) => (
-              <div
-                key={shade.varName}
-                style={{
-                  border: '1px solid #e2e8f0',
-                  borderRadius: '12px',
-                  overflow: 'hidden',
-                  boxShadow: '0 2px 8px rgba(0,0,0,0.04)',
-                }}
-              >
-                <div
-                  style={{
-                    height: '64px',
-                    backgroundColor: `var(${shade.varName}, ${shade.hex})`,
-                    borderBottom: '1px solid #f1f5f9',
-                  }}
-                />
-                <div style={{ padding: '10px 12px' }}>
-                  <div style={{ fontWeight: '700', fontSize: '13px', color: '#0f172a' }}>{shade.label}</div>
-                  <div style={{ fontSize: '11px', color: '#64748b', fontFamily: 'monospace', marginTop: '2px' }}>
-                    {shade.varName}
-                  </div>
-                  <div style={{ fontSize: '11px', color: '#94a3b8', marginTop: '2px' }}>{shade.hex}</div>
-                </div>
-              </div>
-            ))}
-          </div>
+    <div className="doc-page-container" style={{ padding: '8px 0' }}>
+      <div className="doc-page-header">
+        <h1 className="doc-page-title">Base Color Palette</h1>
+        <p className="doc-page-description">
+          Core foundational color families and tint scales extracted directly from Figma design variables. These tokens form the visual baseline for all healthcare component surfaces, textual hierarchies, and interactive states.
+        </p>
+        <div className="doc-meta-row">
+          <span className="doc-meta-item">
+            <span className="doc-meta-label">Category:</span>
+            <span className="doc-meta-badge">Foundations & Tokens</span>
+          </span>
+          <span className="doc-meta-item">
+            <span className="doc-meta-label">Source:</span>
+            <code className="doc-meta-code">base-palette-tokens.json</code>
+          </span>
+          <span className="doc-meta-item">
+            <span className="doc-meta-label">Status:</span>
+            <span className="doc-meta-badge status-stable">Active Foundation</span>
+          </span>
         </div>
-      ))}
+      </div>
+
+      <div className="token-arch-grid">
+        <div className="token-arch-card">
+          <div className="token-arch-title">Neutral Hierarchy (Slate)</div>
+          <p className="token-arch-desc">Governs primary body text, muted secondary labels, and structural dividing borders with rigorous contrast ratios.</p>
+        </div>
+        <div className="token-arch-card">
+          <div className="token-arch-title">Clinical Accent (Teal)</div>
+          <p className="token-arch-desc">Signature healthcare color for primary action triggers, active navigation indicators, and verified provider badges.</p>
+        </div>
+        <div className="token-arch-card">
+          <div className="token-arch-title">Secondary Scale (Zinc)</div>
+          <p className="token-arch-desc">Provides subdued background fills, disabled states, and dark mode surface adaptations.</p>
+        </div>
+        <div className="token-arch-card">
+          <div className="token-arch-title">Base Neutrals</div>
+          <p className="token-arch-desc">Foundational anchor values (pure white and absolute black) serving high-contrast viewport boundaries.</p>
+        </div>
+      </div>
+
+      <div className="token-gallery-wrapper">
+        {families.map((family) => (
+          <div key={family.name} className="token-family-section">
+            <h3 className="token-family-title">
+              {family.name}
+              <span className="token-family-count">{family.shades.length} tints</span>
+            </h3>
+            <div className="token-swatch-grid">
+              {family.shades.map((shade) => (
+                <div key={shade.varName} className="token-swatch-card">
+                  <div
+                    className="token-swatch-rect"
+                    style={{
+                      backgroundColor: `var(${shade.varName}, ${shade.hex})`,
+                    }}
+                  />
+                  <div className="token-swatch-body">
+                    <span className="token-swatch-label">{shade.label}</span>
+                    <span className="token-swatch-var">{shade.varName}</span>
+                    <span className="token-swatch-hex">{shade.hex}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

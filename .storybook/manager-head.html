@@ -4,35 +4,137 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
-  /* Manager UI Font & Sidebar Hierarchy */
+  /* ==========================================================================
+     Storybook Manager UI & Sidebar Hierarchy Styling
+     Professional, structured design-system documentation navigation
+     ========================================================================== */
+
   body, button, input, select, textarea {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
   }
 
-  /* Sidebar Section Headers */
-  button[data-nodetype="root"] {
-    font-size: 11px !important;
+  /* Custom Clean Scrollbar for Sidebar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #27272a;
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3f3f46;
+  }
+
+  /* Sidebar Root Container */
+  .sidebar-container,
+  [data-testid="sidebar"] {
+    overflow-x: hidden !important;
+  }
+
+  /* 1. Category Roots (FOUNDATIONS & TOKENS, PRIMITIVES & INPUTS, etc.) */
+  button[data-nodetype="root"],
+  [data-nodetype="root"] {
+    font-size: 10.5px !important;
     font-weight: 700 !important;
     letter-spacing: 0.08em !important;
     text-transform: uppercase !important;
     color: #71717a !important;
-    padding-top: 14px !important;
+    padding-top: 16px !important;
     padding-bottom: 6px !important;
+    margin-top: 8px !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+    transition: color 0.15s ease !important;
   }
 
-  /* Sidebar Component Links */
-  button[data-nodetype="component"], a[data-nodetype="component"],
-  button[data-nodetype="story"], a[data-nodetype="story"] {
+  button[data-nodetype="root"]:first-of-type,
+  [data-nodetype="root"]:first-of-type {
+    border-top: none !important;
+    margin-top: 0 !important;
+  }
+
+  button[data-nodetype="root"]:hover,
+  [data-nodetype="root"]:hover {
+    color: #a1a1aa !important;
+  }
+
+  /* 2. Component Group Headers (e.g. Input Field, Card, Navigation Menu) */
+  button[data-nodetype="component"],
+  a[data-nodetype="component"],
+  [data-nodetype="component"] {
     font-size: 13px !important;
-    font-weight: 500 !important;
+    font-weight: 600 !important;
+    color: #f4f4f5 !important;
     border-radius: 6px !important;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
+    margin: 1px 0 !important;
     transition: all 0.15s ease !important;
   }
 
-  /* Active Sidebar Item */
-  a[data-selected="true"], button[data-selected="true"] {
-    background-color: rgba(45, 212, 191, 0.12) !important;
+  button[data-nodetype="component"]:hover,
+  a[data-nodetype="component"]:hover {
+    color: #ffffff !important;
+    background-color: rgba(255, 255, 255, 0.05) !important;
+  }
+
+  /* 3. Primary Documentation Node (Docs page) */
+  a[data-item-id*="--docs"],
+  a[data-nodetype="document"] {
+    font-size: 12.5px !important;
+    font-weight: 500 !important;
+    color: #cbd5e1 !important;
+    padding-left: 20px !important;
+    border-radius: 4px !important;
+    margin: 1px 0 !important;
+    transition: all 0.15s ease !important;
+  }
+
+  a[data-item-id*="--docs"]:hover,
+  a[data-nodetype="document"]:hover {
+    color: #ffffff !important;
+    background-color: rgba(255, 255, 255, 0.04) !important;
+  }
+
+  /* 4. Variant Stories (e.g. Default, Selected, Error State) - Deeper indentation & subordinate */
+  a[data-nodetype="story"]:not([data-item-id*="--docs"]) {
+    font-size: 12px !important;
+    font-weight: 400 !important;
+    color: #a1a1aa !important;
+    padding-left: 28px !important;
+    border-radius: 4px !important;
+    margin: 1px 0 !important;
+    transition: all 0.15s ease !important;
+  }
+
+  a[data-nodetype="story"]:not([data-item-id*="--docs"]):hover {
+    color: #f4f4f5 !important;
+    background-color: rgba(255, 255, 255, 0.04) !important;
+  }
+
+  /* Active / Selected Sidebar Item - Unmistakable Teal Accent */
+  a[data-selected="true"],
+  button[data-selected="true"] {
+    background-color: rgba(20, 184, 166, 0.12) !important;
     color: #2dd4bf !important;
     font-weight: 600 !important;
+    border-left: 3px solid #2dd4bf !important;
+    border-radius: 0 5px 5px 0 !important;
+  }
+
+  a[data-selected="true"] svg,
+  button[data-selected="true"] svg {
+    color: #2dd4bf !important;
+  }
+
+  /* Top Toolbar Chrome Integration */
+  [role="toolbar"] {
+    border-bottom: 1px solid #27272a !important;
   }
 </style>

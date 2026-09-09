@@ -4,10 +4,10 @@
    ========================================================================== */
 
 .doc-page-container {
-  max-width: 960px;
+  max-width: 920px;
   width: 100%;
   margin: 0 auto;
-  padding: 8px 16px 64px 16px;
+  padding: 16px 20px 80px 20px;
   box-sizing: border-box;
   color: var(--theme-text-primary, #0f172a);
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -15,26 +15,26 @@
 
 /* Documentation Header */
 .doc-page-header {
-  margin-bottom: 32px;
-  padding-bottom: 24px;
+  margin-bottom: 28px;
+  padding-bottom: 20px;
   border-bottom: 1px solid var(--theme-border, #e2e8f0);
 }
 
 .doc-page-title {
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 700;
   letter-spacing: -0.025em;
-  line-height: 1.2;
-  margin: 0 0 12px 0;
+  line-height: 1.25;
+  margin: 0 0 10px 0;
   color: var(--theme-text-primary, #0f172a);
 }
 
 .doc-page-description {
   font-size: 15px;
-  line-height: 1.65;
+  line-height: 1.6;
   color: var(--theme-text-secondary, #475569);
   margin: 0 0 16px 0;
-  max-width: 720px;
+  max-width: 680px;
 }
 
 /* Visually Secondary Documentation Metadata */
@@ -42,16 +42,17 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 16px;
-  font-size: 12.5px;
+  gap: 14px;
+  font-size: 12px;
   color: var(--theme-text-muted, #64748b);
   padding-top: 4px;
+  padding-bottom: 2px;
 }
 
 .doc-meta-item {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 5px;
 }
 
 .doc-meta-label {
@@ -64,8 +65,8 @@
   align-items: center;
   gap: 4px;
   font-size: 11px;
-  font-weight: 600;
-  padding: 2px 8px;
+  font-weight: 500;
+  padding: 2px 7px;
   border-radius: 4px;
   background: var(--theme-bg-surface-subtle, #f1f5f9);
   border: 1px solid var(--theme-border, #e2e8f0);
@@ -87,7 +88,7 @@
 .doc-meta-code {
   font-family: 'JetBrains Mono', monospace;
   font-size: 11px;
-  padding: 1px 6px;
+  padding: 1px 5px;
   border-radius: 4px;
   background: var(--theme-bg-surface-subtle, #f1f5f9);
   border: 1px solid var(--theme-border, #e2e8f0);
@@ -100,26 +101,32 @@
   color: #a1a1aa;
 }
 
-/* Section Headings & Spacing */
+/* Section Headings & Whitespace Rhythm */
 .doc-section {
-  margin-top: 40px;
+  margin-top: 44px;
   padding-top: 24px;
+  border-top: 1px solid var(--theme-border-subtle, #f1f5f9);
+}
+
+[data-theme="dark"] .doc-section {
+  border-top-color: var(--theme-border-subtle, #1f1f23);
 }
 
 .doc-section:first-of-type {
   margin-top: 0;
   padding-top: 0;
+  border-top: none;
 }
 
 .doc-section-header {
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 .doc-section-title {
   font-size: 18px;
   font-weight: 600;
   letter-spacing: -0.015em;
-  margin: 0 0 4px 0;
+  margin: 0 0 3px 0;
   color: var(--theme-text-primary, #0f172a);
 }
 
@@ -128,6 +135,7 @@
   color: var(--theme-text-muted, #64748b);
   margin: 0;
   line-height: 1.5;
+  max-width: 680px;
 }
 
 /* Design Tokens Table */
@@ -138,6 +146,7 @@
   border-radius: 8px;
   background: var(--theme-bg-surface, #ffffff);
   box-sizing: border-box;
+  margin: 12px 0 24px 0;
 }
 
 .doc-token-table {
@@ -515,32 +524,66 @@
   border-bottom: none !important;
 }
 
-/* Controls Property Names */
+/* ArgsTable Property Name as Primary Scan Target */
+.docblock-argstable td:first-child,
 .docblock-argstable [class*="Property"],
-.docblock-argstable code {
+.docblock-argstable td:first-child code,
+.docblock-argstable [class*="Property"] code {
   font-family: 'JetBrains Mono', monospace !important;
-  font-size: 11.5px !important;
-  font-weight: 600 !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
   color: var(--theme-text-primary, #0f172a) !important;
   background: transparent !important;
   border: none !important;
   padding: 0 !important;
+  letter-spacing: -0.01em !important;
 }
 
+[data-theme="dark"] .docblock-argstable td:first-child,
 [data-theme="dark"] .docblock-argstable [class*="Property"],
-[data-theme="dark"] .docblock-argstable code {
+[data-theme="dark"] .docblock-argstable td:first-child code,
+[data-theme="dark"] .docblock-argstable [class*="Property"] code {
   color: var(--theme-text-primary, #f4f4f5) !important;
 }
 
-/* Controls Types and Descriptions */
+/* ArgsTable Types, Defaults & Badges as Secondary Scan Targets */
 .docblock-argstable [class*="Type"],
-.docblock-argstable [class*="Description"] {
-  font-size: 12px !important;
-  line-height: 1.45 !important;
+.docblock-argstable [class*="type"],
+.docblock-argstable [class*="Default"],
+.docblock-argstable [class*="default"] {
+  font-family: 'JetBrains Mono', monospace !important;
+  font-size: 11px !important;
+  font-weight: 400 !important;
+  color: var(--theme-text-muted, #64748b) !important;
+}
+
+.docblock-argstable span[class*="badge"],
+.docblock-argstable [class*="Badge"] {
+  font-size: 10.5px !important;
+  padding: 1px 5px !important;
+  border-radius: 4px !important;
+  background: var(--theme-bg-surface-subtle, #f1f5f9) !important;
+  border: 1px solid var(--theme-border, #e2e8f0) !important;
   color: var(--theme-text-secondary, #475569) !important;
 }
 
-[data-theme="dark"] .docblock-argstable [class*="Type"],
+[data-theme="dark"] .docblock-argstable span[class*="badge"],
+[data-theme="dark"] .docblock-argstable [class*="Badge"] {
+  background: #27272a !important;
+  border-color: #3f3f46 !important;
+  color: #a1a1aa !important;
+}
+
+/* Descriptions & Cell Wrapping */
+.docblock-argstable [class*="Description"],
+.docblock-argstable td {
+  font-size: 12px !important;
+  line-height: 1.45 !important;
+  color: var(--theme-text-secondary, #475569) !important;
+  word-break: break-word !important;
+  overflow-wrap: break-word !important;
+}
+
 [data-theme="dark"] .docblock-argstable [class*="Description"] {
   color: var(--theme-text-secondary, #a1a1aa) !important;
 }
@@ -724,4 +767,440 @@
     padding: 6px 10px;
     font-size: 10.5px;
   }
+}
+
+/* ==========================================================================
+   Foundations & Tokens Documentation Gallery Styling
+   Elevates token pages into first-class design-system documentation.
+   ========================================================================== */
+
+.token-gallery-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-top: 8px;
+}
+
+.token-family-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.token-family-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--theme-text-primary, #0f172a);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.token-family-count {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--theme-text-muted, #64748b);
+  background: var(--theme-bg-surface-subtle, #f1f5f9);
+  padding: 1px 6px;
+  border-radius: 9999px;
+  border: 1px solid var(--theme-border, #e2e8f0);
+}
+
+[data-theme="dark"] .token-family-count {
+  background: #27272a;
+  border-color: #3f3f46;
+  color: #a1a1aa;
+}
+
+.token-swatch-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 12px;
+}
+
+.token-swatch-card {
+  border: 1px solid var(--theme-border, #e2e8f0);
+  border-radius: 8px;
+  background: var(--theme-bg-surface, #ffffff);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.15s ease;
+}
+
+.token-swatch-card:hover {
+  border-color: var(--theme-border-strong, #cbd5e1);
+}
+
+[data-theme="dark"] .token-swatch-card {
+  border-color: var(--theme-border, #27272a);
+  background: var(--theme-bg-surface, #18181b);
+}
+
+[data-theme="dark"] .token-swatch-card:hover {
+  border-color: #3f3f46;
+}
+
+.token-swatch-rect {
+  height: 56px;
+  width: 100%;
+  border-bottom: 1px solid var(--theme-border-subtle, #f1f5f9);
+  box-sizing: border-box;
+}
+
+[data-theme="dark"] .token-swatch-rect {
+  border-bottom-color: rgba(255, 255, 255, 0.06);
+}
+
+.token-swatch-body {
+  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.token-swatch-label {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--theme-text-primary, #0f172a);
+}
+
+.token-swatch-var {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  color: var(--theme-text-muted, #64748b);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.token-swatch-hex {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  color: var(--theme-text-secondary, #475569);
+  margin-top: 1px;
+}
+
+/* Radii & Spacing Specimen Cards */
+.token-specimen-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 12px;
+}
+
+.token-specimen-card {
+  border: 1px solid var(--theme-border, #e2e8f0);
+  background: var(--theme-bg-surface, #ffffff);
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 6px;
+  box-sizing: border-box;
+  transition: border-color 0.15s ease;
+}
+
+[data-theme="dark"] .token-specimen-card {
+  border-color: var(--theme-border, #27272a);
+  background: var(--theme-bg-surface, #18181b);
+}
+
+.token-specimen-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--theme-text-primary, #0f172a);
+}
+
+.token-specimen-val {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--theme-accent-primary-text, #0f766e);
+  font-weight: 600;
+}
+
+[data-theme="dark"] .token-specimen-val {
+  color: var(--theme-accent-primary, #2dd4bf);
+}
+
+/* Spacing Scale Rows */
+.token-spacing-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.token-spacing-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 8px 14px;
+  border: 1px solid var(--theme-border, #e2e8f0);
+  border-radius: 6px;
+  background: var(--theme-bg-surface, #ffffff);
+}
+
+[data-theme="dark"] .token-spacing-row {
+  border-color: var(--theme-border, #27272a);
+  background: var(--theme-bg-surface, #18181b);
+}
+
+.token-spacing-bar {
+  height: 20px;
+  background: var(--theme-accent-primary, #14b8a6);
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.token-spacing-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.token-spacing-label {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--theme-text-primary, #0f172a);
+}
+
+.token-spacing-val {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--theme-text-muted, #64748b);
+}
+
+/* ==========================================================================
+   Component Design Token Documentation Table
+   ========================================================================== */
+
+.doc-table-wrapper {
+  border: 1px solid var(--theme-border, #e2e8f0);
+  border-radius: 8px;
+  background: var(--theme-bg-surface, #ffffff);
+  overflow-x: auto;
+  margin: 12px 0 24px 0;
+  box-sizing: border-box;
+}
+
+[data-theme="dark"] .doc-table-wrapper {
+  border-color: var(--theme-border, #27272a);
+  background: var(--theme-bg-surface, #18181b);
+}
+
+.doc-token-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 12.5px;
+}
+
+.doc-token-table thead {
+  background: var(--theme-bg-surface-subtle, #f8fafc);
+  border-bottom: 1px solid var(--theme-border, #e2e8f0);
+}
+
+[data-theme="dark"] .doc-token-table thead {
+  background: #1f1f23;
+  border-color: #27272a;
+}
+
+.doc-token-table th {
+  padding: 9px 14px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--theme-text-secondary, #475569);
+  border: none;
+}
+
+[data-theme="dark"] .doc-token-table th {
+  color: #a1a1aa;
+}
+
+.doc-token-table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--theme-border, #e2e8f0);
+  color: var(--theme-text-primary, #0f172a);
+  vertical-align: middle;
+}
+
+[data-theme="dark"] .doc-token-table td {
+  border-color: var(--theme-border, #27272a);
+  color: var(--theme-text-primary, #f4f4f5);
+}
+
+.doc-token-table tr:last-child td {
+  border-bottom: none;
+}
+
+.token-property-name {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--theme-text-primary, #0f172a);
+}
+
+[data-theme="dark"] .token-property-name {
+  color: var(--theme-text-primary, #f4f4f5);
+}
+
+.token-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.token-swatch {
+  width: 13px;
+  height: 13px;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  flex-shrink: 0;
+}
+
+[data-theme="dark"] .token-swatch {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.token-chip code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--theme-text-secondary, #475569);
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+[data-theme="dark"] .token-chip code {
+  color: var(--theme-text-secondary, #a1a1aa);
+}
+
+.token-val {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--theme-accent-primary-text, #0f766e);
+}
+
+[data-theme="dark"] .token-val {
+  color: var(--theme-accent-primary, #2dd4bf);
+}
+
+.token-context {
+  font-size: 12px;
+  color: var(--theme-text-secondary, #475569);
+}
+
+[data-theme="dark"] .token-context {
+  color: var(--theme-text-secondary, #a1a1aa);
+}
+
+/* ==========================================================================
+   Technical Metadata & Traceability (Quiet Section 8 Footer)
+   ========================================================================== */
+
+.doc-section-traceability {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px dashed var(--theme-border, #e2e8f0);
+}
+
+[data-theme="dark"] .doc-section-traceability {
+  border-top-color: var(--theme-border, #27272a);
+}
+
+.doc-traceability-card {
+  border: 1px solid var(--theme-border, #e2e8f0);
+  border-radius: 8px;
+  background: var(--theme-bg-surface-subtle, #f8fafc);
+  padding: 12px 18px;
+  margin-top: 12px;
+}
+
+[data-theme="dark"] .doc-traceability-card {
+  border-color: var(--theme-border, #27272a);
+  background: #18181b;
+}
+
+.doc-traceability-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px 28px;
+}
+
+.doc-traceability-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.doc-traceability-label {
+  font-size: 10.5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--theme-text-muted, #64748b);
+}
+
+.doc-traceability-val {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--theme-text-secondary, #334155);
+}
+
+[data-theme="dark"] .doc-traceability-val {
+  color: var(--theme-text-secondary, #cbd5e1);
+}
+
+/* ==========================================================================
+   Foundations Token Architecture Cards
+   ========================================================================== */
+
+.token-arch-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.token-arch-card {
+  border: 1px solid var(--theme-border, #e2e8f0);
+  border-radius: 8px;
+  background: var(--theme-bg-surface-subtle, #f8fafc);
+  padding: 12px 14px;
+}
+
+[data-theme="dark"] .token-arch-card {
+  border-color: var(--theme-border, #27272a);
+  background: #18181b;
+}
+
+.token-arch-title {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--theme-text-primary, #0f172a);
+  margin: 0 0 4px 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+[data-theme="dark"] .token-arch-title {
+  color: var(--theme-text-primary, #f4f4f5);
+}
+
+.token-arch-desc {
+  font-size: 11.5px;
+  line-height: 1.45;
+  color: var(--theme-text-secondary, #475569);
+  margin: 0;
+}
+
+[data-theme="dark"] .token-arch-desc {
+  color: var(--theme-text-secondary, #a1a1aa);
 }

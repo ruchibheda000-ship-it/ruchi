@@ -23,50 +23,28 @@ export const DocTemplate: React.FC = () => {
       {/* 1. Component Name (Strongest element) */}
       <Title />
 
-      {/* 2. Short Description */}
+      {/* 2. Purpose / Description */}
       <Description />
 
-      {/* 3. Documentation Metadata (Visually secondary) */}
-      {figma && (
-        <div className="doc-meta-row">
-          {figma.category && (
-            <span className="doc-meta-item">
-              <span className="doc-meta-label">Category:</span>
-              <span className="doc-meta-badge">{figma.category}</span>
-            </span>
-          )}
-          {figma.status && (
-            <span className="doc-meta-item">
-              <span className="doc-meta-label">Status:</span>
-              <span className="doc-meta-badge status-stable">{figma.status}</span>
-            </span>
-          )}
-          {figma.nodeId && (
-            <span className="doc-meta-item">
-              <span className="doc-meta-label">Figma Node:</span>
-              <code className="doc-meta-code">{figma.nodeId}</code>
-            </span>
-          )}
-          {figma.layerName && (
-            <span className="doc-meta-item">
-              <span className="doc-meta-label">Layer:</span>
-              <code className="doc-meta-code">{figma.layerName}</code>
-            </span>
-          )}
-        </div>
-      )}
-
-      {/* 4. Component Preview */}
-      <section className="doc-section">
+      {/* 3. Component Preview */}
+      <section className="doc-section doc-section-preview">
         <div className="doc-section-header">
           <h2 className="doc-section-title">Preview</h2>
-          <p className="doc-section-subtitle">Interactive component canvas with live props inspection.</p>
+          <p className="doc-section-subtitle">Interactive component specimen canvas with live props inspection.</p>
         </div>
+        <Primary />
+      </section>
 
-        {/* Editorial Variant Metadata List */}
-        {stories.length > 1 && (
+      {/* 4. Variants */}
+      {stories.length > 1 && (
+        <section className="doc-section doc-section-variants">
+          <div className="doc-section-header">
+            <h2 className="doc-section-title">Variants</h2>
+            <p className="doc-section-subtitle">Interaction states and design permutations supported by this component.</p>
+          </div>
+
           <div className="doc-variants-metadata">
-            <span className="doc-variants-label">Variants</span>
+            <span className="doc-variants-label">Available Variants</span>
             <div className="doc-variants-list">
               {stories.map((s: any, idx: number) => {
                 const isPrimary = s.id === primaryStory?.id;
@@ -75,7 +53,7 @@ export const DocTemplate: React.FC = () => {
                     key={idx}
                     type="button"
                     className={`doc-variant-link ${isPrimary ? 'is-active' : ''}`}
-                    title={`View ${s.name} variant`}
+                    title={`Jump to ${s.name} variant`}
                     onClick={() => {
                       const el = document.getElementById(s.id) || document.querySelector(`[id*="${s.id}"]`);
                       if (el) {
@@ -90,13 +68,13 @@ export const DocTemplate: React.FC = () => {
               })}
             </div>
           </div>
-        )}
 
-        <Primary />
-      </section>
+          <Stories />
+        </section>
+      )}
 
-      {/* 5. Properties / API */}
-      <section className="doc-section">
+      {/* 5. Properties & API */}
+      <section className="doc-section doc-section-api">
         <div className="doc-section-header">
           <h2 className="doc-section-title">Properties & API</h2>
           <p className="doc-section-subtitle">Configurable props, callbacks, and available options.</p>
@@ -106,25 +84,25 @@ export const DocTemplate: React.FC = () => {
 
       {/* 6. Design Tokens */}
       {designTokens && designTokens.length > 0 && (
-        <section className="doc-section">
+        <section className="doc-section doc-section-tokens">
           <div className="doc-section-header">
             <h2 className="doc-section-title">Design Tokens</h2>
-            <p className="doc-section-subtitle">Figma token variables bound to this component.</p>
+            <p className="doc-section-subtitle">Design system CSS custom property bindings and theme values.</p>
           </div>
           <div className="doc-token-table-wrapper">
             <table className="doc-token-table">
               <thead>
                 <tr>
-                  <th>CSS Property</th>
-                  <th>Bound Token</th>
-                  <th>Value</th>
-                  <th>Context</th>
+                  <th>Property / Role</th>
+                  <th>Bound Token (CSS Variable)</th>
+                  <th>Resolved Value</th>
+                  <th>Design Context</th>
                 </tr>
               </thead>
               <tbody>
                 {designTokens.map((t: any, i: number) => (
                   <tr key={i}>
-                    <td><code>{t.property}</code></td>
+                    <td><span className="token-property-name">{t.property}</span></td>
                     <td>
                       <span className="token-chip">
                         <span
@@ -144,23 +122,52 @@ export const DocTemplate: React.FC = () => {
         </section>
       )}
 
-      {/* 7. Code / Implementation */}
-      <section className="doc-section">
+      {/* 7. Code & Implementation */}
+      <section className="doc-section doc-section-code">
         <div className="doc-section-header">
           <h2 className="doc-section-title">Code & Implementation</h2>
-          <p className="doc-section-subtitle">JSX usage and component invocation.</p>
+          <p className="doc-section-subtitle">JSX usage reference and component invocation.</p>
         </div>
         <Source />
       </section>
 
-      {/* 8. Variants & States */}
-      <section className="doc-section">
-        <div className="doc-section-header">
-          <h2 className="doc-section-title">Variants & States</h2>
-          <p className="doc-section-subtitle">All preserved component variants and interaction states.</p>
-        </div>
-        <Stories />
-      </section>
+      {/* 8. Technical Metadata & Figma Traceability */}
+      {figma && (
+        <section className="doc-section doc-section-traceability">
+          <div className="doc-section-header">
+            <h2 className="doc-section-title">Figma & Design System Traceability</h2>
+            <p className="doc-section-subtitle">Source lineage between Figma canvas and codebase implementation.</p>
+          </div>
+          <div className="doc-traceability-card">
+            <div className="doc-traceability-grid">
+              {figma.category && (
+                <div className="doc-traceability-item">
+                  <span className="doc-traceability-label">Category</span>
+                  <span className="doc-traceability-val">{figma.category}</span>
+                </div>
+              )}
+              {figma.status && (
+                <div className="doc-traceability-item">
+                  <span className="doc-traceability-label">Status</span>
+                  <span className="doc-meta-badge status-stable">{figma.status}</span>
+                </div>
+              )}
+              {figma.nodeId && (
+                <div className="doc-traceability-item">
+                  <span className="doc-traceability-label">Figma Node ID</span>
+                  <code className="doc-meta-code">{figma.nodeId}</code>
+                </div>
+              )}
+              {figma.layerName && (
+                <div className="doc-traceability-item">
+                  <span className="doc-traceability-label">Figma Layer</span>
+                  <code className="doc-meta-code">{figma.layerName}</code>
+                </div>
+              )}
+            </div>
+          </div>
+        </section>
+      )}
     </div>
   );
 };
