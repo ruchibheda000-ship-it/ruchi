@@ -16,11 +16,11 @@
 .uedp-input-field__container {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 9px 10px;
-  background-color: var(--uedp-base-white, #ffffff);
-  border: 1px solid var(--uedp-slate-200, #e2e8f0);
-  border-radius: 5px;
+  gap: var(--uedp-input-gap, 10px);
+  padding: var(--uedp-input-padding, 9px 10px);
+  background-color: var(--uedp-input-bg, var(--uedp-base-white, #ffffff));
+  border: var(--uedp-input-border-width, 1px) solid var(--uedp-input-border, var(--uedp-slate-200, #e2e8f0));
+  border-radius: var(--uedp-input-radius, var(--uedp-border-radius-rounded-md, 5px));
   transition: all 0.2s ease;
 }
 

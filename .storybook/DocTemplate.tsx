@@ -9,6 +9,7 @@ import {
   DocsContext,
 } from '@storybook/blocks';
 import { ComponentPlayground } from '../src/components/Playground/ComponentPlayground';
+import { TokenInspector } from '../src/components/TokenInspector/TokenInspector';
 
 export const DocTemplate: React.FC = () => {
   const context = useContext(DocsContext);
@@ -91,38 +92,13 @@ export const DocTemplate: React.FC = () => {
         <section className="doc-section doc-section-tokens">
           <div className="doc-section-header">
             <h2 className="doc-section-title">Design Tokens</h2>
-            <p className="doc-section-subtitle">Design system CSS custom property bindings and theme values.</p>
+            <p className="doc-section-subtitle">Design system CSS custom property bindings, lineage, and live customization.</p>
           </div>
-          <div className="doc-token-table-wrapper">
-            <table className="doc-token-table">
-              <thead>
-                <tr>
-                  <th>Property / Role</th>
-                  <th>Bound Token (CSS Variable)</th>
-                  <th>Resolved Value</th>
-                  <th>Design Context</th>
-                </tr>
-              </thead>
-              <tbody>
-                {designTokens.map((t: any, i: number) => (
-                  <tr key={i}>
-                    <td><span className="token-property-name">{t.property}</span></td>
-                    <td>
-                      <span className="token-chip">
-                        <span
-                          className="token-swatch"
-                          style={{ backgroundColor: `var(${t.token}, #14b8a6)` }}
-                        />
-                        <code>{t.token}</code>
-                      </span>
-                    </td>
-                    <td><span className="token-val">{t.value || 'Theme token'}</span></td>
-                    <td><span className="token-context">{t.context || 'Visual styling'}</span></td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+          <TokenInspector
+            designTokens={designTokens}
+            componentTitle={primaryStory?.title}
+            layerName={figma?.layerName}
+          />
         </section>
       )}
 

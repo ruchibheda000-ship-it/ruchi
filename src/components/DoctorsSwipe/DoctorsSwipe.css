@@ -20,10 +20,10 @@
   width: 100%;
   max-width: 320px;
   min-height: 330px;
-  padding: 24px;
-  background-color: #ffffff;
-  border: 2px solid #000000;
-  border-radius: 32px;
+  padding: var(--uedp-doctors-padding, 24px);
+  background-color: var(--uedp-doctors-bg, #ffffff);
+  border: var(--uedp-doctors-border-width, 2px) solid var(--uedp-doctors-border, #000000);
+  border-radius: var(--uedp-doctors-radius, 32px);
   font-family: 'Lufga', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   color: #000000;
   cursor: pointer;
