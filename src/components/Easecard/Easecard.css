@@ -1,72 +1,157 @@
 .uedp-easecard {
   display: flex;
-  align-items: center;
-  gap: var(--uedp-gap-3, 12px);
-  background: var(--uedp-base-white, #ffffff);
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 320px;
+  width: 100%;
+  min-height: 185px;
+  padding: 18px 22px;
   border-radius: var(--uedp-rounded-2xl, 16px);
-  padding: 14px 18px;
-  border: 1px solid var(--uedp-slate-200, #e2e8f0);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
-  cursor: pointer;
-  transition: all 0.2s ease;
-  min-width: 200px;
   box-sizing: border-box;
   font-family: 'Lufga', 'Inter', -apple-system, sans-serif;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
 }
 
 .uedp-easecard:hover {
-  border-color: var(--uedp-zinc-900, #18181b);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.15);
 }
 
-.uedp-easecard--add {
-  border-style: dashed;
-  border-color: var(--uedp-slate-300, #cbd5e1);
+/* KIMS Kingsway - Soft Lavender Periwinkle Tint */
+.uedp-easecard--kims {
+  background-color: #b8c8ea;
+  color: #0f172a;
+}
+
+/* Tata AIG - Sage / Olive Green Tint */
+.uedp-easecard--tata {
+  background-color: #a5b074;
+  color: #0f172a;
+}
+
+/* Metropolis - Warm Pastel Gold / Yellow Tint */
+.uedp-easecard--metro {
+  background-color: #efd576;
+  color: #0f172a;
+}
+
+/* Add Card Dashed Action State */
+.uedp-easecard--add,
+.uedp-easecard--formkit-add {
   background-color: var(--uedp-slate-50, #f8fafc);
+  border: 2px dashed var(--uedp-slate-300, #cbd5e1);
+  box-shadow: none;
+  color: var(--uedp-slate-600, #475569);
+  align-items: center;
+  justify-content: center;
 }
 
-.uedp-easecard__icon-box {
+.uedp-easecard--add:hover,
+.uedp-easecard--formkit-add:hover {
+  border-color: var(--uedp-zinc-900, #18181b);
+  background-color: var(--uedp-slate-100, #f1f5f9);
+  color: var(--uedp-zinc-900, #18181b);
+}
+
+.uedp-easecard__add-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.uedp-easecard__add-icon-box {
   width: 44px;
   height: 44px;
-  border-radius: var(--uedp-rounded-xl, 12px);
-  background-color: var(--uedp-slate-100, #f1f5f9);
+  border-radius: var(--uedp-rounded-full, 9999px);
+  background-color: var(--uedp-slate-200, #e2e8f0);
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
 }
 
-.uedp-easecard__icon--kims {
-  color: var(--uedp-red-500, #ef4444);
+.uedp-easecard__add-label {
+  font-size: 14px;
+  font-weight: 700;
 }
 
-.uedp-easecard__icon--tata {
-  color: var(--uedp-blue-500, #3b82f6);
+.uedp-easecard__add-subtitle {
+  font-size: 12px;
+  color: var(--uedp-slate-500, #64748b);
 }
 
-.uedp-easecard__icon--metro {
-  color: var(--uedp-purple-500, #8b5cf6);
+/* Header with Contactless NFC Waveform */
+.uedp-easecard__header {
+  display: flex;
+  align-items: center;
+  color: #0f172a;
 }
 
-.uedp-easecard__icon--add {
-  color: var(--uedp-teal-500, #14b8a6);
+.uedp-easecard__nfc-icon {
+  display: block;
 }
 
+/* Body with Member Name & Provider Display Title */
 .uedp-easecard__body {
   display: flex;
   flex-direction: column;
+  gap: 2px;
+  margin: 12px 0;
 }
 
-.uedp-easecard__title {
-  margin: 0;
-  font-size: 14px;
+.uedp-easecard__patient-name {
+  font-size: 13px;
   font-weight: 700;
-  color: var(--uedp-slate-900, #0f172a);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #0f172a;
+  line-height: 1.2;
 }
 
-.uedp-easecard__subtitle {
-  margin: 2px 0 0 0;
-  font-size: 12px;
-  color: var(--uedp-slate-500, #64748b);
+.uedp-easecard__provider-title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: #0f172a;
+  line-height: 1.15;
+}
+
+/* Footer with Card Number & Realistic Barcode */
+.uedp-easecard__footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 4px;
+}
+
+.uedp-easecard__number {
+  font-size: 13.5px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  color: #0f172a;
+  line-height: 1;
+}
+
+.uedp-easecard__barcode {
+  display: block;
+  flex-shrink: 0;
+  color: #0f172a;
+}
+
+/* Stacked Showcase Container for Storybook */
+.uedp-easecard-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 320px;
 }

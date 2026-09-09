@@ -13,10 +13,11 @@ const meta: Meta<typeof DoctorsSwipe> = {
       status: 'Stable',
     },
     designTokens: [
-      { property: 'border-radius', token: '--uedp-rounded-3xl', value: '24px', context: 'Doctor card outer curvature' },
-      { property: 'background (Score Badge)', token: '--uedp-amber-100', value: '#FFEDD5', context: 'Patient rating pill surface' },
-      { property: 'text-color (Header)', token: '--uedp-zinc-900', value: '#18181B', context: 'Physician title typography and controls' },
-      { property: 'border-color', token: '--uedp-slate-100', value: '#F1F5F9', context: 'Card perimeter outline stroke' },
+      { property: 'border', token: '--uedp-border-black', value: '2px solid #000000', context: 'High-contrast card boundary stroke' },
+      { property: 'border-radius', token: '--uedp-rounded-4xl', value: '32px', context: 'Doctor card outer curvature' },
+      { property: 'background (Avatar)', token: '--uedp-doctor-avatar-bg', value: '#D1D7E0', context: 'Soft slate-blue physician avatar container fill' },
+      { property: 'font-family', token: '--uedp-font-family', value: "'Lufga', 'Inter', sans-serif", context: 'Typography hierarchy typeface' },
+      { property: 'border (Action Button)', token: '--uedp-border-black', value: '2px solid #000000', context: 'Circular appointment CTA button perimeter' },
     ],
     preview: {
       size: 'spacious',
@@ -24,43 +25,60 @@ const meta: Meta<typeof DoctorsSwipe> = {
     },
     docs: {
       description: {
-        component: 'Interactive practitioner discovery card presenting doctor credentials, experience badges, patient review ratings, and quick query inputs.',
+        component: 'Doctor appointment & discovery card from Figma (`❖ Card -1` / `Doctors Swipe`, ID: `12:3550`). Features crisp 2px solid black outline, 32px corner radius, physician avatar on slate-blue circle, Dr. Acharya specialty credentials, affiliated hospital, consultation schedule, and circular diagonal arrow CTA button.',
       },
     },
   },
   argTypes: {
+    doctorName: { control: { type: 'text' }, description: 'Doctor full name with title' },
+    specialty: { control: { type: 'text' }, description: 'Doctor medical specialty or field' },
+    hospital: { control: { type: 'text' }, description: 'Associated hospital or clinical institution' },
+    availability: { control: { type: 'text' }, description: 'Weekly availability schedule days' },
+    hours: { control: { type: 'text' }, description: 'Consultation schedule timing range' },
+    avatarUrl: { control: { type: 'text' }, description: 'Optional external image URL for doctor avatar' },
+    onSelectDoctor: { action: 'selectedDoctor', description: 'Callback fired when doctor card is clicked' },
+    onAction: { action: 'actionClicked', description: 'Callback fired when circular CTA button is clicked' },
     variant: {
       control: { type: 'select' },
       options: ['Default', 'Variant2', 'Variant3', 'Variant4', 'Variant5', 'Selected'],
-      description: 'Swipe cycle state of the doctor preview card',
+      description: 'Preserved cycle state variant',
     },
-    doctorName: { control: { type: 'text' }, description: 'Doctor full name with title' },
-    specialty: { control: { type: 'text' }, description: 'Specialty field and experience duration' },
-    rating: { control: { type: 'number', min: 1, max: 5, step: 0.1 }, description: 'Aggregated review rating (1.0 - 5.0)' },
-    promptText: { control: { type: 'text' }, description: 'Interactive chat question prompt placeholder or input' },
-    onSelectDoctor: { action: 'selectedDoctor', description: 'Callback fired when doctor is selected' },
   },
 };
 
 export default meta;
 type Story = StoryObj<typeof DoctorsSwipe>;
 
-export const Default: Story = {
+export const DrAcharya: Story = {
+  name: 'Dr. Acharya (Figma ❖ Card -1)',
   args: {
-    variant: 'Default',
-    doctorName: 'Dr. Sarah Jenkins',
-    specialty: 'Cardiologist • 12 Yrs Exp',
-    rating: 4.9,
-    promptText: 'Ask anything...',
+    doctorName: 'Dr. Acharya',
+    specialty: 'Nephrologist',
+    hospital: 'KIMS Kingsway Hospital',
+    availability: 'Available on week days',
+    hours: '10:00 AM - 01:00 PM',
   },
 };
 
-export const Selected: Story = {
+export const DrSarahJenkins: Story = {
+  name: 'Dr. Sarah Jenkins (Cardiology)',
   args: {
-    variant: 'Selected',
-    doctorName: 'Dr. Marcus Vance',
-    specialty: 'Neurologist • 15 Yrs Exp',
-    rating: 5.0,
-    promptText: 'What|',
+    doctorName: 'Dr. Sarah Jenkins',
+    specialty: 'Cardiologist',
+    hospital: 'Apollo Hospitals City Centre',
+    availability: 'Available Mon - Sat',
+    hours: '09:00 AM - 12:00 PM',
+  },
+};
+
+export const CustomAvatar: Story = {
+  name: 'With Photo Avatar',
+  args: {
+    doctorName: 'Dr. Emily Watson',
+    specialty: 'Pediatric Specialist',
+    hospital: 'Memorial Childrens Hospital',
+    availability: 'Available on weekends',
+    hours: '11:00 AM - 03:00 PM',
+    avatarUrl: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=300',
   },
 };
