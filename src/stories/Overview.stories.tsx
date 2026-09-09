@@ -72,7 +72,7 @@ const OverviewPage: React.FC = () => {
             Navigation & Layout
           </div>
           <div style={{ fontSize: '13px', color: 'var(--theme-text-secondary, #64748b)' }}>
-            Frame 37 Top Bar, Navigation Menu, Action Menu, All Pill
+            Frame 37 Carousel, Navigation Menu, Header Menu, All Pill
           </div>
         </div>
 
@@ -81,7 +81,7 @@ const OverviewPage: React.FC = () => {
             Feedback & Motion
           </div>
           <div style={{ fontSize: '13px', color: 'var(--theme-text-secondary, #64748b)' }}>
-            AI Animation & Pulsing Status
+            AI Animation Presence Orb, AI Text Bar Capsule Input
           </div>
         </div>
       </div>

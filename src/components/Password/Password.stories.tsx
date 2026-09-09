@@ -36,6 +36,7 @@ const meta: Meta<typeof Password> = {
     },
     label: { control: { type: 'text' }, description: 'Field header label' },
     value: { control: { type: 'text' }, description: 'Current password string value' },
+    defaultValue: { control: { type: 'text' }, description: 'Initial default password value for uncontrolled typing' },
     errorMessage: { control: { type: 'text' }, description: 'Validation feedback text shown when in error state' },
     onChange: { action: 'valueChanged', description: 'Callback fired on password modification' },
   },

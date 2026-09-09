@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Password.css';
 import { Eye, EyeOff, Lock, AlertCircle } from 'lucide-react';
 
@@ -7,8 +7,10 @@ export interface PasswordProps {
   state?: 'Default' | 'Error' | 'Pressed' | 'Filled';
   /** Field label */
   label?: string;
-  /** Initial password value */
+  /** Controlled password value */
   value?: string;
+  /** Default initial password value for uncontrolled usage */
+  defaultValue?: string;
   /** Helper/Error message */
   errorMessage?: string;
   /** Value change handler */
@@ -18,28 +20,37 @@ export interface PasswordProps {
 /**
  * **Password**
  * 
- * Preserved layer name component from Figma (\`Password\`, ID: \`12:3538\`).
+ * Preserved layer name component from Figma (`Password`, ID: `12:3538`).
  * Type-safe password field with masked dots, status rings, and error state.
  */
 export const Password: React.FC<PasswordProps> = ({
   state = 'Default',
   label = 'Password',
-  value = state === 'Filled' ? 'SuperSecret123!' : '',
+  value: controlledValue,
+  defaultValue,
   errorMessage = 'Password must be at least 8 characters',
   onChange,
 }) => {
   const [showPassword, setShowPassword] = useState(false);
-  const [val, setVal] = useState(value);
+  const [val, setVal] = useState<string>(() => {
+    if (controlledValue !== undefined) return controlledValue;
+    if (defaultValue !== undefined) return defaultValue;
+    if (state === 'Filled') return 'SuperSecret123!';
+    return '';
+  });
 
-  React.useEffect(() => {
-    setVal(value);
-  }, [value]);
+  useEffect(() => {
+    if (controlledValue !== undefined) {
+      setVal(controlledValue);
+    }
+  }, [controlledValue]);
 
   const isError = state === 'Error';
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setVal(e.target.value);
-    onChange?.(e.target.value);
+    const nextVal = e.target.value;
+    setVal(nextVal);
+    onChange?.(nextVal);
   };
 
   return (
