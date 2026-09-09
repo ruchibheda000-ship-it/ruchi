@@ -13,9 +13,10 @@ const meta: Meta<typeof InputField> = {
       status: 'Stable',
     },
     designTokens: [
-      { property: 'border-color (Focus)', token: '--uedp-teal-500', value: '#14B8A6', context: 'Active focus outline accent' },
-      { property: 'border-color (Error)', token: '--uedp-red-500', value: '#EF4444', context: 'Validation error outline' },
-      { property: 'border-radius', token: '--uedp-rounded-xl', value: '12px', context: 'Container boundary radius' },
+      { property: 'border-color (Default)', token: '--uedp-slate-200', value: '#E2E8F0', context: 'Inactive input boundary outline' },
+      { property: 'border-color (Focus / Entered)', token: '--uedp-zinc-900', value: '#18181B', context: 'Active input focus ring and entered border' },
+      { property: 'border-color (Error)', token: '--uedp-red-700', value: '#B91C1C', context: 'Validation error outline and feedback' },
+      { property: 'text-color (Label)', token: '--uedp-slate-700', value: '#334155', context: 'Field label header typography' },
     ],
     preview: {
       size: 'compact',

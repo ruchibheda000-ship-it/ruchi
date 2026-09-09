@@ -6,32 +6,35 @@
   gap: 4px;
   width: 54px;
   height: 68px;
-  border-radius: 12px;
-  border: 1px solid #e2e8f0;
+  border-radius: var(--uedp-rounded-xl, 12px);
+  border: 1px solid var(--uedp-slate-200, #e2e8f0);
   background-color: var(--uedp-slate-50, #f8fafc);
   cursor: pointer;
   transition: all 0.2s ease;
   outline: none;
-  font-family: 'Lufga', 'Inter', sans-serif;
+  font-family: 'Lufga', 'Inter', -apple-system, sans-serif;
+  box-sizing: border-box;
 }
 
 .uedp-date-pill--as-is:hover {
-  border-color: #18181b;
-  background-color: #f1f5f9;
+  border-color: var(--uedp-zinc-900, #18181b);
+  background-color: var(--uedp-slate-100, #f1f5f9);
 }
 
 /* Selected state: Dark #18181b background, Cream #FFEDD5 text */
 .uedp-date-pill--selected {
   background-color: var(--uedp-zinc-900, #18181b);
-  border-color: #18181b;
+  border-color: var(--uedp-zinc-900, #18181b);
   box-shadow: 0 4px 14px rgba(24, 24, 27, 0.25);
 }
 
 .uedp-date-pill__day {
   font-size: 11px;
   font-weight: 500;
-  color: #64748b;
+  color: var(--uedp-slate-500, #64748b);
   text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1;
 }
 
 .uedp-date-pill--selected .uedp-date-pill__day {
@@ -41,7 +44,8 @@
 .uedp-date-pill__number {
   font-size: 16px;
   font-weight: 700;
-  color: #0f172a;
+  color: var(--uedp-slate-900, #0f172a);
+  line-height: 1.2;
 }
 
 .uedp-date-pill--selected .uedp-date-pill__number {

@@ -4,7 +4,7 @@
   justify-content: center;
   gap: 12px;
   padding: 12px 20px;
-  border-radius: 9999px;
+  border-radius: var(--uedp-rounded-full, 9999px);
   font-family: 'Lufga', 'Inter', -apple-system, sans-serif;
   font-size: 14px;
   font-weight: 500;
@@ -12,6 +12,7 @@
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   outline: none;
+  box-sizing: border-box;
 }
 
 /* Selected state - Dark background (#18181b), Cream text (#FFEDD5) */
@@ -22,7 +23,7 @@
 }
 
 .uedp-nav-home-btn--selected:hover {
-  background-color: #000000;
+  background-color: var(--uedp-base-black, #000000);
 }
 
 /* As is state - Cream background (#FFEDD5), Dark text (#18181b) */
@@ -32,13 +33,15 @@
 }
 
 .uedp-nav-home-btn--as-is:hover {
-  background-color: #fde68a;
+  background-color: var(--uedp-amber-200, #fde68a);
 }
 
 .uedp-nav-home-btn__icon {
   flex-shrink: 0;
+  display: block;
 }
 
 .uedp-nav-home-btn__label {
   line-height: 1;
+  display: inline-block;
 }

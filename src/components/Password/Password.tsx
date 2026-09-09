@@ -31,6 +31,10 @@ export const Password: React.FC<PasswordProps> = ({
   const [showPassword, setShowPassword] = useState(false);
   const [val, setVal] = useState(value);
 
+  React.useEffect(() => {
+    setVal(value);
+  }, [value]);
+
   const isError = state === 'Error';
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {

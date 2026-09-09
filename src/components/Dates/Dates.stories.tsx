@@ -15,7 +15,8 @@ const meta: Meta<typeof Dates> = {
     designTokens: [
       { property: 'gap', token: '--uedp-gap-2', value: '8px', context: 'Spacing between horizontal date items' },
       { property: 'border-radius', token: '--uedp-rounded-3xl', value: '24px', context: 'Overall date rail corner radius' },
-      { property: 'accent', token: '--uedp-teal-500', value: '#14B8A6', context: 'Active date indicator highlight' },
+      { property: 'background', token: '--uedp-slate-50', value: '#F8FAFC', context: 'Date carousel container surface' },
+      { property: 'border-color', token: '--uedp-slate-200', value: '#E2E8F0', context: 'Rail perimeter outline stroke' },
     ],
     preview: {
       size: 'standard',

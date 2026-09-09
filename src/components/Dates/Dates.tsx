@@ -32,6 +32,10 @@ export const Dates: React.FC<DatesProps> = ({
 }) => {
   const [active, setActive] = useState(selectedIndex);
 
+  React.useEffect(() => {
+    setActive(selectedIndex);
+  }, [selectedIndex]);
+
   const handleSelect = (idx: number) => {
     setActive(idx);
     onSelectDate?.(idx);

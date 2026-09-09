@@ -13,9 +13,10 @@ const meta: Meta<typeof NavigationHomeButton> = {
       status: 'Stable',
     },
     designTokens: [
-      { property: 'background (Selected)', token: '--uedp-teal-500', value: '#14B8A6', context: 'Primary active selection surface' },
-      { property: 'color (Selected)', token: '--uedp-base-white', value: '#FFFFFF', context: 'High-contrast text label' },
-      { property: 'border-radius', token: '--uedp-rounded-2xl', value: '16px', context: 'Pill capsule geometry' },
+      { property: 'background (Selected)', token: '--uedp-zinc-900', value: '#18181B', context: 'Primary active selection surface' },
+      { property: 'color (Selected Text)', token: '--uedp-amber-100', value: '#FFEDD5', context: 'Contrasting cream label and icon in selected state' },
+      { property: 'background (As is)', token: '--uedp-amber-100', value: '#FFEDD5', context: 'Warm neutral surface in default state' },
+      { property: 'border-radius', token: '--uedp-rounded-full', value: '9999px', context: 'Full capsule pill geometry' },
     ],
     preview: {
       size: 'compact',

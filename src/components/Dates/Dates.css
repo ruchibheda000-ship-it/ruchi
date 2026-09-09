@@ -10,6 +10,8 @@
   scrollbar-width: none;
   max-width: 440px;
   width: 100%;
+  box-sizing: border-box;
+  font-family: 'Lufga', 'Inter', -apple-system, sans-serif;
 }
 
 .uedp-dates-strip::-webkit-scrollbar {

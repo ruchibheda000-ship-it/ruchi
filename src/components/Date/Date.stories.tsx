@@ -13,9 +13,10 @@ const meta: Meta<typeof DateComponent> = {
       status: 'Stable',
     },
     designTokens: [
-      { property: 'background (Selected)', token: '--uedp-teal-500', value: '#14B8A6', context: 'Active selection highlight surface' },
-      { property: 'border-radius', token: '--uedp-rounded-2xl', value: '16px', context: 'Vertical capsule corner curvature' },
-      { property: 'color (Unselected)', token: '--uedp-slate-600', value: '#475569', context: 'Muted weekday label' },
+      { property: 'background (Selected)', token: '--uedp-zinc-900', value: '#18181B', context: 'Active selection pill surface' },
+      { property: 'color (Selected Text)', token: '--uedp-amber-100', value: '#FFEDD5', context: 'Selected date number and day label' },
+      { property: 'border-radius', token: '--uedp-rounded-xl', value: '12px', context: 'Vertical capsule corner curvature' },
+      { property: 'border-color (Unselected)', token: '--uedp-slate-200', value: '#E2E8F0', context: 'Boundary stroke in unselected state' },
     ],
     preview: {
       size: 'compact',

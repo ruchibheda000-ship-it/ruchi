@@ -4,13 +4,13 @@
   gap: 6px;
   max-width: 340px;
   width: 100%;
-  font-family: 'Lufga', 'Inter', sans-serif;
+  font-family: 'Lufga', 'Inter', -apple-system, sans-serif;
 }
 
 .uedp-input-field__label {
   font-size: 12px;
   font-weight: 500;
-  color: #334155;
+  color: var(--uedp-slate-700, #334155);
 }
 
 .uedp-input-field__container {
@@ -18,31 +18,31 @@
   align-items: center;
   gap: 10px;
   padding: 9px 10px;
-  background-color: #ffffff;
-  border: 1px solid #e2e8f0;
+  background-color: var(--uedp-base-white, #ffffff);
+  border: 1px solid var(--uedp-slate-200, #e2e8f0);
   border-radius: 5px;
   transition: all 0.2s ease;
 }
 
 .uedp-input-field__container:focus-within {
-  border-color: #18181b;
-  box-shadow: 0 0 0 2px rgba(24, 24, 27, 0.1);
+  border-color: var(--uedp-zinc-900, #18181b);
+  box-shadow: 0 0 0 2px rgba(24, 24, 27, 0.08);
 }
 
 .uedp-input-field--error .uedp-input-field__container {
-  border-color: #b91c1c;
+  border-color: var(--uedp-red-700, #b91c1c);
 }
 
 .uedp-input-field--error .uedp-input-field__input {
-  color: #b91c1c;
+  color: var(--uedp-red-700, #b91c1c);
 }
 
 .uedp-input-field--entered .uedp-input-field__container {
-  border-color: #18181b;
+  border-color: var(--uedp-zinc-900, #18181b);
 }
 
 .uedp-input-field__icon-left {
-  color: #71717a;
+  color: var(--uedp-zinc-500, #71717a);
   flex-shrink: 0;
 }
 
@@ -50,19 +50,23 @@
   flex: 1;
   border: none;
   background: transparent;
-  font-family: 'Lufga', 'Inter', sans-serif;
+  font-family: 'Lufga', 'Inter', -apple-system, sans-serif;
   font-size: 12px;
   font-weight: 400;
-  color: #18181b;
+  color: var(--uedp-zinc-900, #18181b);
   outline: none;
 }
 
+.uedp-input-field__input::placeholder {
+  color: var(--uedp-zinc-400, #a1a1aa);
+}
+
 .uedp-input-field__icon-status--success {
-  color: #18181b;
+  color: var(--uedp-zinc-900, #18181b);
 }
 
 .uedp-input-field__icon-status--error {
-  color: #b91c1c;
+  color: var(--uedp-red-700, #b91c1c);
 }
 
 .uedp-input-field__error-msg {
@@ -70,5 +74,5 @@
   align-items: center;
   gap: 4px;
   font-size: 11px;
-  color: #b91c1c;
+  color: var(--uedp-red-700, #b91c1c);
 }

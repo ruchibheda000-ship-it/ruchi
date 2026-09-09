@@ -13,9 +13,10 @@ const meta: Meta<typeof Password> = {
       status: 'Stable',
     },
     designTokens: [
-      { property: 'border-color (Active)', token: '--uedp-teal-500', value: '#14B8A6', context: 'Accent focus outline' },
-      { property: 'border-color (Error)', token: '--uedp-red-500', value: '#EF4444', context: 'Credential validation error border' },
-      { property: 'border-radius', token: '--uedp-rounded-xl', value: '12px', context: 'Input boundary curvature' },
+      { property: 'border-color (Default)', token: '--uedp-slate-200', value: '#E2E8F0', context: 'Inactive input boundary outline' },
+      { property: 'border-color (Active / Focus)', token: '--uedp-zinc-900', value: '#18181B', context: 'Active input focus ring and pressed border' },
+      { property: 'border-color (Error)', token: '--uedp-red-700', value: '#B91C1C', context: 'Validation error outline and feedback' },
+      { property: 'text-color (Label)', token: '--uedp-slate-700', value: '#334155', context: 'Field label header typography' },
     ],
     preview: {
       size: 'compact',
