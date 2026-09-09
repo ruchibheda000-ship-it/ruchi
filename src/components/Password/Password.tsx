@@ -42,8 +42,16 @@ export const Password: React.FC<PasswordProps> = ({
   useEffect(() => {
     if (controlledValue !== undefined) {
       setVal(controlledValue);
+    } else if (defaultValue !== undefined) {
+      setVal(defaultValue);
+    } else if (state === 'Filled') {
+      setVal('SuperSecret123!');
+    } else if (state === 'Error') {
+      setVal('123');
+    } else if (state === 'Default') {
+      setVal('');
     }
-  }, [controlledValue]);
+  }, [controlledValue, defaultValue, state]);
 
   const isError = state === 'Error';
 

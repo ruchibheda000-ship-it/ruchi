@@ -50,12 +50,20 @@ export const InputField: React.FC<InputFieldProps> = ({
     return '';
   });
 
-  // Synchronize internal state when controlledValue updates from parent / Storybook controls
+  // Synchronize internal state when controlledValue, defaultValue, or state updates from parent / Storybook controls
   useEffect(() => {
     if (controlledValue !== undefined) {
       setInternalValue(controlledValue);
+    } else if (defaultValue !== undefined) {
+      setInternalValue(defaultValue);
+    } else if (state === 'Entered') {
+      setInternalValue('Jane Doe');
+    } else if (state === 'Error') {
+      setInternalValue('Invalid Name!');
+    } else if (state === 'Input Field - Status') {
+      setInternalValue('');
     }
-  }, [controlledValue]);
+  }, [controlledValue, defaultValue, state]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const nextVal = e.target.value;

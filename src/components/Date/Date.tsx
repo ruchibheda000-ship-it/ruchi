@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Date.css';
 
 export interface DateProps {
@@ -15,7 +15,7 @@ export interface DateProps {
 /**
  * **Date**
  * 
- * Preserved layer name component from Figma (\`Date\`, ID: \`10:2569\`).
+ * Preserved layer name component from Figma (`Date`, ID: `10:2569`).
  * Calendar date picker pill item with active selected highlighting.
  */
 export const DateComponent: React.FC<DateProps> = ({
@@ -24,14 +24,23 @@ export const DateComponent: React.FC<DateProps> = ({
   dateNumber = 14,
   onClick,
 }) => {
-  const isSelected = state === 'Selected';
+  const [internalSelected, setInternalSelected] = useState(state === 'Selected');
+
+  useEffect(() => {
+    setInternalSelected(state === 'Selected');
+  }, [state]);
+
+  const handleClick = () => {
+    setInternalSelected((prev) => !prev);
+    onClick?.();
+  };
 
   return (
     <button
       type="button"
-      className={`uedp-date-pill ${isSelected ? 'uedp-date-pill--selected' : 'uedp-date-pill--as-is'}`}
-      onClick={onClick}
-      aria-selected={isSelected}
+      className={`uedp-date-pill ${internalSelected ? 'uedp-date-pill--selected' : 'uedp-date-pill--as-is'}`}
+      onClick={handleClick}
+      aria-selected={internalSelected}
     >
       <span className="uedp-date-pill__day">{day}</span>
       <span className="uedp-date-pill__number">{dateNumber}</span>

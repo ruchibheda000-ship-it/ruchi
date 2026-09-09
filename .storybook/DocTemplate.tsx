@@ -8,6 +8,7 @@ import {
   Source,
   DocsContext,
 } from '@storybook/blocks';
+import { ComponentPlayground } from '../src/components/Playground/ComponentPlayground';
 
 export const DocTemplate: React.FC = () => {
   const context = useContext(DocsContext);
@@ -32,7 +33,10 @@ export const DocTemplate: React.FC = () => {
           <h2 className="doc-section-title">Preview</h2>
           <p className="doc-section-subtitle">Interactive component specimen canvas with live props inspection.</p>
         </div>
-        <Primary />
+        <div className="doc-preview-specimen-container">
+          <Primary />
+          <ComponentPlayground primaryStory={primaryStory} />
+        </div>
       </section>
 
       {/* 4. Variants */}

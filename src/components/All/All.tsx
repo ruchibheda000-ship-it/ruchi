@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './All.css';
 
 export interface AllProps {
@@ -24,17 +24,26 @@ export const AllComponent: React.FC<AllProps> = ({
   icon,
   onClick,
 }) => {
-  const isSelected = state === 'Default';
+  const [internalSelected, setInternalSelected] = useState(state === 'Default');
+
+  useEffect(() => {
+    setInternalSelected(state === 'Default');
+  }, [state]);
+
+  const handleClick = () => {
+    setInternalSelected((prev) => !prev);
+    onClick?.();
+  };
 
   return (
     <button
       type="button"
       className={`uedp-all-pill ${
-        isSelected ? 'uedp-all-pill--selected' : 'uedp-all-pill--not-selected'
+        internalSelected ? 'uedp-all-pill--selected' : 'uedp-all-pill--not-selected'
       }`}
-      onClick={onClick}
-      aria-pressed={isSelected}
-      aria-label={`Filter category: ${label}, ${isSelected ? 'selected' : 'not selected'}`}
+      onClick={handleClick}
+      aria-pressed={internalSelected}
+      aria-label={`Filter category: ${label}, ${internalSelected ? 'selected' : 'not selected'}`}
     >
       {icon && <span className="uedp-all-pill__icon">{icon}</span>}
       <span className="uedp-all-pill__label">{label}</span>

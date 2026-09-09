@@ -1,0 +1,180 @@
+/**
+ * Component Playground Interaction Bar Styles
+ * Matches existing editorial documentation aesthetics.
+ */
+
+.doc-playground-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 10px 16px;
+  margin-top: 10px;
+  background: var(--theme-bg-surface-subtle, #f8fafc);
+  border: 1px solid var(--theme-border, #e2e8f0);
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+[data-theme="dark"] .doc-playground-bar {
+  background: #18181b;
+  border-color: #27272a;
+}
+
+.doc-playground-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.doc-playground-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: #0f172a;
+  padding: 3px 7px;
+  border-radius: 4px;
+  user-select: none;
+}
+
+[data-theme="dark"] .doc-playground-tag {
+  background: #27272a;
+  color: #f4f4f5;
+  border: 1px solid #3f3f46;
+}
+
+.doc-playground-hint {
+  font-size: 12px;
+  color: var(--theme-text-muted, #64748b);
+  line-height: 1.4;
+}
+
+[data-theme="dark"] .doc-playground-hint {
+  color: #a1a1aa;
+}
+
+.doc-playground-controls {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.doc-playground-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--theme-text-secondary, #475569);
+  background: var(--theme-bg-surface, #ffffff);
+  border: 1px solid var(--theme-border, #e2e8f0);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+.doc-playground-btn:hover {
+  color: var(--theme-text-primary, #0f172a);
+  background: var(--theme-bg-surface-subtle, #f1f5f9);
+  border-color: var(--theme-border-strong, #cbd5e1);
+}
+
+.doc-playground-btn:focus-visible {
+  outline: 2px solid var(--theme-accent-primary, #14b8a6);
+  outline-offset: 1px;
+}
+
+.doc-playground-btn__dot {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--theme-border-strong, #94a3b8);
+  transition: background 0.15s ease;
+}
+
+/* Active State styling consistent with documentation system */
+.doc-playground-btn.is-active {
+  color: var(--theme-accent-primary-text, #0f766e);
+  background: var(--theme-accent-primary-subtle, #f0fdfa);
+  border-color: #ccfbf1;
+  font-weight: 600;
+}
+
+.doc-playground-btn.is-active .doc-playground-btn__dot {
+  background: var(--theme-accent-primary, #14b8a6);
+}
+
+[data-theme="dark"] .doc-playground-btn {
+  background: #27272a;
+  border-color: #3f3f46;
+  color: #d4d4d8;
+}
+
+[data-theme="dark"] .doc-playground-btn:hover {
+  background: #3f3f46;
+  border-color: #52525b;
+  color: #ffffff;
+}
+
+[data-theme="dark"] .doc-playground-btn.is-active {
+  color: #5eead4;
+  background: #134e4a;
+  border-color: #0f766e;
+}
+
+[data-theme="dark"] .doc-playground-btn.is-active .doc-playground-btn__dot {
+  background: #2dd4bf;
+}
+
+/* Action button variation (e.g. Clear Text / Clear Query) */
+.doc-playground-btn--action {
+  border-style: dashed;
+  color: var(--theme-text-muted, #64748b);
+}
+
+.doc-playground-btn--action .doc-playground-btn__dot {
+  display: none;
+}
+
+.doc-playground-btn--action:hover {
+  color: #b91c1c;
+  border-color: #f87171;
+  background: #fef2f2;
+}
+
+[data-theme="dark"] .doc-playground-btn--action:hover {
+  color: #fca5a5;
+  border-color: #ef4444;
+  background: #450a0a;
+}
+
+/* Responsive Narrow Breakpoint */
+@media (max-width: 640px) {
+  .doc-playground-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px 12px;
+  }
+
+  .doc-playground-controls {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 2px;
+  }
+}

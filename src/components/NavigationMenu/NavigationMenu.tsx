@@ -19,6 +19,17 @@ export const NavigationMenu: React.FC<NavigationMenuProps> = ({
   activeTab = 'Home',
   onTabChange,
 }) => {
+  const [currentTab, setCurrentTab] = React.useState(activeTab);
+
+  React.useEffect(() => {
+    setCurrentTab(activeTab);
+  }, [activeTab]);
+
+  const handleTabClick = (tabId: 'Home' | 'Add Docs' | 'Report' | 'Schedule') => {
+    setCurrentTab(tabId);
+    onTabChange?.(tabId);
+  };
+
   const tabs = [
     { id: 'Home', label: 'Home', Icon: Home },
     { id: 'Add Docs', label: 'Add Docs', Icon: FilePlus },
@@ -29,7 +40,7 @@ export const NavigationMenu: React.FC<NavigationMenuProps> = ({
   return (
     <nav className="uedp-nav-menu" role="navigation" aria-label="Bottom Navigation">
       {tabs.map((tab) => {
-        const isActive = activeTab === tab.id;
+        const isActive = currentTab === tab.id;
         const IconComponent = tab.Icon;
         return (
           <button
@@ -38,7 +49,7 @@ export const NavigationMenu: React.FC<NavigationMenuProps> = ({
             className={`uedp-nav-menu__item ${
               isActive ? 'uedp-nav-menu__item--active' : 'uedp-nav-menu__item--inactive'
             } uedp-nav-menu__item--${tab.id.toLowerCase().replace(/\s+/g, '-')}`}
-            onClick={() => onTabChange?.(tab.id)}
+            onClick={() => handleTabClick(tab.id)}
             aria-selected={isActive}
             aria-label={`${tab.label} destination tab`}
           >

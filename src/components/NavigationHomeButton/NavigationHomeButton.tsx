@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './NavigationHomeButton.css';
 import { Home } from 'lucide-react';
 
@@ -22,14 +22,25 @@ export const NavigationHomeButton: React.FC<NavigationHomeButtonProps> = ({
   label = 'Home',
   onClick,
 }) => {
-  const isSelected = state === 'Selected';
+  const [internalSelected, setInternalSelected] = useState(state === 'Selected');
+
+  useEffect(() => {
+    setInternalSelected(state === 'Selected');
+  }, [state]);
+
+  const handleClick = () => {
+    setInternalSelected((prev) => !prev);
+    onClick?.();
+  };
+
+  const resolvedState = internalSelected ? 'Selected' : 'As is';
 
   return (
     <button
       type="button"
-      className={`uedp-nav-home-btn uedp-nav-home-btn--${state.toLowerCase().replace(/\s+/g, '-')}`}
-      onClick={onClick}
-      aria-pressed={isSelected}
+      className={`uedp-nav-home-btn uedp-nav-home-btn--${resolvedState.toLowerCase().replace(/\s+/g, '-')}`}
+      onClick={handleClick}
+      aria-pressed={internalSelected}
     >
       <Home className="uedp-nav-home-btn__icon" size={20} />
       <span className="uedp-nav-home-btn__label">{label}</span>
