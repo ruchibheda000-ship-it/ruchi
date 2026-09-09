@@ -3,3 +3,5 @@ storybook-static/
 dist/
 .cache/
 *.log
+.vercel
+.env*
