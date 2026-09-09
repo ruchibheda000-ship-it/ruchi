@@ -94,7 +94,7 @@ export const FoundationalTokensGallery: React.FC = () => {
 };
 
 const meta: Meta<typeof FoundationalTokensGallery> = {
-  title: 'Tokens/Foundational Tokens',
+  title: 'Foundations & Tokens/Foundational Tokens',
   component: FoundationalTokensGallery,
   parameters: {
     docs: {

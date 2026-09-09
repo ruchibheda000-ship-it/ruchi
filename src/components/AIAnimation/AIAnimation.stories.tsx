@@ -2,24 +2,27 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { AIAnimation } from './AIAnimation';
 
 const meta: Meta<typeof AIAnimation> = {
-  title: 'Design System/AI Animation',
+  title: 'Feedback & Motion/AI Animation',
   component: AIAnimation,
   tags: ['autodocs'],
   parameters: {
+    figma: {
+      nodeId: '9:7423',
+      layerName: 'AI Animation',
+      category: 'Feedback & Motion',
+      status: 'Stable',
+    },
+    designTokens: [
+      { property: 'accent / aura', token: '--uedp-teal-500', value: '#14B8A6', context: 'Concentric aura and particle illumination' },
+      { property: 'border-radius', token: '--uedp-rounded-full', value: '9999px', context: 'Spherical glow ring curvature' },
+    ],
+    preview: {
+      size: 'spacious',
+      align: 'center',
+    },
     docs: {
       description: {
-        component: `
-### Figma Component Specification: \`AI Animation\`
-
-| Attribute | Details |
-| :--- | :--- |
-| **Figma Node ID** | \`9:7423\` |
-| **Preserved Layer Name** | \`AI Animation\` |
-| **Bound CSS Tokens** | \`--uedp-teal-500\`, \`--uedp-rounded-full\` |
-| **Animation Effects** | Pulsing glow ring & rotating sparkle indicator |
-
-Preserved AI animation component from Figma node \`9:7423\`.
-        `,
+        component: 'Health assistant animated indicator signaling listening, computation, and interactive standby voice states.',
       },
     },
   },
@@ -27,9 +30,10 @@ Preserved AI animation component from Figma node \`9:7423\`.
     size: {
       control: { type: 'select' },
       options: ['small', 'medium', 'large'],
+      description: 'Physical dimensions of the AI aura indicator',
     },
-    statusText: { control: { type: 'text' } },
-    active: { control: { type: 'boolean' } },
+    statusText: { control: { type: 'text' }, description: 'Descriptive status text displayed below animation' },
+    active: { control: { type: 'boolean' }, description: 'Toggles active pulsing animation vs idle standby' },
   },
 };
 

@@ -2,24 +2,28 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Easecard } from './Easecard';
 
 const meta: Meta<typeof Easecard> = {
-  title: 'Design System/Easecard',
+  title: 'Cards & Data Display/Easecard',
   component: Easecard,
   tags: ['autodocs'],
   parameters: {
+    figma: {
+      nodeId: '9:7343',
+      layerName: 'Easecard',
+      category: 'Cards & Data Display',
+      status: 'Stable',
+    },
+    designTokens: [
+      { property: 'border-radius', token: '--uedp-rounded-2xl', value: '16px', context: 'Provider card perimeter radius' },
+      { property: 'accent', token: '--uedp-teal-500', value: '#14B8A6', context: 'Network action highlights and link icon' },
+      { property: 'text-color', token: '--uedp-slate-900', value: '#0F172A', context: 'Hospital facility typography header' },
+    ],
+    preview: {
+      size: 'standard',
+      align: 'center',
+    },
     docs: {
       description: {
-        component: `
-### Figma Component Specification: \`Easecard\`
-
-| Attribute | Details |
-| :--- | :--- |
-| **Figma Node ID** | \`9:7343\` |
-| **Preserved Layer Name** | \`Easecard\` |
-| **Variant Property** | \`Property 1\` (\`KIMS\` \| \`Tata\` \| \`Metro\` \| \`Add\` \| \`formkit:add\`) |
-| **Bound CSS Tokens** | \`--uedp-teal-500\`, \`--uedp-rounded-2xl\`, \`--uedp-slate-900\` |
-
-Hospital network provider card component preserving Figma node \`9:7343\`.
-        `,
+        component: 'Branded hospital network integration tile displaying certified provider emblems, official network status, and connection action triggers.',
       },
     },
   },
@@ -27,11 +31,11 @@ Hospital network provider card component preserving Figma node \`9:7343\`.
     provider: {
       control: { type: 'select' },
       options: ['KIMS', 'Tata', 'Metro', 'Add', 'formkit:add'],
-      description: 'Figma component variant provider',
+      description: 'Healthcare provider variant identifying logo and visual branding style',
     },
-    name: { control: { type: 'text' } },
-    type: { control: { type: 'text' } },
-    onClick: { action: 'clicked' },
+    name: { control: { type: 'text' }, description: 'Hospital or clinic facility name' },
+    type: { control: { type: 'text' }, description: 'Network classification subtitle' },
+    onClick: { action: 'clicked', description: 'Callback triggered when card is clicked' },
   },
 };
 

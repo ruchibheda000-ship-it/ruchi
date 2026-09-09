@@ -4,18 +4,17 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "type-check": "tsc --noEmit",
+    "dev": "storybook dev -p 6006",
+    "build": "storybook build",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
+    "type-check": "tsc --noEmit",
     "deploy-check": "node scripts/deploy-vercel.js"
   },
   "dependencies": {
     "lucide-react": "^0.344.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^7.18.3"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^8.0.0",

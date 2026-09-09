@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import type { Preview } from '@storybook/react';
 import '../src/styles/figma-tokens.css';
 import '../src/styles/theme.css';
+import '../src/styles/docs.css';
+import { DocTemplate } from './DocTemplate';
 
 export const globalTypes = {
   theme: {
@@ -34,138 +36,108 @@ export const decorators = [
       }
     }, [theme]);
 
+    // Determine specimen sizing and alignment from story parameters or intelligent defaults
+    const previewParams = context.parameters?.preview || {};
+    const title = context.title || '';
+    const category = context.parameters?.figma?.category || '';
+
+    let size = previewParams.size;
+    if (!size) {
+      if (
+        title.includes('Input Field') ||
+        title.includes('Password') ||
+        title.includes('Home Button') ||
+        title === 'Primitives & Inputs/Date' ||
+        title.includes('All') ||
+        category === 'Forms'
+      ) {
+        size = 'compact';
+      } else if (
+        title.includes('Doctors Swipe') ||
+        title.includes('Navigation Menu') ||
+        title.includes('AI Animation') ||
+        title.includes('Frame 37')
+      ) {
+        size = 'spacious';
+      } else {
+        size = 'standard';
+      }
+    }
+
+    let align = previewParams.align;
+    if (!align) {
+      if (
+        title.includes('Input Field') ||
+        title.includes('Password') ||
+        category === 'Forms'
+      ) {
+        align = 'form';
+      } else if (title.includes('Date')) {
+        align = 'horizontal';
+      } else {
+        align = 'center';
+      }
+    }
+
+    const sizeClass = `specimen-${size}`;
+    const alignClass = `specimen-align-${align}`;
+
     if (theme === 'side-by-side') {
       return (
-        <div
-          style={{
-            display: 'flex',
-            gap: '24px',
-            padding: '24px',
-            width: '100%',
-            boxSizing: 'border-box',
-            flexWrap: 'wrap',
-            alignItems: 'stretch',
-          }}
-        >
-          {/* Light Theme Panel */}
-          <div
-            data-theme="light"
-            style={{
-              flex: '1 1 360px',
-              backgroundColor: '#f8fafc',
-              color: '#0f172a',
-              padding: '32px 24px',
-              borderRadius: '16px',
-              border: '1px solid #e2e8f0',
-              boxShadow: '0 4px 20px rgba(0,0,0,0.04)',
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '20px',
-              boxSizing: 'border-box',
-            }}
-          >
-            <div
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '6px',
-                fontSize: '11px',
-                fontWeight: 700,
-                letterSpacing: '0.06em',
-                textTransform: 'uppercase',
-                color: '#475569',
-                padding: '4px 12px',
-                background: '#ffffff',
-                borderRadius: '9999px',
-                border: '1px solid #e2e8f0',
-                alignSelf: 'flex-start',
-              }}
-            >
-              ☀️ Light Theme
+        <div className="theme-comparison-grid">
+          {/* Light Theme Panel Specimen */}
+          <div className="theme-specimen-panel" data-theme="light">
+            <div className="theme-specimen-header">
+              <span className="theme-specimen-title">
+                <span className="theme-specimen-dot" />
+                Light Theme
+              </span>
             </div>
-            <div
-              style={{
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                flex: 1,
-                minHeight: '120px',
-              }}
-            >
-              <Story />
+            <div className={`theme-specimen-content specimen-stage ${sizeClass} ${alignClass}`}>
+              {align === 'form' ? (
+                <div className="specimen-form-container">
+                  <Story />
+                </div>
+              ) : (
+                <Story />
+              )}
             </div>
           </div>
 
-          {/* Dark Theme Panel */}
-          <div
-            data-theme="dark"
-            style={{
-              flex: '1 1 360px',
-              backgroundColor: '#09090b',
-              color: '#f4f4f5',
-              padding: '32px 24px',
-              borderRadius: '16px',
-              border: '1px solid #27272a',
-              boxShadow: '0 8px 30px rgba(0,0,0,0.5)',
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '20px',
-              boxSizing: 'border-box',
-            }}
-          >
-            <div
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '6px',
-                fontSize: '11px',
-                fontWeight: 700,
-                letterSpacing: '0.06em',
-                textTransform: 'uppercase',
-                color: '#2dd4bf',
-                padding: '4px 12px',
-                background: '#18181b',
-                borderRadius: '9999px',
-                border: '1px solid #27272a',
-                alignSelf: 'flex-start',
-              }}
-            >
-              🌙 Dark Theme
+          {/* Dark Theme Panel Specimen */}
+          <div className="theme-specimen-panel panel-dark" data-theme="dark">
+            <div className="theme-specimen-header">
+              <span className="theme-specimen-title">
+                <span className="theme-specimen-dot" />
+                Dark Theme
+              </span>
             </div>
-            <div
-              style={{
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                flex: 1,
-                minHeight: '120px',
-              }}
-            >
-              <Story />
+            <div className={`theme-specimen-content specimen-stage ${sizeClass} ${alignClass}`}>
+              {align === 'form' ? (
+                <div className="specimen-form-container">
+                  <Story />
+                </div>
+              ) : (
+                <Story />
+              )}
             </div>
           </div>
         </div>
       );
     }
 
-    const isDark = theme === 'dark';
     return (
       <div
         data-theme={theme}
-        style={{
-          minHeight: '100%',
-          width: '100%',
-          backgroundColor: isDark ? '#09090b' : '#f8fafc',
-          color: isDark ? '#f4f4f5' : '#0f172a',
-          padding: '24px',
-          boxSizing: 'border-box',
-          transition: 'background-color 0.2s ease, color 0.2s ease',
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}
+        className={`specimen-stage ${sizeClass} ${alignClass}`}
       >
-        <Story />
+        {align === 'form' ? (
+          <div className="specimen-form-container">
+            <Story />
+          </div>
+        ) : (
+          <Story />
+        )}
       </div>
     );
   },
@@ -175,6 +147,10 @@ const preview: Preview = {
   globalTypes,
   decorators,
   parameters: {
+    docs: {
+      page: DocTemplate,
+      toc: true,
+    },
     controls: {
       matchers: {
         color: /(background|color)$/i,
@@ -190,9 +166,41 @@ const preview: Preview = {
         { name: 'slate', value: '#0f172a' },
       ],
     },
+    viewport: {
+      viewports: {
+        mobileSmall: {
+          name: 'Mobile Small',
+          styles: { width: '320px', height: '568px' },
+        },
+        mobileLarge: {
+          name: 'Mobile Large (iPhone 14)',
+          styles: { width: '390px', height: '844px' },
+        },
+        tablet: {
+          name: 'Tablet (iPad Mini)',
+          styles: { width: '768px', height: '1024px' },
+        },
+        desktop: {
+          name: 'Desktop Standard',
+          styles: { width: '1280px', height: '800px' },
+        },
+      },
+    },
     options: {
       storySort: {
-        order: ['Tokens', ['Base Color Palette', 'Foundational Tokens'], 'Design System'],
+        order: [
+          'Overview',
+          'Foundations & Tokens',
+          ['Base Color Palette', 'Foundational Tokens'],
+          'Primitives & Inputs',
+          ['Input Field', 'Password', 'Navigation - Home Button', 'Date', 'Dates'],
+          'Cards & Data Display',
+          ['Card', 'Easecard', 'Doctors Swipe'],
+          'Navigation & Layout',
+          ['Frame 37', 'Navigation Menu', 'Menu', 'All'],
+          'Feedback & Motion',
+          ['AI Animation'],
+        ],
       },
     },
   },

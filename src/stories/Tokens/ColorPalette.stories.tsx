@@ -93,7 +93,7 @@ const ColorSwatchGallery: React.FC = () => {
 };
 
 const meta: Meta = {
-  title: 'Tokens/Base Color Palette',
+  title: 'Foundations & Tokens/Base Color Palette',
   component: ColorSwatchGallery,
   parameters: {
     docs: {

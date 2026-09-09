@@ -2,25 +2,28 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { NavigationHomeButton } from './NavigationHomeButton';
 
 const meta: Meta<typeof NavigationHomeButton> = {
-  title: 'Design System/Navigation - Home Button',
+  title: 'Primitives & Inputs/Navigation - Home Button',
   component: NavigationHomeButton,
   tags: ['autodocs'],
   parameters: {
+    figma: {
+      nodeId: '8:4123',
+      layerName: 'Navigation - Home Button',
+      category: 'Primitives & Inputs',
+      status: 'Stable',
+    },
+    designTokens: [
+      { property: 'background (Selected)', token: '--uedp-teal-500', value: '#14B8A6', context: 'Primary active selection surface' },
+      { property: 'color (Selected)', token: '--uedp-base-white', value: '#FFFFFF', context: 'High-contrast text label' },
+      { property: 'border-radius', token: '--uedp-rounded-2xl', value: '16px', context: 'Pill capsule geometry' },
+    ],
+    preview: {
+      size: 'compact',
+      align: 'center',
+    },
     docs: {
       description: {
-        component: `
-### Figma Component Specification: \`Navigation - Home Button\`
-
-| Attribute | Details |
-| :--- | :--- |
-| **Figma Node ID** | \`8:4123\` |
-| **Preserved Layer Name** | \`Navigation - Home Button\` |
-| **Variant Property** | \`State\` (\`Selected\` \| \`As is\`) |
-| **Bound CSS Tokens** | \`--uedp-teal-500\`, \`--uedp-rounded-2xl\`, \`--uedp-base-white\` |
-| **Unbound Properties** | \`padding: 10px 20px\`, \`font-size: 14px\`, \`font-weight: 600\` |
-
-This component is derived directly from the Figma design canvas matching layer ID \`8:4123\`.
-        `,
+        component: 'Curved interactive pill button designed for primary top-level return actions and bottom navigation centers with toggleable active state.',
       },
     },
   },
@@ -28,13 +31,13 @@ This component is derived directly from the Figma design canvas matching layer I
     state: {
       control: { type: 'select' },
       options: ['Selected', 'As is'],
-      description: 'Figma component variant state',
+      description: 'Active selection status of the button',
     },
     label: {
       control: { type: 'text' },
-      description: 'Button text label',
+      description: 'Text label accompanying the home icon',
     },
-    onClick: { action: 'clicked' },
+    onClick: { action: 'clicked', description: 'Click trigger callback' },
   },
 };
 

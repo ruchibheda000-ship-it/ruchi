@@ -2,24 +2,27 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { AllComponent } from './All';
 
 const meta: Meta<typeof AllComponent> = {
-  title: 'Design System/All',
+  title: 'Navigation & Layout/All',
   component: AllComponent,
   tags: ['autodocs'],
   parameters: {
+    figma: {
+      nodeId: '12:3547',
+      layerName: 'All',
+      category: 'Navigation & Layout',
+      status: 'Stable',
+    },
+    designTokens: [
+      { property: 'background (Selected)', token: '--uedp-teal-500', value: '#14B8A6', context: 'Active filter category surface' },
+      { property: 'border-radius', token: '--uedp-rounded-full', value: '9999px', context: 'Capsule chip perimeter' },
+    ],
+    preview: {
+      size: 'compact',
+      align: 'center',
+    },
     docs: {
       description: {
-        component: `
-### Figma Component Specification: \`All\`
-
-| Attribute | Details |
-| :--- | :--- |
-| **Figma Node ID** | \`12:3547\` |
-| **Preserved Layer Name** | \`All\` |
-| **Variant Property** | \`Property 1\` (\`Default\` \| \`Not Selected\`) |
-| **Bound CSS Tokens** | \`--uedp-teal-500\`, \`--uedp-rounded-full\` |
-
-Category tag filter pill preserving Figma node \`12:3547\`.
-        `,
+        component: 'Interactive pill filter chip used in specialist category navigation rails and appointment filtering controls.',
       },
     },
   },
@@ -27,10 +30,10 @@ Category tag filter pill preserving Figma node \`12:3547\`.
     state: {
       control: { type: 'select' },
       options: ['Default', 'Not Selected'],
-      description: 'Figma component state variant',
+      description: 'Filter pill selection state',
     },
-    label: { control: { type: 'text' } },
-    onClick: { action: 'clicked' },
+    label: { control: { type: 'text' }, description: 'Text label displayed inside filter pill' },
+    onClick: { action: 'clicked', description: 'Callback fired on pill click' },
   },
 };
 

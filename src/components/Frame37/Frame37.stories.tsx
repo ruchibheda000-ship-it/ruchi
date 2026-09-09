@@ -2,28 +2,32 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Frame37 } from './Frame37';
 
 const meta: Meta<typeof Frame37> = {
-  title: 'Design System/Frame 37',
+  title: 'Navigation & Layout/Frame 37',
   component: Frame37,
   tags: ['autodocs'],
   parameters: {
+    figma: {
+      nodeId: '11:3457',
+      layerName: 'Frame 37',
+      category: 'Navigation & Layout',
+      status: 'Stable',
+    },
+    designTokens: [
+      { property: 'gap', token: '--uedp-gap-4', value: '16px', context: 'Horizontal spacing between doctor card items' },
+      { property: 'color (Heading)', token: '--uedp-slate-900', value: '#0F172A', context: 'Section title header color' },
+    ],
+    preview: {
+      size: 'spacious',
+      align: 'center',
+    },
     docs: {
       description: {
-        component: `
-### Figma Component Specification: \`Frame 37\`
-
-| Attribute | Details |
-| :--- | :--- |
-| **Figma Node ID** | \`11:3457\` |
-| **Preserved Layer Name** | \`Frame 37\` |
-| **Bound CSS Tokens** | \`--uedp-gap-4\`, \`--uedp-slate-900\` |
-
-Doctor card list frame container matching Figma node \`11:3457\`.
-        `,
+        component: 'Composite section container coordinating a prominent category title with a horizontal specialists carousel rail.',
       },
     },
   },
   argTypes: {
-    heading: { control: { type: 'text' } },
+    heading: { control: { type: 'text' }, description: 'Section title displayed above the carousel' },
   },
 };
 

@@ -2,24 +2,28 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { DateComponent } from './Date';
 
 const meta: Meta<typeof DateComponent> = {
-  title: 'Design System/Date',
+  title: 'Primitives & Inputs/Date',
   component: DateComponent,
   tags: ['autodocs'],
   parameters: {
+    figma: {
+      nodeId: '10:2569',
+      layerName: 'Date',
+      category: 'Primitives & Inputs',
+      status: 'Stable',
+    },
+    designTokens: [
+      { property: 'background (Selected)', token: '--uedp-teal-500', value: '#14B8A6', context: 'Active selection highlight surface' },
+      { property: 'border-radius', token: '--uedp-rounded-2xl', value: '16px', context: 'Vertical capsule corner curvature' },
+      { property: 'color (Unselected)', token: '--uedp-slate-600', value: '#475569', context: 'Muted weekday label' },
+    ],
+    preview: {
+      size: 'compact',
+      align: 'horizontal',
+    },
     docs: {
       description: {
-        component: `
-### Figma Component Specification: \`Date\`
-
-| Attribute | Details |
-| :--- | :--- |
-| **Figma Node ID** | \`10:2569\` |
-| **Preserved Layer Name** | \`Date\` |
-| **Variant Property** | \`Property 1\` (\`As is\` \| \`Selected\`) |
-| **Bound CSS Tokens** | \`--uedp-teal-500\`, \`--uedp-rounded-2xl\`, \`--uedp-base-white\` |
-
-Calendar date item pill component preserving Figma node \`10:2569\`.
-        `,
+        component: 'Calendar day selector card presenting weekday abbreviation and calendar day number in a vertical interactive pill format.',
       },
     },
   },
@@ -27,11 +31,11 @@ Calendar date item pill component preserving Figma node \`10:2569\`.
     state: {
       control: { type: 'select' },
       options: ['As is', 'Selected'],
-      description: 'Figma component variant state',
+      description: 'Selection status of the date card',
     },
-    day: { control: { type: 'text' } },
-    dateNumber: { control: { type: 'number' } },
-    onClick: { action: 'clicked' },
+    day: { control: { type: 'text' }, description: 'Day abbreviation (e.g. Mon, Tue, Wed)' },
+    dateNumber: { control: { type: 'number' }, description: 'Calendar day of month integer' },
+    onClick: { action: 'clicked', description: 'Callback fired on date selection' },
   },
 };
 

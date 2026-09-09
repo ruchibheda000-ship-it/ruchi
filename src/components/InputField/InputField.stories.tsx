@@ -2,24 +2,28 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { InputField } from './InputField';
 
 const meta: Meta<typeof InputField> = {
-  title: 'Design System/Input Field',
+  title: 'Primitives & Inputs/Input Field',
   component: InputField,
   tags: ['autodocs'],
   parameters: {
+    figma: {
+      nodeId: '12:3542',
+      layerName: 'Input Field',
+      category: 'Primitives & Inputs',
+      status: 'Stable',
+    },
+    designTokens: [
+      { property: 'border-color (Focus)', token: '--uedp-teal-500', value: '#14B8A6', context: 'Active focus outline accent' },
+      { property: 'border-color (Error)', token: '--uedp-red-500', value: '#EF4444', context: 'Validation error outline' },
+      { property: 'border-radius', token: '--uedp-rounded-xl', value: '12px', context: 'Container boundary radius' },
+    ],
+    preview: {
+      size: 'compact',
+      align: 'form',
+    },
     docs: {
       description: {
-        component: `
-### Figma Component Specification: \`Input Field\`
-
-| Attribute | Details |
-| :--- | :--- |
-| **Figma Node ID** | \`12:3542\` |
-| **Preserved Layer Name** | \`Input Field\` |
-| **Variant Property** | \`State\` (\`Input Field - Status\` \| \`Entered\` \| \`Error\` \| \`Variant4\`) |
-| **Bound CSS Tokens** | \`--uedp-teal-500\`, \`--uedp-red-500\`, \`--uedp-rounded-xl\` |
-
-Form text input component set preserving Figma node \`12:3542\`.
-        `,
+        component: 'Foundational text input control supporting custom labels, helper placeholders, filled values, and contextual error feedback states.',
       },
     },
   },
@@ -27,13 +31,13 @@ Form text input component set preserving Figma node \`12:3542\`.
     state: {
       control: { type: 'select' },
       options: ['Input Field - Status', 'Entered', 'Error', 'Variant4'],
-      description: 'Figma component variant state',
+      description: 'Figma component variant state reflecting user interaction stage.',
     },
-    label: { control: { type: 'text' } },
-    value: { control: { type: 'text' } },
-    placeholder: { control: { type: 'text' } },
-    errorMessage: { control: { type: 'text' } },
-    onChange: { action: 'valueChanged' },
+    label: { control: { type: 'text' }, description: 'Descriptive field label above input' },
+    value: { control: { type: 'text' }, description: 'Current input text content' },
+    placeholder: { control: { type: 'text' }, description: 'Placeholder hint shown when input is empty' },
+    errorMessage: { control: { type: 'text' }, description: 'Validation feedback text displayed in Error state' },
+    onChange: { action: 'valueChanged', description: 'Callback fired upon input change' },
   },
 };
 

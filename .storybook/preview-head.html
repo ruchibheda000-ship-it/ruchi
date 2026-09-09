@@ -1,3 +1,227 @@
+<!-- Google Fonts: Inter & JetBrains Mono -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  /* Base Documentation Typography */
+  body, .sbdocs {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  code, pre, .doc-token, .token-chip {
+    font-family: 'JetBrains Mono', monospace !important;
+  }
+
+  /* Storybook Docs Container Improvements */
+  .sbdocs.sbdocs-wrapper {
+    padding: 40px 48px !important;
+    max-width: 1100px !important;
+    margin: 0 auto !important;
+  }
+
+  .sbdocs-content {
+    max-width: 100% !important;
+  }
+
+  /* Documentation Headings & Spacing */
+  .sbdocs h1 {
+    font-size: 32px !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.025em !important;
+    margin-bottom: 8px !important;
+    color: var(--theme-text-primary, #0f172a);
+  }
+
+  .sbdocs h2 {
+    font-size: 22px !important;
+    font-weight: 600 !important;
+    letter-spacing: -0.015em !important;
+    margin-top: 36px !important;
+    margin-bottom: 16px !important;
+    padding-bottom: 8px !important;
+    border-bottom: 1px solid var(--theme-border, #e2e8f0);
+    color: var(--theme-text-primary, #0f172a);
+  }
+
+  .sbdocs h3 {
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    margin-top: 24px !important;
+    margin-bottom: 12px !important;
+    color: var(--theme-text-primary, #0f172a);
+  }
+
+  .sbdocs p {
+    font-size: 14px !important;
+    line-height: 1.65 !important;
+    color: var(--theme-text-secondary, #475569);
+  }
+
+  /* Component Header Banner */
+  .doc-header {
+    margin-bottom: 28px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--theme-border, #e2e8f0);
+  }
+
+  .doc-badges {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+  }
+
+  .doc-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 3px 10px;
+    border-radius: 9999px;
+    line-height: 1.4;
+  }
+
+  .doc-badge-status {
+    background: #f0fdf4;
+    color: #166534;
+    border: 1px solid #bbf7d0;
+  }
+
+  .doc-badge-category {
+    background: #f0fdfa;
+    color: #0f766e;
+    border: 1px solid #99f6e4;
+  }
+
+  .doc-badge-figma {
+    background: #f8fafc;
+    color: #475569;
+    border: 1px solid #e2e8f0;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  /* Dark Theme Adaptations for Doc Badges */
+  [data-theme="dark"] .doc-badge-status {
+    background: #052e16;
+    color: #86efac;
+    border-color: #14532d;
+  }
+
+  [data-theme="dark"] .doc-badge-category {
+    background: #134e4a;
+    color: #5eead4;
+    border-color: #0f766e;
+  }
+
+  [data-theme="dark"] .doc-badge-figma {
+    background: #18181b;
+    color: #a1a1aa;
+    border-color: #27272a;
+  }
+
+  /* Specification & Token Cards */
+  .doc-card {
+    background: var(--theme-bg-surface, #ffffff);
+    border: 1px solid var(--theme-border, #e2e8f0);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+  }
+
+  .doc-card-title {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--theme-text-muted, #64748b);
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  /* Token Chips */
+  .token-chip-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .token-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 11.5px;
+    font-weight: 500;
+    background: #f1f5f9;
+    color: #0f172a;
+    border: 1px solid #e2e8f0;
+  }
+
+  [data-theme="dark"] .token-chip {
+    background: #27272a;
+    color: #f4f4f5;
+    border-color: #3f3f46;
+  }
+
+  /* Polished Documentation Tables */
+  .doc-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    margin: 16px 0;
+  }
+
+  .doc-table th {
+    text-align: left;
+    padding: 10px 14px;
+    background: var(--theme-bg-surface-subtle, #f8fafc);
+    border-bottom: 2px solid var(--theme-border, #e2e8f0);
+    color: var(--theme-text-secondary, #475569);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .doc-table td {
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--theme-border, #e2e8f0);
+    color: var(--theme-text-primary, #0f172a);
+    vertical-align: middle;
+  }
+
+  .doc-table code {
+    font-size: 11.5px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    background: #f1f5f9;
+    border: 1px solid #e2e8f0;
+  }
+
+  [data-theme="dark"] .doc-table code {
+    background: #27272a;
+    border-color: #3f3f46;
+  }
+
+  /* Storybook Default Tables Polish */
+  .docblock-argstable {
+    border-radius: 10px !important;
+    overflow: hidden !important;
+    border: 1px solid var(--theme-border, #e2e8f0) !important;
+  }
+</style>
+
 <!-- Google Analytics 4 (GA4) Global Site Tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-G4JQP7QYTE"></script>
 <script>
