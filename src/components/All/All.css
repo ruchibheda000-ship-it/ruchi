@@ -1,36 +1,64 @@
+/**
+ * All Component Styles
+ * Figma Source: 'All' (ID: 12:3547)
+ * 
+ * Interactive category filter pill chip with distinct high-contrast selected
+ * and warm cream unselected treatments.
+ */
+
 .uedp-all-pill {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 12px 20px;
-  border-radius: 24px;
-  font-family: 'Lufga', 'Inter', sans-serif;
+  gap: 8px;
+  padding: 10px 22px;
+  border-radius: var(--uedp-rounded-full, 9999px);
+  font-family: 'Lufga', 'Inter', -apple-system, sans-serif;
   font-size: 14px;
   font-weight: 500;
-  border: none;
   cursor: pointer;
   transition: all 0.2s ease;
   outline: none;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+.uedp-all-pill:focus-visible {
+  box-shadow: 0 0 0 2px rgba(24, 24, 27, 0.25);
 }
 
 /* Default / Selected state: Dark #18181b background, Light #F8FAFC text */
 .uedp-all-pill--selected {
   background-color: var(--uedp-zinc-900, #18181b);
   color: var(--uedp-slate-50, #f8fafc);
+  border: 1px solid transparent;
+  font-weight: 600;
   box-shadow: 0 4px 12px rgba(24, 24, 27, 0.2);
 }
 
 .uedp-all-pill--selected:hover {
-  background-color: #000000;
+  background-color: var(--uedp-base-black, #000000);
 }
 
-/* Not Selected state: Cream #FFFBEB background, Black #000000 text */
+/* Not Selected state: Warm Cream surface, Dark text */
 .uedp-all-pill--not-selected {
   background-color: var(--uedp-amber-50, #fffbeb);
-  color: #000000;
-  border: 1px solid #fef3c7;
+  color: var(--uedp-zinc-900, #18181b);
+  border: 1px solid var(--uedp-amber-200, #fde68a);
 }
 
 .uedp-all-pill--not-selected:hover {
-  background-color: #fef3c7;
+  background-color: var(--uedp-amber-100, #ffedd5);
+}
+
+.uedp-all-pill__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.uedp-all-pill__label {
+  line-height: 1;
+  display: inline-block;
 }

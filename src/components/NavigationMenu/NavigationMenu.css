@@ -1,52 +1,76 @@
+/**
+ * Navigation Menu Component Styles
+ * Figma Source: 'Navigation Menu' (ID: 12:3546)
+ * 
+ * Floating bottom navigation capsule coordinating Home, Add Docs,
+ * Report, and Schedule with active capsule pill highlighting.
+ */
+
 .uedp-nav-menu {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   background-color: var(--uedp-base-white, #ffffff);
-  border-radius: var(--uedp-rounded-3xl, 24px);
-  padding: 10px 16px;
+  border-radius: var(--uedp-rounded-full, 9999px);
+  padding: 8px 10px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  max-width: 400px;
+  max-width: 440px;
   width: 100%;
   margin: 0 auto;
-  border: 1px solid var(--uedp-slate-100, #f1f5f9);
+  border: 1px solid var(--uedp-slate-200, #e2e8f0);
+  box-sizing: border-box;
+  font-family: 'Lufga', 'Inter', -apple-system, sans-serif;
+  gap: 4px;
 }
 
 .uedp-nav-menu__item {
   display: flex;
   align-items: center;
-  gap: var(--uedp-gap-2, 8px);
-  padding: 8px 14px;
-  border-radius: var(--uedp-rounded-2xl, 16px);
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: var(--uedp-rounded-full, 9999px);
   border: none;
   background: transparent;
-  color: var(--uedp-slate-400, #94a3b8);
+  color: var(--uedp-slate-500, #64748b);
   font-family: inherit;
   font-size: 13px;
   font-weight: 500;
   cursor: pointer;
-  transition: all 0.2s ease;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+  white-space: nowrap;
+  flex: 1;
 }
 
 .uedp-nav-menu__item:hover {
-  color: var(--uedp-slate-700, #334155);
+  color: var(--uedp-slate-900, #0f172a);
+  background-color: var(--uedp-slate-100, #f1f5f9);
 }
 
+.uedp-nav-menu__item:focus-visible {
+  box-shadow: 0 0 0 2px rgba(24, 24, 27, 0.2);
+}
+
+/* Active State: High-contrast selected capsule pill */
 .uedp-nav-menu__item--active {
-  background-color: var(--uedp-teal-500, #14b8a6);
-  color: var(--uedp-base-white, #ffffff);
+  background-color: var(--uedp-zinc-900, #18181b);
+  color: var(--uedp-amber-100, #ffedd5);
   font-weight: 600;
-  box-shadow: 0 4px 12px rgba(20, 184, 166, 0.25);
+  box-shadow: 0 4px 14px rgba(24, 24, 27, 0.25);
 }
 
 .uedp-nav-menu__item--active:hover {
-  background-color: var(--uedp-teal-600, #0d9488);
+  background-color: var(--uedp-base-black, #000000);
+  color: var(--uedp-amber-100, #ffedd5);
 }
 
 .uedp-nav-menu__icon {
   flex-shrink: 0;
+  display: block;
 }
 
 .uedp-nav-menu__label {
-  white-space: nowrap;
+  line-height: 1;
+  display: inline-block;
 }

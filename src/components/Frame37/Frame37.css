@@ -1,32 +1,71 @@
+/**
+ * Frame 37 Component Styles
+ * Figma Source: 'Frame 37' (ID: 11:3457)
+ * 
+ * Recommended specialists section container coordinating category heading
+ * with a horizontal doctors discovery swipe carousel rail.
+ */
+
 .uedp-frame37 {
   display: flex;
   flex-direction: column;
   gap: 16px;
   width: 100%;
-  max-width: 440px;
-  background-color: var(--uedp-slate-100, #f1f5f9);
-  border-radius: 25px;
-  padding: 20px;
-  border: 1px solid #000000;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
-  font-family: 'Lufga', 'Inter', sans-serif;
+  max-width: 760px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  font-family: 'Lufga', 'Inter', -apple-system, sans-serif;
+}
+
+.uedp-frame37__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4px;
 }
 
 .uedp-frame37__heading {
   margin: 0;
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 700;
-  color: #0f172a;
+  color: #000000;
+  letter-spacing: -0.01em;
+}
+
+.uedp-frame37__action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: transparent;
+  border: none;
+  color: var(--uedp-zinc-900, #18181b);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 8px;
+  transition: background-color 0.15s ease;
+}
+
+.uedp-frame37__action-btn:hover {
+  background-color: var(--uedp-slate-100, #f1f5f9);
 }
 
 .uedp-frame37__carousel {
   display: flex;
   gap: 16px;
   overflow-x: auto;
-  padding: 8px 4px 16px 4px;
+  padding: 6px 4px 18px 4px;
   scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
 }
 
 .uedp-frame37__carousel::-webkit-scrollbar {
   display: none;
+}
+
+.uedp-frame37__card-item {
+  flex: 0 0 310px;
+  max-width: 320px;
 }
