@@ -11,3 +11,4 @@ export * from './components/InputField/InputField';
 export * from './components/All/All';
 export * from './components/Frame37/Frame37';
 export * from './components/Menu/Menu';
+export * from './components/AITextBar/AITextBar';

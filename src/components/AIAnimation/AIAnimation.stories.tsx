@@ -13,8 +13,11 @@ const meta: Meta<typeof AIAnimation> = {
       status: 'Stable',
     },
     designTokens: [
-      { property: 'accent / aura', token: '--uedp-teal-500', value: '#14B8A6', context: 'Concentric aura and particle illumination' },
-      { property: 'border-radius', token: '--uedp-rounded-full', value: '9999px', context: 'Spherical glow ring curvature' },
+      { property: 'border-radius', token: '--uedp-rounded-full', value: '9999px', context: 'Circular spherical boundary curvature' },
+      { property: 'background (Lavender)', token: '--uedp-pastel-lavender', value: '#E0E7FF', context: 'Translucent organic layer gradient' },
+      { property: 'background (Peach)', token: '--uedp-pastel-peach', value: '#FCE7F3', context: 'Translucent warm layer gradient' },
+      { property: 'background (Sky)', token: '--uedp-pastel-sky', value: '#E0F2FE', context: 'Translucent light blue layer gradient' },
+      { property: 'filter (Blur)', token: '--uedp-blur-2xl', value: '20px - 28px', context: 'Soft feathered edge diffusion' },
     ],
     preview: {
       size: 'spacious',
@@ -22,7 +25,7 @@ const meta: Meta<typeof AIAnimation> = {
     },
     docs: {
       description: {
-        component: 'Health assistant animated indicator signaling listening, computation, and interactive standby voice states.',
+        component: 'Soft, translucent circular AI assistant presence orb from Figma (`AI Animation`, ID: `9:7423`). Composed of multiple delicate pastel layers (lavender, peach, sky blue, and soft mint) with gentle, organic breathing movement suitable for calming healthcare interactions.',
       },
     },
   },
@@ -30,10 +33,16 @@ const meta: Meta<typeof AIAnimation> = {
     size: {
       control: { type: 'select' },
       options: ['small', 'medium', 'large'],
-      description: 'Physical dimensions of the AI aura indicator',
+      description: 'Physical diameter scaling of the AI orb',
     },
-    statusText: { control: { type: 'text' }, description: 'Descriptive status text displayed below animation' },
-    active: { control: { type: 'boolean' }, description: 'Toggles active pulsing animation vs idle standby' },
+    active: {
+      control: { type: 'boolean' },
+      description: 'Toggles organic living breathing motion vs calm static standby',
+    },
+    statusText: {
+      control: { type: 'text' },
+      description: 'Optional status text displayed underneath the orb',
+    },
   },
 };
 
@@ -41,17 +50,19 @@ export default meta;
 type Story = StoryObj<typeof AIAnimation>;
 
 export const Active: Story = {
+  name: 'Active (Living Presence)',
   args: {
     size: 'medium',
-    statusText: 'AI Health Assistant Active',
     active: true,
+    statusText: 'Listening to your query...',
   },
 };
 
 export const Idle: Story = {
+  name: 'Idle (Standby)',
   args: {
     size: 'medium',
-    statusText: 'AI Standby',
     active: false,
+    statusText: 'Eva is ready to assist',
   },
 };

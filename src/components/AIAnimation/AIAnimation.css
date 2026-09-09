@@ -1,74 +1,257 @@
+/**
+ * AI Animation Component Styles
+ * Figma Source: 'AI Animation' (ID: 9:7423)
+ * 
+ * Soft, translucent, pastel circular AI assistant orb with organic layer blending.
+ * Features light blue/lavender, peach/pink, and soft mint tones with calm motion.
+ */
+
 .uedp-ai-animation {
   display: inline-flex;
-  align-items: center;
-  gap: var(--uedp-gap-3, 12px);
-  position: relative;
-}
-
-.uedp-ai-animation__core {
-  position: relative;
-  width: 48px;
-  height: 48px;
-  border-radius: var(--uedp-rounded-full, 9999px);
-  background: linear-gradient(135deg, #0d9488 0%, #14b8a6 50%, #2dd4bf 100%);
-  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: var(--uedp-base-white, #ffffff);
-  box-shadow: 0 4px 14px rgba(20, 184, 166, 0.4);
-  z-index: 2;
+  position: relative;
+  box-sizing: border-box;
+  user-select: none;
 }
 
-.uedp-ai-animation__pulse-ring {
+/* Orb Dimensions by Size */
+.uedp-ai-animation--small .uedp-ai-animation__orb {
+  width: 140px;
+  height: 140px;
+}
+.uedp-ai-animation--small .uedp-ai-animation__glow {
+  width: 170px;
+  height: 170px;
+}
+
+.uedp-ai-animation--medium .uedp-ai-animation__orb {
+  width: 200px;
+  height: 200px;
+}
+.uedp-ai-animation--medium .uedp-ai-animation__glow {
+  width: 240px;
+  height: 240px;
+}
+
+.uedp-ai-animation--large .uedp-ai-animation__orb {
+  width: 270px;
+  height: 270px;
+}
+.uedp-ai-animation--large .uedp-ai-animation__glow {
+  width: 320px;
+  height: 320px;
+}
+
+/* Ambient Surrounding Glow */
+.uedp-ai-animation__glow {
   position: absolute;
-  left: -4px;
-  top: -4px;
-  width: 56px;
-  height: 56px;
-  border-radius: var(--uedp-rounded-full, 9999px);
-  border: 2px solid var(--uedp-teal-500, #14b8a6);
-  opacity: 0.7;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(224, 231, 255, 0.55) 0%,
+    rgba(252, 231, 243, 0.35) 45%,
+    rgba(236, 253, 245, 0.2) 70%,
+    transparent 100%
+  );
+  filter: blur(28px);
+  pointer-events: none;
   z-index: 1;
+  transition: opacity 0.5s ease;
 }
 
-.uedp-ai-animation--active .uedp-ai-animation__pulse-ring {
-  animation: uedpPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+/* Orb Core Container */
+.uedp-ai-animation__orb {
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  background: radial-gradient(
+    circle at 50% 50%,
+    #ffffff 0%,
+    #f8fafc 40%,
+    #f1f5f9 100%
+  );
+  box-shadow: 
+    0 10px 40px -10px rgba(199, 210, 254, 0.4),
+    inset 0 0 24px rgba(255, 255, 255, 0.9);
+  z-index: 2;
+  isolation: isolate;
 }
 
-.uedp-ai-animation__sparkle {
+/* Translucent Overlapping Organic Layers */
+.uedp-ai-animation__layer {
   position: absolute;
-  top: 6px;
-  right: 6px;
-  color: #fef08a;
-  animation: uedpSpin 4s linear infinite;
+  border-radius: 50%;
+  mix-blend-mode: multiply;
+  filter: blur(20px);
+  opacity: 0.75;
+  transition: transform 0.8s ease, opacity 0.8s ease;
 }
 
-.uedp-ai-animation__label {
+/* Layer 1: Soft Lavender / Periwinkle */
+.uedp-ai-animation__layer--lavender {
+  width: 85%;
+  height: 85%;
+  top: 5%;
+  left: 10%;
+  background: radial-gradient(circle, #c7d2fe 0%, #e0e7ff 60%, transparent 80%);
+}
+
+/* Layer 2: Subtle Pink / Peach */
+.uedp-ai-animation__layer--peach {
+  width: 80%;
+  height: 80%;
+  bottom: 8%;
+  right: 8%;
+  background: radial-gradient(circle, #fbcfe8 0%, #fce7f3 65%, transparent 80%);
+}
+
+/* Layer 3: Sky Blue */
+.uedp-ai-animation__layer--sky {
+  width: 75%;
+  height: 75%;
+  top: 15%;
+  right: 12%;
+  background: radial-gradient(circle, #bae6fd 0%, #e0f2fe 65%, transparent 85%);
+}
+
+/* Layer 4: Subtle Mint / Soft Yellow */
+.uedp-ai-animation__layer--mint {
+  width: 70%;
+  height: 70%;
+  bottom: 12%;
+  left: 14%;
+  background: radial-gradient(circle, #a7f3d0 0%, #ecfdf5 55%, #fef9c3 80%, transparent 90%);
+  opacity: 0.65;
+}
+
+/* Layer 5: Inner Soft Core */
+.uedp-ai-animation__layer--core {
+  width: 55%;
+  height: 55%;
+  top: 22%;
+  left: 22%;
+  background: radial-gradient(circle, #ffffff 0%, #fdf2f8 50%, #ede9fe 80%, transparent 95%);
+  filter: blur(14px);
+  opacity: 0.85;
+}
+
+/* Active State: Slow, gentle, organic movement */
+.uedp-ai-animation--active .uedp-ai-animation__layer--lavender {
+  animation: uedpOrbShiftLavender 13s ease-in-out infinite alternate;
+}
+
+.uedp-ai-animation--active .uedp-ai-animation__layer--peach {
+  animation: uedpOrbShiftPeach 15s ease-in-out infinite alternate;
+}
+
+.uedp-ai-animation--active .uedp-ai-animation__layer--sky {
+  animation: uedpOrbShiftSky 11s ease-in-out infinite alternate;
+}
+
+.uedp-ai-animation--active .uedp-ai-animation__layer--mint {
+  animation: uedpOrbShiftMint 14s ease-in-out infinite alternate;
+}
+
+.uedp-ai-animation--active .uedp-ai-animation__layer--core {
+  animation: uedpOrbShiftCore 10s ease-in-out infinite alternate;
+}
+
+.uedp-ai-animation--active .uedp-ai-animation__glow {
+  animation: uedpGlowBreath 8s ease-in-out infinite alternate;
+}
+
+/* Idle State: Paused calm organic presence */
+.uedp-ai-animation--idle .uedp-ai-animation__layer {
+  animation-play-state: paused;
+}
+
+/* Status text */
+.uedp-ai-animation__status {
+  margin-top: 16px;
+  font-family: 'Lufga', 'Inter', -apple-system, sans-serif;
   font-size: 13px;
-  font-weight: 600;
-  color: var(--uedp-slate-900, #0f172a);
+  font-weight: 500;
+  color: var(--uedp-slate-500, #64748b);
+  letter-spacing: 0.01em;
 }
 
-@keyframes uedpPulse {
+/* Gentle Organic Shift Animations */
+@keyframes uedpOrbShiftLavender {
   0% {
-    transform: scale(0.95);
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(8px, -6px) scale(1.04);
+  }
+  100% {
+    transform: translate(-6px, 8px) scale(0.97);
+  }
+}
+
+@keyframes uedpOrbShiftPeach {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-10px, 6px) scale(1.05);
+  }
+  100% {
+    transform: translate(6px, -8px) scale(0.96);
+  }
+}
+
+@keyframes uedpOrbShiftSky {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-6px, -10px) scale(0.95);
+  }
+  100% {
+    transform: translate(8px, 6px) scale(1.06);
+  }
+}
+
+@keyframes uedpOrbShiftMint {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(10px, 8px) scale(1.06);
+  }
+  100% {
+    transform: translate(-8px, -6px) scale(0.94);
+  }
+}
+
+@keyframes uedpOrbShiftCore {
+  0% {
+    transform: scale(0.96);
     opacity: 0.8;
   }
   50% {
-    transform: scale(1.25);
-    opacity: 0;
+    transform: scale(1.06);
+    opacity: 0.95;
   }
   100% {
-    transform: scale(0.95);
-    opacity: 0.8;
+    transform: scale(0.98);
+    opacity: 0.85;
   }
 }
 
-@keyframes uedpSpin {
-  from {
-    transform: rotate(0deg);
+@keyframes uedpGlowBreath {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.6;
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    transform: scale(1.06);
+    opacity: 0.85;
+  }
+  100% {
+    transform: scale(0.98);
+    opacity: 0.65;
   }
 }
