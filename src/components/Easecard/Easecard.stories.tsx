@@ -14,8 +14,9 @@ const meta: Meta<typeof Easecard> = {
     },
     designTokens: [
       { property: 'border-radius', token: '--uedp-rounded-2xl', value: '16px', context: 'Provider card perimeter radius' },
-      { property: 'accent', token: '--uedp-teal-500', value: '#14B8A6', context: 'Network action highlights and link icon' },
-      { property: 'text-color', token: '--uedp-slate-900', value: '#0F172A', context: 'Hospital facility typography header' },
+      { property: 'border-color', token: '--uedp-slate-200', value: '#E2E8F0', context: 'Boundary outline stroke' },
+      { property: 'text-color (Title)', token: '--uedp-slate-900', value: '#0F172A', context: 'Hospital facility typography header' },
+      { property: 'background (Icon Box)', token: '--uedp-slate-100', value: '#F1F5F9', context: 'Provider emblem container fill' },
     ],
     preview: {
       size: 'standard',

@@ -2,15 +2,16 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
-  background: #ffffff;
-  border-radius: 25px;
+  background: var(--uedp-base-white, #ffffff);
+  border-radius: var(--uedp-rounded-3xl, 24px);
   padding: 16px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
   max-width: 360px;
   width: 100%;
-  border: 1px solid #f1f5f9;
+  border: 1px solid var(--uedp-slate-100, #f1f5f9);
   transition: all 0.25s ease;
-  font-family: 'Lufga', 'Inter', sans-serif;
+  font-family: 'Lufga', 'Inter', -apple-system, sans-serif;
+  box-sizing: border-box;
 }
 
 .uedp-doctors-swipe:hover {
@@ -32,28 +33,32 @@
 .uedp-doctors-swipe__avatar {
   width: 56px;
   height: 56px;
-  border-radius: 9999px;
+  border-radius: var(--uedp-rounded-full, 9999px);
   background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #18181b;
+  color: var(--uedp-zinc-900, #18181b);
 }
 
 .uedp-doctors-swipe__badge {
   position: absolute;
   bottom: -4px;
   right: -4px;
-  background: #ffedd5;
-  color: #18181b;
+  background: var(--uedp-amber-100, #ffedd5);
+  color: var(--uedp-zinc-900, #18181b);
   font-size: 11px;
   font-weight: 700;
   padding: 2px 6px;
-  border-radius: 9999px;
+  border-radius: var(--uedp-rounded-full, 9999px);
   display: flex;
   align-items: center;
   gap: 2px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.uedp-doctors-swipe__badge svg {
+  color: var(--uedp-amber-500, #f59e0b);
 }
 
 .uedp-doctors-swipe__info {
@@ -66,37 +71,41 @@
   margin: 0;
   font-size: 16px;
   font-weight: 700;
-  color: #18181b;
+  color: var(--uedp-zinc-900, #18181b);
 }
 
 .uedp-doctors-swipe__specialty {
   margin: 0;
   font-size: 12px;
-  color: #64748b;
+  color: var(--uedp-slate-500, #64748b);
 }
 
 .uedp-doctors-swipe__ai-bar {
   display: flex;
   align-items: center;
   gap: 8px;
-  background-color: #f8fafc;
-  border: 1px solid #e2e8f0;
-  border-radius: 25px;
-  padding: 5px 17px;
+  background-color: var(--uedp-slate-50, #f8fafc);
+  border: 1px solid var(--uedp-slate-200, #e2e8f0);
+  border-radius: var(--uedp-rounded-full, 9999px);
+  padding: 5px 14px;
 }
 
 .uedp-doctors-swipe__ai-icon {
-  color: #18181b;
+  color: var(--uedp-zinc-900, #18181b);
 }
 
 .uedp-doctors-swipe__input {
   flex: 1;
   border: none;
   background: transparent;
-  font-family: 'Lufga', 'Inter', sans-serif;
+  font-family: 'Lufga', 'Inter', -apple-system, sans-serif;
   font-size: 12px;
-  color: #18181b;
+  color: var(--uedp-zinc-900, #18181b);
   outline: none;
+}
+
+.uedp-doctors-swipe__input::placeholder {
+  color: var(--uedp-zinc-400, #a1a1aa);
 }
 
 .uedp-doctors-swipe__voice-btn {
@@ -105,14 +114,19 @@
   justify-content: center;
   width: 28px;
   height: 28px;
-  border-radius: 9999px;
-  background: #18181b;
-  color: #ffffff;
+  border-radius: var(--uedp-rounded-full, 9999px);
+  background: var(--uedp-zinc-900, #18181b);
+  color: var(--uedp-base-white, #ffffff);
   cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+
+.uedp-doctors-swipe__voice-btn:hover {
+  opacity: 0.85;
 }
 
 /* Selected state styling */
 .uedp-doctors-swipe--selected {
-  border-color: #18181b;
-  box-shadow: 0 0 0 2px rgba(24, 24, 27, 0.2);
+  border-color: var(--uedp-zinc-900, #18181b);
+  box-shadow: 0 0 0 2px rgba(24, 24, 27, 0.15);
 }

@@ -13,9 +13,10 @@ const meta: Meta<typeof Card> = {
       status: 'Stable',
     },
     designTokens: [
-      { property: 'border-radius', token: '--uedp-rounded-3xl', value: '24px', context: 'Outer container corner radius' },
-      { property: 'background', token: '--uedp-base-white', value: '#FFFFFF / #18181B', context: 'Surface background (adaptive in dark mode)' },
-      { property: 'accent / badge', token: '--uedp-teal-500', value: '#14B8A6', context: 'Confirmed booking status indicator' },
+      { property: 'background', token: '--uedp-amber-100', value: '#FFEDD5', context: 'Warm amber consultation card surface' },
+      { property: 'border-color', token: '--uedp-amber-200', value: '#FDE68A', context: 'Subtle container perimeter stroke' },
+      { property: 'text-color (Title)', token: '--uedp-zinc-900', value: '#18181B', context: 'High-contrast consultation header typography' },
+      { property: 'text-color (Subtitle)', token: '--uedp-zinc-500', value: '#71717A', context: 'Healthcare facility and clinic name' },
     ],
     preview: {
       size: 'standard',

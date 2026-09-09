@@ -14,8 +14,9 @@ const meta: Meta<typeof DoctorsSwipe> = {
     },
     designTokens: [
       { property: 'border-radius', token: '--uedp-rounded-3xl', value: '24px', context: 'Doctor card outer curvature' },
-      { property: 'accent / highlights', token: '--uedp-teal-500', value: '#14B8A6', context: 'Rating star indicator and selected border' },
-      { property: 'text-color (Header)', token: '--uedp-slate-900', value: '#0F172A', context: 'Physician title typography' },
+      { property: 'background (Score Badge)', token: '--uedp-amber-100', value: '#FFEDD5', context: 'Patient rating pill surface' },
+      { property: 'text-color (Header)', token: '--uedp-zinc-900', value: '#18181B', context: 'Physician title typography and controls' },
+      { property: 'border-color', token: '--uedp-slate-100', value: '#F1F5F9', context: 'Card perimeter outline stroke' },
     ],
     preview: {
       size: 'spacious',

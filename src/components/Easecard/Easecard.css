@@ -10,16 +10,19 @@
   cursor: pointer;
   transition: all 0.2s ease;
   min-width: 200px;
+  box-sizing: border-box;
+  font-family: 'Lufga', 'Inter', -apple-system, sans-serif;
 }
 
 .uedp-easecard:hover {
-  border-color: var(--uedp-teal-500, #14b8a6);
+  border-color: var(--uedp-zinc-900, #18181b);
   transform: translateY(-2px);
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
 }
 
 .uedp-easecard--add {
   border-style: dashed;
+  border-color: var(--uedp-slate-300, #cbd5e1);
   background-color: var(--uedp-slate-50, #f8fafc);
 }
 
@@ -35,15 +38,15 @@
 }
 
 .uedp-easecard__icon--kims {
-  color: #ef4444;
+  color: var(--uedp-red-500, #ef4444);
 }
 
 .uedp-easecard__icon--tata {
-  color: #3b82f6;
+  color: var(--uedp-blue-500, #3b82f6);
 }
 
 .uedp-easecard__icon--metro {
-  color: #8b5cf6;
+  color: var(--uedp-purple-500, #8b5cf6);
 }
 
 .uedp-easecard__icon--add {
