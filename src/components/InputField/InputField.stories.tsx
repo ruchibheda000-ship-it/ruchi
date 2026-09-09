@@ -24,7 +24,7 @@ const meta: Meta<typeof InputField> = {
     },
     docs: {
       description: {
-        component: 'Foundational text input control supporting custom labels, helper placeholders, filled values, and contextual error feedback states.',
+        component: 'Foundational interactive text input control supporting typing, custom labels, helper placeholders, auto-updating status icons, and contextual validation feedback.',
       },
     },
   },
@@ -35,7 +35,8 @@ const meta: Meta<typeof InputField> = {
       description: 'Figma component variant state reflecting user interaction stage.',
     },
     label: { control: { type: 'text' }, description: 'Descriptive field label above input' },
-    value: { control: { type: 'text' }, description: 'Current input text content' },
+    value: { control: { type: 'text' }, description: 'Controlled input text content' },
+    defaultValue: { control: { type: 'text' }, description: 'Initial default value for uncontrolled typing' },
     placeholder: { control: { type: 'text' }, description: 'Placeholder hint shown when input is empty' },
     errorMessage: { control: { type: 'text' }, description: 'Validation feedback text displayed in Error state' },
     onChange: { action: 'valueChanged', description: 'Callback fired upon input change' },
@@ -46,6 +47,7 @@ export default meta;
 type Story = StoryObj<typeof InputField>;
 
 export const DefaultStatus: Story = {
+  name: 'Default Status (Typable)',
   args: {
     state: 'Input Field - Status',
     label: 'Full Name',
@@ -54,18 +56,20 @@ export const DefaultStatus: Story = {
 };
 
 export const Entered: Story = {
+  name: 'Entered State (Editable)',
   args: {
     state: 'Entered',
     label: 'Full Name',
-    value: 'Jane Doe',
+    defaultValue: 'Jane Doe',
   },
 };
 
 export const ErrorState: Story = {
+  name: 'Error State',
   args: {
     state: 'Error',
     label: 'Full Name',
-    value: 'Invalid Name!',
+    defaultValue: 'Invalid Name!',
     errorMessage: 'Please enter a valid full name',
   },
 };
