@@ -3,7 +3,7 @@ import { create } from '@storybook/theming/create';
 
 const theme = create({
   base: 'dark',
-  brandTitle: 'Anti-Gravity Design System',
+  brandTitle: 'Ease App - Design System',
   brandUrl: '/',
   brandTarget: '_self',
 
